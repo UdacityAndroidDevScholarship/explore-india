@@ -4,19 +4,20 @@
     android:id="@+id/cardview"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="2dp"
     android:layout_marginLeft="1dp"
     android:layout_marginRight="1dp"
+    android:layout_marginTop="2dp"
     card_view:cardCornerRadius="2dp"
-    card_view:cardBackgroundColor="@android:color/transparent"
-    card_view:cardElevation="0dp">
+    card_view:cardBackgroundColor="#9d7b7b7b">
+    <!-- android:background="#9d7b7b7b" -->
+
 
     <LinearLayout
-        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:orientation="vertical"
-        android:layout_weight="1">
+        android:padding="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,26 +26,12 @@
 
             <TextView
                 android:id="@+id/tvName"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Name Show Here"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-
-            <TextView
-                android:id="@+id/tvDis"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Description gose here"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
 
         </LinearLayout>
 
