@@ -16,6 +16,11 @@ in state wise view user in top will get top locations in that state. scrolling u
 
 City participants can make their own layout for their city.
 
+If you have any feature suggestion for Explore India App. Fill this short form [here][5].
+You can add your responses multiple times.
+You can read all responses [here][6]
+
+
 
 
 ## Contributing
@@ -35,3 +40,5 @@ If you need any help, please contact us on slack at channel #
 [1]: https://github.com/UdacityAndroidDevScholarship/explore-india/issues/new
 [3]: https://help.github.com/articles/fork-a-repo/
 [4]: https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches
+[5]: https://goo.gl/forms/qleWaOqtXTBtCRwJ3
+[6]: https://docs.google.com/spreadsheets/d/1ebKK1k8t78_CnDc_JjkvYh-lzVaY83CUSXyxPzll3qI/edit?usp=sharing
