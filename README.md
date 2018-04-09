@@ -1,5 +1,5 @@
 # explore-india
-This application is a collaborative project made by the Google Udacity Android Developer Scholars.
+This application is a collaborative project made by the Google India Udacity Android Developer Scholars.
 
 ## Features
 
@@ -21,6 +21,14 @@ You can add your responses multiple times.
 You can read all responses [here][6]
 
 
+## Use the project with your own Firebase instance
+
+* Create a new project in the [Firebase console][7].
+* Click Add Firebase to your Android app
+   * use the `applicationId` value specified in the `app/build.gradle` file of the app as the Android package name
+   * insert SHA-1 fingerprint of your debug certificate
+* Download the generated `google-services.json` file, and copy it to the `app/` directory of your project.
+* You should be able to successfully sync the project now.
 
 
 ## Contributing
@@ -42,3 +50,4 @@ If you need any help, please contact us on slack at channel #
 [4]: https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches
 [5]: https://goo.gl/forms/qleWaOqtXTBtCRwJ3
 [6]: https://docs.google.com/spreadsheets/d/1ebKK1k8t78_CnDc_JjkvYh-lzVaY83CUSXyxPzll3qI/edit?usp=sharing
+[7]: https://console.firebase.google.com/

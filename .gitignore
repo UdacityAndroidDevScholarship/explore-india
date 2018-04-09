@@ -12,5 +12,8 @@ build
 /local.properties
 /captures
 
+# Google services config file
+app/google-services.json
+
 # OSX
 .DS_Store
