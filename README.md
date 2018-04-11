@@ -23,7 +23,7 @@ You can read all responses [here][6]
 
 ## Google-services.json
 
-When you compile the Application, It will give an error that google-services.json cannot be found. The file is not supposed to be added to git to avoid getting spam attacks. You can find this file in pinned messages in #cp_explore_india Channel. Put it in this location -   \explore-india\app\google-services.json
+When you compile the Application, It will give an error that google-services.json cannot be found. The file is not supposed to be added to git to avoid getting spam attacks. You can find this file in pinned messages in #cp_explore_india Channel. Put it in this path -        `\explore-india\app\google-services.json`
 
 
 
