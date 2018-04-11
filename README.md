@@ -1,18 +1,18 @@
 # explore-india
-This application is a collaborative project made by the Google Udacity Android Developer Scholars.
+This Application is a collaborative project made by the Google Udacity Android Developer Scholars.
 
 ## Features
 
-1) Awesome places (Location base or Interest-based)
+1) Awesome places (Location based or Interest-based)
 2) Places photos
-3) Famous (Food, story, culture, etc)
+3) Famous (Food, Story, Culture, etc)
 4) Giving Google Map API to give directions.
-5) Places type ( Picnic, Tracking, Beach)
-6) audience (Family, Friends, Couple, etc)
+5) Place type ( Picnic, Tracking, Beach)
+6) Audience (Family, Friends, Couple, etc)
 
-When the app is launched first time user will be sent to welcome screen, to introduce app.. get permissions (Like Location). then location access given will show famous places nearby ( as per users interest) or can swipe up and have state list.
+When the Application is launched for the first time, The user will be sent to welcome screen to introduce app, and to get permissions (Like Location). Then, Location Access given will show famous places nearby (as per users interest) or can swipe up and have state list. If Location Access is not given, They will be showed the state/city selector activity.
 
-In state wise view, a user in the top will get top locations in that state. scrolling up will give user cities list. with places name in small fonts.
+In state wise view, a user in the top will get top locations in that state. Scrolling up will give user cities list, with places name in small fonts.
 
 City participants can make their own layout for their city.
 
