@@ -2,15 +2,15 @@ package com.udacity.exploreindia.ui.welcome;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
 import com.udacity.exploreindia.R;
 import com.udacity.exploreindia.repo.PreferenceRepository;
+import com.udacity.exploreindia.ui.base.BaseActivity;
 import com.udacity.exploreindia.ui.splash.SplashActivity;
 
-public class WelcomeActivity extends AppCompatActivity {
+public class WelcomeActivity extends BaseActivity {
 
     private PreferenceRepository prefRepo;
 
