@@ -19,7 +19,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        PreferenceRepository prefRepo = new PreferenceRepository(getApplicationContext());
+        PreferenceRepository prefRepo = PreferenceRepository.getInstance(getApplicationContext());
 
         if (prefRepo.isFirstTimeLaunch()) launchActivity(WelcomeActivity.class);
         else launchActivity(MainActivity.class);

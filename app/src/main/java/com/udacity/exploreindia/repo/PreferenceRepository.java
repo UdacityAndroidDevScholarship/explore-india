@@ -3,42 +3,49 @@ package com.udacity.exploreindia.repo;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import static android.content.Context.MODE_PRIVATE;
+
 /**
  * Created by Desk on 17/02/2018.
  */
 
 public class PreferenceRepository {
-    // Shared Preferences
-    SharedPreferences pref;
-    // Editor for Shared preferences
-    SharedPreferences.Editor editor;
 
-    // Context
-    Context _context;
-
-    // Shared pref mode
-    int PRIVATE_MODE = 0;
-
-    // Shared preferences file name
+    // SharedPreferences file names
     private static final String PREF_NAME = "ExploreIndia";
 
+    // Key Constants
+    private static final String KEY_IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch";
 
-    // All Shared Preferences Keys
-    private static final String IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch";
+    // Default Value Constants
+    private static final boolean IS_FIRST_TIME_LAUNCH = true;
 
-    public PreferenceRepository(Context context) {
-        this._context = context;
-        pref = _context.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
-        editor = pref.edit();
+    private static PreferenceRepository prefRepo;
+
+    private SharedPreferences exploreIndiaPrefs;
+
+    private PreferenceRepository(Context context) {
+        this.exploreIndiaPrefs = context.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
     }
 
-    public void setFirstTimeLaunch(boolean isFirstTime) {
-        editor.putBoolean(IS_FIRST_TIME_LAUNCH, isFirstTime);
-        editor.commit();
+    /**
+     * @param applicationContext Application Context
+     */
+    public static PreferenceRepository getInstance(Context applicationContext) {
+        if (prefRepo == null)
+            prefRepo = new PreferenceRepository(applicationContext);
+
+        return prefRepo;
     }
 
     public boolean isFirstTimeLaunch() {
-        return pref.getBoolean(IS_FIRST_TIME_LAUNCH, true);
+        return exploreIndiaPrefs.getBoolean(KEY_IS_FIRST_TIME_LAUNCH, IS_FIRST_TIME_LAUNCH);
+    }
+
+    public void setFirstTimeLaunch(boolean isFirstTime) {
+        exploreIndiaPrefs.edit()
+                .putBoolean(KEY_IS_FIRST_TIME_LAUNCH, isFirstTime)
+                .apply();
     }
 
 }
