@@ -1,4 +1,4 @@
-package com.udacity.exploreindia.helper;
+package com.udacity.exploreindia.repo;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -7,10 +7,9 @@ import android.content.SharedPreferences;
  * Created by Desk on 17/02/2018.
  */
 
-public class PrefManager {
+public class PreferenceRepository {
     // Shared Preferences
     SharedPreferences pref;
-
     // Editor for Shared preferences
     SharedPreferences.Editor editor;
 
@@ -27,7 +26,7 @@ public class PrefManager {
     // All Shared Preferences Keys
     private static final String IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch";
 
-    public PrefManager(Context context) {
+    public PreferenceRepository(Context context) {
         this._context = context;
         pref = _context.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
         editor = pref.edit();

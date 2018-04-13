@@ -1,18 +1,20 @@
-package com.udacity.exploreindia;
+package com.udacity.exploreindia.ui.welcome;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.udacity.exploreindia.helper.PrefManager;
+import com.udacity.exploreindia.R;
+import com.udacity.exploreindia.repo.PreferenceRepository;
+import com.udacity.exploreindia.ui.splash.SplashActivity;
 
 public class WelcomeActivity extends AppCompatActivity {
 
     TextView tvTest;
-    PrefManager prefManager;
+    PreferenceRepository prefRepo;
     Context context = this;
 
     @Override
@@ -20,12 +22,12 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
         tvTest = findViewById(R.id.a_welcome_tv_test);
-        prefManager = new PrefManager(context);
+        prefRepo = new PreferenceRepository(context);
 
         tvTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                prefManager.setFirstTimeLaunch(false);
+                prefRepo.setFirstTimeLaunch(false);
                 Intent intent = new Intent(context, SplashActivity.class);
                 startActivity(intent);
                 finish();

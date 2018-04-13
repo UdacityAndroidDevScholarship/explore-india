@@ -1,15 +1,18 @@
-package com.udacity.exploreindia;
+package com.udacity.exploreindia.ui.splash;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
-import com.udacity.exploreindia.helper.PrefManager;
+import com.udacity.exploreindia.R;
+import com.udacity.exploreindia.repo.PreferenceRepository;
+import com.udacity.exploreindia.ui.main.MainActivity;
+import com.udacity.exploreindia.ui.welcome.WelcomeActivity;
 
 public class SplashActivity extends AppCompatActivity {
-    PrefManager prefManager;
+    PreferenceRepository prefRepo;
     Context context = this;
 
     int secondsDelayed = 1;
@@ -18,8 +21,8 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        prefManager = new PrefManager(context);
-        if (prefManager.isFirstTimeLaunch()) {
+        prefRepo = new PreferenceRepository(context);
+        if (prefRepo.isFirstTimeLaunch()) {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
