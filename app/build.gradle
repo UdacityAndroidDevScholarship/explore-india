@@ -27,16 +27,16 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
     // Support libraries
-    implementation 'com.android.support:support-v4:27.1.1'
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support:cardview-v7:27.1.1'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation "com.android.support:support-v4:$supportVersion"
+    implementation "com.android.support:appcompat-v7:$supportVersion"
+    implementation "com.android.support:cardview-v7:$supportVersion"
+    implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
 
     // Firebase
-    implementation 'com.google.firebase:firebase-database:15.0.0'
-    implementation 'com.google.firebase:firebase-core:15.0.0'
-    implementation 'com.google.firebase:firebase-storage:15.0.0'
-    implementation 'com.google.firebase:firebase-auth:15.0.0'
+    implementation "com.google.firebase:firebase-database:$firebaseVersion"
+    implementation "com.google.firebase:firebase-core:$firebaseVersion"
+    implementation "com.google.firebase:firebase-storage:$firebaseVersion"
+    implementation "com.google.firebase:firebase-auth:$firebaseVersion"
 }
 
 apply plugin: 'com.google.gms.google-services'
