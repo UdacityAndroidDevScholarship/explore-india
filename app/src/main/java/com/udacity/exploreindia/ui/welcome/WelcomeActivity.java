@@ -1,5 +1,6 @@
 package com.udacity.exploreindia.ui.welcome;
 
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,7 @@ import com.udacity.exploreindia.ui.splash.SplashActivity;
 public class WelcomeActivity extends BaseActivity {
 
     private PreferenceRepository prefRepo;
+    private WelcomeViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,8 @@ public class WelcomeActivity extends BaseActivity {
         setContentView(R.layout.activity_welcome);
 
         prefRepo = PreferenceRepository.getInstance(getApplicationContext());
+
+        setupViewModel();
 
         TextView tvTest = findViewById(R.id.a_welcome_tv_test);
 
@@ -32,5 +36,10 @@ public class WelcomeActivity extends BaseActivity {
                 finish();
             }
         });
+    }
+
+    private void setupViewModel() {
+        WelcomeViewModel.Factory factory = new WelcomeViewModel.Factory();
+        viewModel = ViewModelProviders.of(WelcomeActivity.this, factory).get(WelcomeViewModel.class);
     }
 }
