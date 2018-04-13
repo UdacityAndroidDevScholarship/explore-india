@@ -37,6 +37,10 @@ dependencies {
     implementation "com.google.firebase:firebase-core:$firebaseVersion"
     implementation "com.google.firebase:firebase-storage:$firebaseVersion"
     implementation "com.google.firebase:firebase-auth:$firebaseVersion"
+
+    // Android Architecture Components
+    implementation "android.arch.lifecycle:extensions:$aacLifecycleExtVersion"
+    annotationProcessor "android.arch.lifecycle:compiler:$aacLifecycleExtVersion"
 }
 
 apply plugin: 'com.google.gms.google-services'
