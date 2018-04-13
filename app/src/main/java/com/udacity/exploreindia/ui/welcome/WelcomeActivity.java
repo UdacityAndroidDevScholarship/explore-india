@@ -19,7 +19,7 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
-        prefRepo = new PreferenceRepository(getApplicationContext());
+        prefRepo = PreferenceRepository.getInstance(getApplicationContext());
 
         TextView tvTest = findViewById(R.id.a_welcome_tv_test);
 
