@@ -26,3 +26,9 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    supportVersion = '27.1.1'
+    constraintLayoutVersion = '1.1.0'
+    firebaseVersion = '15.0.0'
+}
