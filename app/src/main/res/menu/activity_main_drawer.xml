@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/nav_my_stuff">
+        <item
+            android:id="@+id/nav_your_places"
+            android:icon="@drawable/ic_your_places"
+            android:title="Your places" />
+        <item
+            android:id="@+id/nav_your_timeline"
+            android:icon="@drawable/ic_your_timeline"
+            android:title="Your timeline" />
+        <item
+            android:id="@+id/nav_your_contributions"
+            android:icon="@drawable/ic_your_contributions"
+            android:title="Your Contributions" />
+        <item
+            android:id="@+id/nav_offline_areas"
+            android:icon="@drawable/ic_offline_areas"
+            android:title="Offline areas" />
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/nav_about_the_city">
+        <item
+            android:id="@+id/nav_food"
+            android:icon="@drawable/ic_food"
+            android:title="Food" />
+        <item
+            android:id="@+id/nav_interesting_places"
+            android:icon="@drawable/ic_interesting_places"
+            android:title="Interesting Places" />
+        <item
+            android:id="@+id/nav_culture"
+            android:icon="@drawable/ic_culture"
+            android:title="Cultures" />
+    </group>
+
+
+
+</menu>
