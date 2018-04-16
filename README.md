@@ -32,7 +32,7 @@ When you compile the Application, It will give an error that google-services.jso
 
 Contributions are welcome!
 
-If you need any help, please contact us on slack at channel #
+If you need any help, please contact us on slack at channel #cp_explore_india
 
 1. Check out our [public issues board][0]. If your issue isn't on the board, [open a new one][1].
 2. Wait for mods to assign you an issue. 
