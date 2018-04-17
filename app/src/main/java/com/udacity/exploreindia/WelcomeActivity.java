@@ -41,13 +41,13 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     public void locationPermissionCheck() {
-        String[] location_permission = new String[]{Manifest.permission.ACCESS_FINE_LOCATION};
-        if (ContextCompat.checkSelfPermission(this,
-                android.Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this,location_permission,1);
-        } else {
-        }
+        String location_permission = Manifest.permission.ACCESS_FINE_LOCATION;
+        int grant = ContextCompat.checkSelfPermission(this,location_permission);
+        if ( grant != PackageManager.PERMISSION_GRANTED) {
+            String[] permission_list = new String[1];
+            permission_list[0] = location_permission;
+            ActivityCompat.requestPermissions(this,permission_list,1);
+            } else {   }
     }
 
     @Override
