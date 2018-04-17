@@ -19,25 +19,22 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     // Testing
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-
     // Support libraries
     implementation "com.android.support:support-v4:$supportVersion"
     implementation "com.android.support:appcompat-v7:$supportVersion"
     implementation "com.android.support:cardview-v7:$supportVersion"
     implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
-
+    implementation "com.android.support:design:$supportVersion"
     // Firebase
     implementation "com.google.firebase:firebase-database:$firebaseVersion"
     implementation "com.google.firebase:firebase-core:$firebaseVersion"
     implementation "com.google.firebase:firebase-storage:$firebaseVersion"
     implementation "com.google.firebase:firebase-auth:$firebaseVersion"
-
     // Android Architecture Components
     implementation "android.arch.lifecycle:extensions:$aacLifecycleExtVersion"
     annotationProcessor "android.arch.lifecycle:compiler:$aacLifecycleExtVersion"
