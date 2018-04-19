@@ -16,9 +16,10 @@ import com.udacity.exploreindia.helper.PrefManager;
 
 public class WelcomeActivity extends AppCompatActivity {
 
-    TextView tvTest;
-    PrefManager prefManager;
-    Context context = this;
+    private TextView tvTest;
+    private PrefManager prefManager;
+    private Context context = this;
+    private int REQUEST_LOCATION=1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,14 +47,14 @@ public class WelcomeActivity extends AppCompatActivity {
         if ( grant != PackageManager.PERMISSION_GRANTED) {
             String[] permission_list = new String[1];
             permission_list[0] = location_permission;
-            ActivityCompat.requestPermissions(this,permission_list,1);
+            ActivityCompat.requestPermissions(this,permission_list,REQUEST_LOCATION);
             } else {   }
     }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if(requestCode == 1) {
+        if(requestCode == REQUEST_LOCATION) {
             if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 Log.v("Permission", "Permission: " + permissions[0] + "was " + grantResults[0]);
             } else { }
