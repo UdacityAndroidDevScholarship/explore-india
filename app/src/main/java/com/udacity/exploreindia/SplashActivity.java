@@ -8,13 +8,13 @@ import android.os.Bundle;
 
 import com.udacity.exploreindia.helper.PrefManager;
 
-public class SplashActivity extends AppCompatActivity {
-    PrefManager prefManager;
-    Context context = this;
+    public class SplashActivity extends AppCompatActivity {
+        PrefManager prefManager;
+        Context context = this;
 
-    int secondsDelayed = 1;
+        int secondsDelayed = 1;
 
-    @Override
+        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
