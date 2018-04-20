@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Explore India</string>
+    <string name="nav_main_header">Explore India</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
 </resources>
