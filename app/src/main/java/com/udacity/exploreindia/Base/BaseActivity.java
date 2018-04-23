@@ -24,14 +24,14 @@ public abstract class BaseActivity<T extends BaseMvpPresenter, K extends ViewDat
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mPresenter = injectPresenter();
+        mPresenter = PresenterFactory.getPresenter(this);
         mPresenter.attach(this);
         mPresenter.init();
         beforeView(savedInstanceState);
         mDataBinder = DataBindingUtil.setContentView(this, getContentResource());
 
         init(savedInstanceState);
-
+        getPresenter().init();
     }
 
 
@@ -60,7 +60,7 @@ public abstract class BaseActivity<T extends BaseMvpPresenter, K extends ViewDat
 
     protected abstract void init(@Nullable Bundle savedInstanceState);
 
-    protected abstract T injectPresenter();
+
 
     protected abstract void beforeView(@Nullable Bundle savedInstanceState);
 
