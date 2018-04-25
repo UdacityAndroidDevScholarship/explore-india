@@ -10,10 +10,14 @@ public interface SplashContract {
 
     interface Presenter extends BaseMvpPresenter<View>{
 
+
+        void inintCountDown();
+
     }
 
     interface View extends BaseView{
 
+        void moveToNextSScreen();
     }
 }
 

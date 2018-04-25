@@ -28,4 +28,9 @@ public class CloudStorage implements BaseStorage {
         }
         return INSTANCE;
     }
+
+    @Override
+    public void storageUsser() {
+        // TODO: 24-04-2018 CAll API TO STORE
+    }
 }
