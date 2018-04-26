@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Explore India</string>
+
+    <string name="readPrivacy"><u>Read our privacy and policy</u></string>
+
+
 </resources>
