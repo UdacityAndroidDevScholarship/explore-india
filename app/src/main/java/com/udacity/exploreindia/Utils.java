@@ -5,6 +5,12 @@ import android.content.Context;
 
 public class Utils {
 
+    /**
+     * Animation with
+     * Exit current Activity- SlideOut to Left
+     * Entry new Activity- SlideIn from Right
+     * @param context
+     */
     public static void finishEntryAnimation(Context context)
     {
         Activity activity=(Activity)context;
