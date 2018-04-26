@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 public class SplashActivity extends Activity {
 
+
     private Context mContext;
 
     private int mSecondsDelayed = 5000;  // 5 seconds
@@ -25,6 +26,7 @@ public class SplashActivity extends Activity {
     private ImageView imageWomen;
     private TextView title;
     private TextView privacy;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
