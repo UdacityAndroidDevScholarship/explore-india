@@ -1,0 +1,33 @@
+# IDEA
+*.iml
+/.idea
+
+!/.idea/runConfigurations
+
+# Gradle
+.gradle
+/build
+/reports
+
+# Gradle Android
+/local.properties
+/captures
+
+# OSX
+.DS_Store
+
+# Generated files
+bin/
+gen/
+out/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Google Services (e.g. APIs or Firebase)
+google-services.json
+
+# Built application files
+*.apk
+*.ap_
+

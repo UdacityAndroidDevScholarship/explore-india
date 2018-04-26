@@ -1,27 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/transitionsContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    tools:context="com.udacity.exploreindia.SplashActivity">
+    android:background="@drawable/gradient_red_background">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+
+    <ImageView
+        android:id="@+id/imageLeft"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginLeft="-90dp"
+        android:layout_marginTop="-90dp"
+        android:background="@drawable/ic_circular_pattern" />
+
+    <ImageView
+        android:id="@+id/imageRight"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="-90dp"
+        android:layout_marginTop="-90dp"
+        android:background="@drawable/ic_circular_pattern" />
+
+    <RelativeLayout
+        android:id="@+id/frameLogo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:alpha="0">
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyle"
+        <ImageView
+            android:id="@+id/imageWomen"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:foregroundGravity="center" />
+            android:layout_height="200dp"
+            android:src="@drawable/ic_namaste" />
+
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/title"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Please wait..." />
-    </LinearLayout>
-</LinearLayout>
+            android:layout_below="@id/imageWomen"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center_horizontal"
+            android:text="Explore India"
+            android:textColor="#FFFFFF"
+            android:textSize="60sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    <!--
+        <RelativeLayout
+            android:id="@+id/frames2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+             >-->
+    <!--
+
+            <TextView
+                style="@style/MyButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="LOGIN"
+
+                />
+    -->
+
+
+    <!--  <RelativeLayout
+          android:id="@+id/login"
+          android:layout_width="250dp"
+          android:layout_height="55dp"
+          android:layout_centerHorizontal="true"
+          android:layout_centerVertical="true"
+          android:alpha="0"
+          android:animateLayoutChanges="true"
+          android:background="@drawable/rect_curved_shape"
+          android:paddingLeft="8dp"
+          android:paddingRight="8dp">
+
+          <EditText
+              android:id="@+id/editPhone"
+              style="@style/MyEdit"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_centerHorizontal="true"
+              android:layout_centerVertical="true"
+              android:background="@drawable/edittextdrawable_white"
+              android:drawableLeft="@drawable/ic_phone_android_black_24dp"
+              android:drawableRight="@drawable/ic_tick_inside_circle"
+              android:gravity="center_horizontal|center_vertical"
+              android:inputType="number"
+              android:hint="Enter mobile number"
+              android:maxLength="10"
+              android:textSize="16sp"
+              android:textColor="@color/white"
+              android:textColorHint="#d9d9d9"
+              android:textCursorDrawable="@color/white" />
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:id="@+id/line"
+          android:layout_width="match_parent"
+          android:layout_height="35dp"
+          android:layout_below="@id/login"
+          android:layout_marginTop="20dp"
+          android:alpha="0"
+          android:animateLayoutChanges="true"
+          android:gravity="center_vertical">
+
+          <View
+              android:layout_width="100dp"
+              android:layout_height="1dp"
+              android:layout_centerVertical="true"
+              android:layout_toLeftOf="@id/txtor"
+              android:background="@color/white" />
+
+          <TextView
+              android:id="@+id/txtor"
+              android:layout_width="50dp"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:layout_centerVertical="true"
+              android:gravity="center_vertical|center_horizontal"
+              android:text="OR"
+              android:textColor="@color/white"
+              android:textSize="16sp" />
+
+          <View
+              android:layout_width="100dp"
+              android:layout_height="1dp"
+              android:layout_centerVertical="true"
+              android:layout_toRightOf="@id/txtor"
+              android:background="@color/white" />
+
+      </RelativeLayout>
+  -->
+    <!--
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/line"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:alpha="0"
+            android:animateLayoutChanges="true"
+            app:buttonSize="wide" />
+    -->
+
+
+    <!--   <ImageView
+           android:layout_width="80dp"
+           android:layout_height="80dp"
+           android:layout_centerHorizontal="true"
+           android:src="@drawable/google2" />-->
+    <!-- </RelativeLayout>-->
+
+    <TextView
+        android:id="@+id/privacy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/readPrivacy"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
+</RelativeLayout>
