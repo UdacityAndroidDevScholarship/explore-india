@@ -11,7 +11,7 @@ import com.udacity.exploreindia.helper.SharedPrefManager;
 /**
  * Created by Kautilya on 24-04-2018.
  */
-public class SplashPresenter extends BasePresenter<SplashContract.View> {
+public class SplashPresenter extends BasePresenter<SplashContract.View> implements SplashContract.Presenter {
 
     int secondsDelayed = 1;
 
@@ -21,11 +21,17 @@ public class SplashPresenter extends BasePresenter<SplashContract.View> {
 
     @Override
     public void init() {
+
+    }
+
+    @Override
+    public void inintCountDown() {
         if (getSharedPreferences().isFirstTimeLaunch()) {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     // TODO: 24-04-2018 First Time Code
+                    getView().moveToNextSScreen();
                 }
             }, secondsDelayed * 1000);
         } else {

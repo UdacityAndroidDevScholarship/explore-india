@@ -27,4 +27,8 @@ public class BaseRepo implements BaseStorage {
         return INSTANCE;
     }
 
+    @Override
+    public void storageUsser() {
+
+    }
 }

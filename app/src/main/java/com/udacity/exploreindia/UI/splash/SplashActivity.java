@@ -11,7 +11,7 @@ import com.udacity.exploreindia.R;
 import com.udacity.exploreindia.databinding.ActivitySplashBinding;
 import com.udacity.exploreindia.helper.SharedPrefManager;
 
-public class SplashActivity extends BaseActivity< SplashContract.Presenter,ActivitySplashBinding> {
+public class SplashActivity extends BaseActivity< SplashContract.Presenter,ActivitySplashBinding> implements SplashContract.View {
 
 
 
@@ -22,11 +22,16 @@ public class SplashActivity extends BaseActivity< SplashContract.Presenter,Activ
 
     @Override
     protected void init(@Nullable Bundle savedInstanceState) {
-
+            getPresenter().inintCountDown();
     }
 
     @Override
     protected void beforeView(@Nullable Bundle savedInstanceState) {
+
+    }
+
+    @Override
+    public void moveToNextSScreen() {
 
     }
 }
