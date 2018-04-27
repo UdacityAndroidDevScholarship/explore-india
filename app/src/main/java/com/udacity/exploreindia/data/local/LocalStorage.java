@@ -1,6 +1,6 @@
-package com.udacity.exploreindia.data.Basic.local;
+package com.udacity.exploreindia.data.local;
 
-import com.udacity.exploreindia.data.Basic.BaseStorage;
+import com.udacity.exploreindia.data.BaseStorage;
 
 /**
  * Created by Kautilya on 24-04-2018.
@@ -9,7 +9,8 @@ public class LocalStorage implements BaseStorage {
 
     private static LocalStorage INSTANCE;
 
-    private LocalStorage(){}
+    private LocalStorage() {
+    }
 
     public static LocalStorage getInstance() {
         if (INSTANCE == null) {
@@ -22,8 +23,5 @@ public class LocalStorage implements BaseStorage {
         return INSTANCE;
     }
 
-    @Override
-    public void storageUsser() {
-        // TODO: 24-04-2018 Store in the phone data
-    }
+
 }

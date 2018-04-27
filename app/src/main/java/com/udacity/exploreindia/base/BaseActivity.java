@@ -1,13 +1,11 @@
-package com.udacity.exploreindia.Base;
+package com.udacity.exploreindia.base;
 
-import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
 
 
 /**

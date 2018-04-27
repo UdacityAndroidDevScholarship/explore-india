@@ -1,9 +1,9 @@
 package com.udacity.exploreindia.injection;
 
-import com.udacity.exploreindia.data.Basic.BaseRepo;
-import com.udacity.exploreindia.data.Basic.BaseStorage;
-import com.udacity.exploreindia.data.Basic.cloud.CloudStorage;
-import com.udacity.exploreindia.data.Basic.local.LocalStorage;
+import com.udacity.exploreindia.data.BaseRepo;
+import com.udacity.exploreindia.data.BaseStorage;
+import com.udacity.exploreindia.data.cloud.CloudStorage;
+import com.udacity.exploreindia.data.local.LocalStorage;
 import com.udacity.exploreindia.helper.SharedPrefManager;
 
 /**

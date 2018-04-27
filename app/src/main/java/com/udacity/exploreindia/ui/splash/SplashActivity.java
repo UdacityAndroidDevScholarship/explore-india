@@ -1,15 +1,11 @@
-package com.udacity.exploreindia.UI.splash;
+package com.udacity.exploreindia.ui.splash;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.Nullable;
 
-import com.udacity.exploreindia.Base.BaseActivity;
+import com.udacity.exploreindia.base.BaseActivity;
 import com.udacity.exploreindia.R;
 import com.udacity.exploreindia.databinding.ActivitySplashBinding;
-import com.udacity.exploreindia.helper.SharedPrefManager;
 
 public class SplashActivity extends BaseActivity< SplashContract.Presenter,ActivitySplashBinding> implements SplashContract.View {
 
