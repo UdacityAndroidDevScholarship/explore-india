@@ -1,6 +1,7 @@
 package com.udacity.exploreindia.ui.login;
 
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -18,7 +19,8 @@ public class LoginActivity extends BaseActivity<LoginContract.Presenter,Activity
 
     @Override
     protected void init(@Nullable Bundle savedInstanceState) {
-
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
     }
 
     @Override

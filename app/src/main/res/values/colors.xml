@@ -3,4 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="blackText">#000</color>
+    <color name="whiteColor">#FFF</color>
+    <color name="btn_google_login_text_color">#b30909</color>
 </resources>
