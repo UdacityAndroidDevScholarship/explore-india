@@ -1,11 +1,10 @@
-package com.udacity.exploreindia.UI.splash;
+package com.udacity.exploreindia.ui.splash;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Handler;
 
-import com.udacity.exploreindia.Base.BasePresenter;
-import com.udacity.exploreindia.data.Basic.BaseRepo;
+import com.udacity.exploreindia.base.BasePresenter;
+import com.udacity.exploreindia.data.BaseRepo;
 import com.udacity.exploreindia.helper.SharedPrefManager;
 
 /**
