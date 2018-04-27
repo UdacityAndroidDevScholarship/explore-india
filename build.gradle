@@ -14,6 +14,8 @@ buildscript {
         // in the individual module build.gradle files
         classpath 'com.google.gms:google-services:3.2.0'
     }
+
+
     ext.buildConfig = [
             'compileSdk': 27,
             'targetSdk' : 27,
@@ -37,6 +39,12 @@ buildscript {
             'timber'          : '4.7.0',
             'play_services'   : '15.0.0'
     ]
+
+    String versionName = "${buildConfig.version.major}.${buildConfig.version.minor}.${buildConfig.version.patch}"
+
+    ext.buildConfig.version['name'] = versionName
+    ext.buildConfig.version['code'] = buildConfig.version.major * 100000 + buildConfig.version.minor * 10000 + buildConfig.version.patch * 100
+
     ext.deps = [
             'android': [
                     'support': [
@@ -75,6 +83,13 @@ allprojects {
     repositories {
         google()
         jcenter()
+    }
+    configurations.all {
+        resolutionStrategy.eachDependency { details ->
+            if (details.requested.group == 'com.android.support') {
+                details.useVersion versions.supportLibrary
+            }
+        }
     }
 }
 
