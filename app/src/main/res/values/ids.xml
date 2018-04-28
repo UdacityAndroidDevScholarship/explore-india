@@ -136,9 +136,13 @@
     <item name="profile_tv_name" type="id"/>
     <item name="profile_btn_edit_profile" type="id"/>
     <item name="profile_img_profile_image" type="id"/>
+    <item name="profile_tv_city_label" type="id"/>
     <item name="profile_tv_city" type="id"/>
+    <item name="profile_tv_state_label" type="id"/>
     <item name="profile_tv_state" type="id"/>
+    <item name="profile_tv_number_label" type="id"/>
     <item name="profile_tv_number" type="id"/>
+    <item name="profile_tv_age_label" type="id"/>
     <item name="profile_tv_age" type="id"/>
     <item name="profile_rv_places" type="id"/>
 

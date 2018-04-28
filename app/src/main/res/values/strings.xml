@@ -3,4 +3,28 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- String resources for Profile Page Layout -->
+
+    <string name="profile_name">\@vvklingayat</string>
+    <string name="content_description">Your Profile Image</string>
+
+    <string name="edit_profile">Edit Profile</string>
+
+    <string name="city_label">City :</string>
+    <string name="city">Mumbai</string>
+
+    <string name="state_label">State :</string>
+    <string name="state">Maharashtra</string>
+
+    <string name="number_label">Mobile :</string>
+    <string name="number">8879495775</string>
+
+    <string name="age_label">Age :</string>
+    <string name="age">24</string>
+
+    <string name="my_places_label">My Places</string>
+
+    <!-- End of String resources for Profile Page Layout -->
+
 </resources>
