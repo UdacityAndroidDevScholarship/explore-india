@@ -5,21 +5,19 @@
 
     </data>
 
-    <android.support.constraint.ConstraintLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/login_page_bg"
-        tools:context=".ui.login.LoginActivity">
 
         <ScrollView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            tools:context=".ui.login.LoginActivity"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
+            android:layout_height="match_parent"
+            android:background="@drawable/login_page_bg"
+            >
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+           >
 
                 <TextView
                     android:id="@+id/tv_app_title"
@@ -147,8 +145,7 @@
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
             </android.support.constraint.ConstraintLayout>
         </ScrollView>
-    </android.support.constraint.ConstraintLayout>
+
 </layout>

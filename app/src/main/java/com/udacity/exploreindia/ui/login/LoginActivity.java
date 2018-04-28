@@ -19,8 +19,7 @@ public class LoginActivity extends BaseActivity<LoginContract.Presenter,Activity
 
     @Override
     protected void init(@Nullable Bundle savedInstanceState) {
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+
     }
 
     @Override
