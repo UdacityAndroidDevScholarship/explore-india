@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
 
     </data>
 
 
-        <ScrollView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
-            tools:context=".ui.login.LoginActivity"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/login_page_bg"
-            >
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-           >
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:context=".ui.login.LoginActivity"
+                android:background="@drawable/login_page_bg">
 
                 <TextView
-                    android:id="@+id/tv_app_title"
+                    android:id="@+id/login_tv_app_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="80dp"
@@ -33,7 +28,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <EditText
-                    android:id="@+id/et_phone_no_input"
+                    android:id="@+id/login_et_name"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="32dp"
@@ -49,10 +44,10 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.503"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_app_title" />
+                    app:layout_constraintTop_toBottomOf="@id/login_tv_app_title" />
 
                 <Button
-                    android:id="@+id/btn_phone_signin"
+                    android:id="@+id/login_btn_proceed"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="80dp"
@@ -66,7 +61,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/et_phone_no_input" />
+                    app:layout_constraintTop_toBottomOf="@id/login_et_name" />
 
                 <LinearLayout
                     android:id="@+id/linearLayout"
@@ -78,10 +73,10 @@
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/btn_phone_signin">
+                    app:layout_constraintTop_toBottomOf="@id/login_btn_proceed">
 
                     <View
-                        android:id="@+id/view"
+                        android:id="@+id/login_left_divider"
                         android:layout_width="100dp"
                         android:layout_height="3dp"
                         android:layout_gravity="center"
@@ -91,12 +86,12 @@
                         android:layout_marginStart="24dp"
                         android:layout_weight="1"
                         android:background="@android:color/white"
-                        app:layout_constraintEnd_toStartOf="@+id/tv_label_or"
+                        app:layout_constraintEnd_toStartOf="@id/login_tv_label_or"
                         app:layout_constraintStart_toStartOf="parent"
                         tools:layout_editor_absoluteY="354dp" />
 
                     <TextView
-                        android:id="@+id/tv_label_or"
+                        android:id="@+id/login_tv_label_or"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="2dp"
@@ -105,11 +100,11 @@
                         android:textColor="@android:color/white"
                         android:textSize="24sp"
                         android:textStyle="bold"
-                        app:layout_constraintStart_toEndOf="@+id/view"
-                        app:layout_constraintTop_toBottomOf="@+id/et_phone_no_input" />
+                        app:layout_constraintStart_toEndOf="login_right_divider"
+                        app:layout_constraintTop_toBottomOf="@id/login_btn_proceed" />
 
                     <View
-                        android:id="@+id/view2"
+                        android:id="@+id/login_right_divider"
                         android:layout_width="100dp"
                         android:layout_height="3dp"
                         android:layout_gravity="center"
@@ -119,14 +114,14 @@
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
                         android:background="@android:color/white"
-                        app:layout_constraintEnd_toStartOf="@+id/tv_label_or"
+                        app:layout_constraintEnd_toStartOf="@id/login_tv_label_or"
                         app:layout_constraintStart_toStartOf="parent"
                         tools:layout_editor_absoluteY="354dp" />
 
                 </LinearLayout>
 
                 <Button
-                    android:id="@+id/btn_google_signin"
+                    android:id="@+id/login_btn_signin_google_plus"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
@@ -144,8 +139,7 @@
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+                    app:layout_constraintTop_toBottomOf="@id/linearLayout" />
             </android.support.constraint.ConstraintLayout>
-        </ScrollView>
 
 </layout>
