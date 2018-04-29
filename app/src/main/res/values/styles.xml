@@ -7,5 +7,10 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    
+    <!-- CardView Style -->
+    <style name="CardViewStyle" parent="CardView">
+        <item name="cardElevation">4dp</item>
+    </style>
 
 </resources>

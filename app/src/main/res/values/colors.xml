@@ -4,7 +4,17 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <!-- Color resource for all TextViews -->
+    <!-- Color resources for User Detail UI -->
 
-    <color name="textColor">#BF360C</color>
+        <!-- Color resource for TextViews -->
+        <color name="textColor">#BF360C</color>
+
+        <!-- Color resource for margins -->
+        <color name="marginColor">#BBB7B7</color>
+
+        <!-- Color resource for RecyclerView item -->
+        <color name="textColorRecyclerView">#FFFFFF</color>
+
+    <!-- End of Color resources for User Detail UI -->
+
 </resources>
