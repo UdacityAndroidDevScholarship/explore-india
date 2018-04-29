@@ -179,7 +179,6 @@
                 android:focusable="true"
                 app:backgroundTint="#D6D2D2"
                 app:borderWidth="0dp"
-                app:fab_showShadow="true"
                 app:layout_constraintBottom_toBottomOf="@id/marginView2"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="@id/marginView2"
