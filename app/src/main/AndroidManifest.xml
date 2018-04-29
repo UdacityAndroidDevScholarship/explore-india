@@ -13,8 +13,10 @@
 
         <activity android:name=".UI.splash.SplashActivity">
 
-        </activity>
 
+        </activity>
+        <activity android:name=".ui.login.LoginActivity" />
+        <activity android:name=".ui.home.HomeActivity"></activity>
     </application>
 
 </manifest>

@@ -1,9 +1,9 @@
-package com.udacity.exploreindia.Base;
+package com.udacity.exploreindia.base;
 
 
 import android.content.Context;
 
-import com.udacity.exploreindia.data.Basic.BaseRepo;
+import com.udacity.exploreindia.data.BaseRepo;
 import com.udacity.exploreindia.helper.SharedPrefManager;
 
 /**

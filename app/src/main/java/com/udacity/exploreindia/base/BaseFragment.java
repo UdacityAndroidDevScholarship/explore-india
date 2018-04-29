@@ -1,4 +1,4 @@
-package com.udacity.exploreindia.Base;
+package com.udacity.exploreindia.base;
 
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
@@ -37,7 +37,7 @@ public abstract class BaseFragment<T extends BaseMvpPresenter, K extends ViewDat
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mPresenter = injectPresenter();
+        mPresenter = PresenterFactory.getPresenter(this);
         mPresenter.attach(this);
         init(view, savedInstanceState);
     }
@@ -68,8 +68,6 @@ public abstract class BaseFragment<T extends BaseMvpPresenter, K extends ViewDat
 
     protected abstract void init(View view, @Nullable Bundle savedInstanceState);
 
-
-    protected abstract T injectPresenter();
 
     void displayText(String message) {
         Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();

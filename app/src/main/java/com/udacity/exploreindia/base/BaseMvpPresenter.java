@@ -1,4 +1,4 @@
-package com.udacity.exploreindia.Base;
+package com.udacity.exploreindia.base;
 
 /**
  * Created by kautilya on 09-12-2017.
