@@ -70,7 +70,7 @@
         app:srcCompat="@drawable/ic_navigation_red_24dp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@id/places_details_tv_place_description"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
