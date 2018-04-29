@@ -235,6 +235,7 @@
     <item name="places_details_btn_favourite" type="id"/>
     <item name="places_details_btn_map_location" type="id"/>
     <item name="places_details_tv_place_description" type="id"/>
+    <item name="places_details_ll_dots_indicator" type="id"/>
 
     <!-- End of places details layout -->
 
