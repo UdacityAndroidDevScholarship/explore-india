@@ -28,7 +28,7 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/profile_tv_name"
+                        android:id="@id/profile_tv_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
@@ -37,7 +37,7 @@
                         android:textSize="24sp" />
 
                     <TextView
-                        android:id="@+id/profile_btn_edit_profile"
+                        android:id="@id/profile_btn_edit_profile"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
@@ -62,48 +62,48 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/profile_img_profile_image"
+                        android:id="@id/profile_img_profile_image"
                         android:layout_width="136dp"
                         android:layout_height="136dp"
                         android:layout_marginRight="16dp" />
 
                     <TextView
-                        android:id="@+id/profile_tv_city"
+                        android:id="@id/profile_tv_city"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
                         android:layout_marginBottom="8dp"
-                        android:layout_toRightOf="@+id/profile_img_profile_image"
+                        android:layout_toRightOf="@id/profile_img_profile_image"
                         android:textColor="@color/colorPrimary"
                         android:textSize="20sp" />
 
                     <TextView
-                        android:id="@+id/profile_tv_state"
+                        android:id="@id/profile_tv_state"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/profile_tv_city"
+                        android:layout_below="@id/profile_tv_city"
                         android:layout_marginBottom="8dp"
-                        android:layout_toRightOf="@+id/profile_img_profile_image"
+                        android:layout_toRightOf="@id/profile_img_profile_image"
                         android:textColor="@color/colorPrimary"
                         android:textSize="20sp" />
 
                     <TextView
-                        android:id="@+id/profile_tv_number"
+                        android:id="@id/profile_tv_number"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/profile_tv_state"
+                        android:layout_below="@id/profile_tv_state"
                         android:layout_marginBottom="8dp"
-                        android:layout_toRightOf="@+id/profile_img_profile_image"
+                        android:layout_toRightOf="@id/profile_img_profile_image"
                         android:textColor="@color/colorPrimary"
                         android:textSize="20sp" />
 
                     <TextView
-                        android:id="@+id/profile_tv_age"
+                        android:id="@id/profile_tv_age"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/profile_tv_number"
+                        android:layout_below="@id/profile_tv_number"
                         android:layout_marginBottom="8dp"
-                        android:layout_toRightOf="@+id/profile_img_profile_image"
+                        android:layout_toRightOf="@id/profile_img_profile_image"
                         android:textColor="@color/colorPrimary"
                         android:textSize="20sp" />
 
@@ -135,7 +135,7 @@
                 app:contentPadding="16dp">
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/profile_rv_places"
+                    android:id="@id/profile_rv_places"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
