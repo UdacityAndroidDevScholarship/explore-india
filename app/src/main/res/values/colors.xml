@@ -15,6 +15,9 @@
         <!-- Color resource for RecyclerView item -->
         <color name="textColorRecyclerView">#FFFFFF</color>
 
+        <!-- Color resource for background -->
+        <color name="backgroundColor">#F1F1F1</color>
+
     <!-- End of Color resources for User Detail UI -->
 
 </resources>

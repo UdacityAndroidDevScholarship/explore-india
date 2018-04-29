@@ -9,6 +9,7 @@ android {
         versionCode buildConfig.version.code
         versionName buildConfig.version.name
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
 
     dataBinding {
@@ -46,6 +47,8 @@ dependencies {
     implementation 'com.android.support:support-v4:27.1.1'
     implementation 'com.android.support:cardview-v7:27.1.1'
     implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.github.clans:fab:1.6.4'
     testImplementation deps.junit
 
     androidTestImplementation deps.android.support.test.runner
