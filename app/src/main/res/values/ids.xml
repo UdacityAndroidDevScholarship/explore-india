@@ -40,9 +40,12 @@
                This ids are created in accordance with final UI mocks. Refer the UI mock.-->
 
     <!-- Login Layout -->
-
+    <item name="login_tv_app_title" type="id" />
     <item name="login_et_mobile_no" type="id" />
     <item name="login_btn_proceed" type="id" />
+    <item name="login_left_divider" type="id" />
+    <item name="login_right_divider" type="id" />
+    <item name="login_tv_label_or" type="id" />
     <item name="login_btn_signin_google_plus" type="id" />
 
     <!-- End of Login Layout -->
@@ -177,7 +180,6 @@
     <item name="single_state_vp_cities_places" type="id"/>
 
     <item name="state_rv_places" type="id"/>
-    
         <!-- single state places list layout -->
         <item name="state_place_list_img_place" type="id"/>
         <item name="state_place_list_tv_name" type="id"/>
@@ -198,7 +200,7 @@
             <!-- state city list recyclerview layout -->
             <item name="city_list_rv_img_images" type="id"/>
             <item name="city_list_rv_tv_name" type="id"/>
-
+  
             <!-- End of state city list recyclerview layout -->
 
         <!-- End of single state cities list layout -->

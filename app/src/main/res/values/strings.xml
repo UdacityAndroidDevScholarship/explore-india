@@ -3,6 +3,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <!--Places Details Strings-->
     <string name="taj_mahal">Taj Mahal</string>
     <string name="dummy_place_description">The Taj Mahal was commissioned by Shah Jahan in 1631, to be built in the memory of his wife Mumtaz Mahal, a Persian princess who died giving birth to their 14th child, Gauhara Begum.[6] Construction of the Taj Mahal began in 1632.[7] The imperial court documenting Shah Jahan\'s grief after the death of Mumtaz Mahal illustrate the love story held as the inspiration for Taj Mahal.[8][9] The principal mausoleum was completed in 1643 and the surrounding buildings and garden were finished about five years later.[10].
@@ -10,4 +11,13 @@
     <string name="places_details_btn_share">Place details share button</string>
     <string name="places_details_btn_favourite">Places details favourite button</string>
     <string name="places_details_btn_map_location">Places details map location button</string>
+
+
+    <!--Login Screen Strings-->
+    <string name="login_tv_app_title">Explore India</string>
+    <string name="login_et_phone_no_hint">  +91    Mobile No.</string>
+    <string name="login_btn_proceed_label">Proceed</string>
+    <string name="login_tv_or_label">Or</string>
+    <string name="login_btn_google_login">Sign in with google plus</string>
+
 </resources>
