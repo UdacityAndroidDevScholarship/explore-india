@@ -177,11 +177,11 @@
                 android:clickable="true"
                 android:elevation="6dp"
                 android:focusable="true"
-                app:backgroundTint="#D6D2D2"
+                app:backgroundTint="@color/fabColor"
                 app:borderWidth="0dp"
-                app:layout_constraintBottom_toBottomOf="@id/marginView2"
+                app:layout_constraintBottom_toTopOf="@+id/marginView2"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="@id/marginView2"
+                app:layout_constraintTop_toBottomOf="@+id/marginView2"
                 app:srcCompat="@drawable/ic_edit_black_24dp" />
 
             <!-- Second partition line -->

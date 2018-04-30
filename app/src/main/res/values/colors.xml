@@ -18,6 +18,9 @@
         <!-- Color resource for background -->
         <color name="backgroundColor">#F1F1F1</color>
 
+        <!-- Color resource for backgroundTint of FAB -->
+        <color name="fabColor">#D6D2D2</color>
+
     <!-- End of Color resources for User Detail UI -->
 
 </resources>
