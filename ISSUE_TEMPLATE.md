@@ -1,20 +1,26 @@
-## Description
-As a [USER],
-I need [TO DO THIS],
-so that I can [ACCOMPLISH THAT].
+**Summary:**
 
-## Mocks
-[INSERT RELEVANT PNG FILE]
+Summarize your issue in one sentence (what goes wrong, what did you expect to happen).
 
-## Acceptance Criteria
-### Update [Required]
-- [ ] [LIST ITEMS]
-### Enhancement to Update [Optional]
-- [ ] [LIST ITEMS]
+**Steps to reproduce:**
 
-## Definition of Done
-- [ ] All of the required items are completed.
-- [ ] Approval by 1 moderator.
+How can we reproduce the issue?
 
-## Estimation
-[INSERT NUMBER HERE] hours 
+**Expected behaviour:**
+
+What did you expect the app to do?
+
+**Observed behaviour:**
+
+What did you see instead?  Describe your issue in detail here.
+
+**Device and Android version:**
+
+What make and model device (e.g., Samsung Galaxy S3) did you encounter this on?  What Android
+version (e.g., Android 4.0 Ice Cream Sandwich or Android 6.0 Marshmallow) are you running?  Is it
+ the stock
+version from the manufacturer or a custom ROM?
+
+**Screenshots:**
+
+Can be created by pressing the Volume Down and Power Button at the same time on Android 4.0 and higher.

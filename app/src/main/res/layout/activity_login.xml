@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:context=".ui.login.LoginActivity"
+                android:background="@drawable/login_page_bg">
+
+                <TextView
+                    android:id="@id/login_tv_app_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:fontFamily="@font/grandhotel_regular"
+                    android:text="@string/login_tv_app_title"
+                    android:textColor="@android:color/white"
+                    android:textSize="48sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@id/login_et_mobile_no"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="64dp"
+                    android:background="@android:color/white"
+                    android:drawableLeft="@drawable/ic_phone"
+                    android:drawableStart="@drawable/ic_phone"
+                    android:ems="10"
+                    android:hint="@string/login_et_phone_no_hint"
+                    android:inputType="phone|number"
+                    android:padding="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.503"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/login_tv_app_title" />
+
+                <Button
+                    android:id="@id/login_btn_proceed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="80dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/btn_background_solid"
+                    android:padding="10dp"
+                    android:text="@string/login_btn_proceed_label"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/login_et_mobile_no" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="42dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/login_btn_proceed">
+
+                    <View
+                        android:id="@id/login_left_divider"
+                        android:layout_width="100dp"
+                        android:layout_height="3dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        app:layout_constraintEnd_toStartOf="@id/login_tv_label_or"
+                        app:layout_constraintStart_toStartOf="parent"
+                        />
+
+                    <TextView
+                        android:id="@id/login_tv_label_or"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text="@string/login_tv_or_label"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/login_right_divider"
+                        app:layout_constraintTop_toBottomOf="@id/login_btn_proceed" />
+
+                    <View
+                        android:id="@id/login_right_divider"
+                        android:layout_width="100dp"
+                        android:layout_height="3dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        app:layout_constraintEnd_toStartOf="@id/login_tv_label_or"
+                        app:layout_constraintStart_toStartOf="parent"
+                         />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@id/login_btn_signin_google_plus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@android:color/white"
+                    android:padding="10dp"
+                    android:text="@string/login_btn_google_login"
+                    android:textColor="@color/btn_google_login_text_color"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/linearLayout" />
+            </android.support.constraint.ConstraintLayout>
+
+</layout>

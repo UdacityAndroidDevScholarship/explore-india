@@ -41,9 +41,13 @@ If you need any help, please contact us on slack at channel #cp_explore_india
 5. Name the branch something like `fixes-xxx-issue` or `add-xxx-feature` where `xxx` is a short description of the changes or feature you are adding.
 6. Once your code is ready, submit a pull request from your branch to Explore India's `master` branch. We'll do a quick review and give you feedback.
 
+## Note: 
+Please refer `ids.xml` file to assign ids to the views that you have created in your layout. Don't make changes to the ids.xml layout unless extremely required. If you are adding new ids to `ids.xml`, please add it in the appropriate layout section in `ids.xml` by following the naming convention. Also, take approval from mods or co-mods incase new ids has to be included or existing one has to be updated. Thank You.
+
 [0]: https://github.com/UdacityAndroidDevScholarship/explore-india/issues
 [1]: https://github.com/UdacityAndroidDevScholarship/explore-india/issues/new
 [3]: https://help.github.com/articles/fork-a-repo/
 [4]: https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches
 [5]: https://goo.gl/forms/qleWaOqtXTBtCRwJ3
 [6]: https://docs.google.com/spreadsheets/d/1ebKK1k8t78_CnDc_JjkvYh-lzVaY83CUSXyxPzll3qI/edit?usp=sharing
+
