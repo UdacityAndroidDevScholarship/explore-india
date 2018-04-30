@@ -15,7 +15,7 @@
                 android:background="@drawable/login_page_bg">
 
                 <TextView
-                    android:id="@+id/login_tv_app_title"
+                    android:id="@id/login_tv_app_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="80dp"
@@ -28,7 +28,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <EditText
-                    android:id="@+id/login_et_name"
+                    android:id="@id/login_et_mobile_no"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="32dp"
@@ -47,7 +47,7 @@
                     app:layout_constraintTop_toBottomOf="@id/login_tv_app_title" />
 
                 <Button
-                    android:id="@+id/login_btn_proceed"
+                    android:id="@id/login_btn_proceed"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="80dp"
@@ -61,7 +61,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/login_et_name" />
+                    app:layout_constraintTop_toBottomOf="@id/login_et_mobile_no" />
 
                 <LinearLayout
                     android:id="@+id/linearLayout"
@@ -76,7 +76,7 @@
                     app:layout_constraintTop_toBottomOf="@id/login_btn_proceed">
 
                     <View
-                        android:id="@+id/login_left_divider"
+                        android:id="@id/login_left_divider"
                         android:layout_width="100dp"
                         android:layout_height="3dp"
                         android:layout_gravity="center"
@@ -88,10 +88,10 @@
                         android:background="@android:color/white"
                         app:layout_constraintEnd_toStartOf="@id/login_tv_label_or"
                         app:layout_constraintStart_toStartOf="parent"
-                        tools:layout_editor_absoluteY="354dp" />
+                        />
 
                     <TextView
-                        android:id="@+id/login_tv_label_or"
+                        android:id="@id/login_tv_label_or"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="2dp"
@@ -100,11 +100,11 @@
                         android:textColor="@android:color/white"
                         android:textSize="24sp"
                         android:textStyle="bold"
-                        app:layout_constraintStart_toEndOf="login_right_divider"
+                        app:layout_constraintStart_toEndOf="@id/login_right_divider"
                         app:layout_constraintTop_toBottomOf="@id/login_btn_proceed" />
 
                     <View
-                        android:id="@+id/login_right_divider"
+                        android:id="@id/login_right_divider"
                         android:layout_width="100dp"
                         android:layout_height="3dp"
                         android:layout_gravity="center"
@@ -116,12 +116,12 @@
                         android:background="@android:color/white"
                         app:layout_constraintEnd_toStartOf="@id/login_tv_label_or"
                         app:layout_constraintStart_toStartOf="parent"
-                        tools:layout_editor_absoluteY="354dp" />
+                         />
 
                 </LinearLayout>
 
                 <Button
-                    android:id="@+id/login_btn_signin_google_plus"
+                    android:id="@id/login_btn_signin_google_plus"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
