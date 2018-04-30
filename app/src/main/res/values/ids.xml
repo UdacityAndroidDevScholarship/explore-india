@@ -228,14 +228,16 @@
 
     <!-- places details layout -->
 
-    <item name="places_details_rv_images" type="id"/>
+    <item name="places_details_vp_images" type="id"/>
 
     <item name="places_details_list_img_images" type="id"/>
     <item name="places_details_btn_share" type="id"/>
     <item name="places_details_btn_favourite" type="id"/>
     <item name="places_details_btn_map_location" type="id"/>
     <item name="places_details_tv_place_description" type="id"/>
-    <item name="places_details_ll_dots_indicator" type="id"/>
+    <item name="places_details_ll_image_dots_indicator" type="id"/>
+    <item name="places_details_ll_text_dots_indicator" type="id"/>
+    <item name="places_details_vp_text" type="id"/>
 
     <!-- End of places details layout -->
 

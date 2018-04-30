@@ -1,88 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
 
-    <android.support.v4.view.ViewPager
-        android:id="@id/places_details_rv_images"
-        android:layout_width="0dp"
-        android:layout_height="168dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    </data>
 
-    <LinearLayout
-        android:id="@id/places_details_ll_dots_indicator"
-        android:layout_width="368dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/places_details_rv_images"/>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@id/places_details_btn_share"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/icon_circle_outline"
-        android:padding="8dp"
-        app:layout_constraintBottom_toTopOf="@id/places_details_btn_favourite"
-        app:layout_constraintEnd_toStartOf="@id/places_details_btn_favourite"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/places_details_btn_favourite"
-        app:srcCompat="@drawable/ic_share_red_24dp" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@id/places_details_btn_favourite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/icon_circle_outline"
-        android:padding="8dp"
-        app:layout_constraintEnd_toStartOf="@id/places_details_btn_map_location"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@id/places_details_btn_share"
-        app:layout_constraintTop_toBottomOf="@id/places_details_ll_dots_indicator"
-        app:srcCompat="@drawable/ic_heart_outline_red" />
+            <android.support.v4.view.ViewPager
+                android:id="@id/places_details_vp_images"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/image_slider_height"
+                android:layout_marginTop="@dimen/margin_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@id/places_details_btn_map_location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/icon_circle_outline"
-        android:padding="8dp"
-        app:layout_constraintBottom_toTopOf="@id/places_details_btn_favourite"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@id/places_details_btn_favourite"
-        app:layout_constraintTop_toBottomOf="@id/places_details_btn_favourite"
-        app:srcCompat="@drawable/ic_navigation_red_24dp" />
+            <LinearLayout
+                android:id="@id/places_details_ll_image_dots_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/places_details_vp_images" />
 
-    <TextView
-        android:id="@id/places_details_tv_place_description"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/places_details_btn_favourite"
-        tools:text="@sample/tools:lorem/random" />
+            <ImageButton
+                android:id="@id/places_details_btn_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_circle_outline"
+                android:padding="@dimen/margin_medium"
+                android:contentDescription="@string/places_details_btn_share"
+                app:layout_constraintBottom_toTopOf="@id/places_details_btn_favourite"
+                app:layout_constraintEnd_toStartOf="@id/places_details_btn_favourite"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/places_details_btn_favourite"
+                app:srcCompat="@drawable/ic_share_red_24dp" />
 
-</android.support.constraint.ConstraintLayout>
+            <ImageButton
+                android:id="@id/places_details_btn_favourite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                android:background="@drawable/icon_circle_outline"
+                android:padding="@dimen/margin_medium"
+                android:contentDescription="@string/places_details_btn_favourite"
+                app:layout_constraintEnd_toStartOf="@id/places_details_btn_map_location"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/places_details_btn_share"
+                app:layout_constraintTop_toBottomOf="@id/places_details_ll_image_dots_indicator"
+                app:srcCompat="@drawable/ic_heart_outline_red" />
+
+            <ImageButton
+                android:id="@id/places_details_btn_map_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_circle_outline"
+                android:padding="@dimen/margin_medium"
+                android:contentDescription="@string/places_details_btn_map_location"
+                app:layout_constraintBottom_toTopOf="@id/places_details_btn_favourite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/places_details_btn_favourite"
+                app:layout_constraintTop_toBottomOf="@id/places_details_btn_favourite"
+                app:srcCompat="@drawable/ic_navigation_red_24dp" />
+
+                <TextView
+                    android:id="@id/places_details_tv_place_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:layout_marginEnd="@dimen/margin_large"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:layout_marginRight="@dimen/margin_large"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/places_details_btn_favourite"/>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+</layout>
