@@ -4,6 +4,13 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!--Login Screen Strings-->
+    <string name="login_tv_app_title">Explore India</string>
+    <string name="login_et_phone_no_hint">  +91    Mobile No.</string>
+    <string name="login_btn_proceed_label">Proceed</string>
+    <string name="login_tv_or_label">Or</string>
+    <string name="login_btn_google_login">Sign in with google plus</string>
+
     <!-- String resources for Profile Page Layout -->
 
     <string name="profile_name">\@vvklingayat</string>
@@ -24,18 +31,18 @@
     <string name="age">24</string>
 
     <string name="my_places_label">My Places</string>
-    
+
         <!-- String resources for RecyclerView item -->
 
         <string name="content_description_place">Image of place</string>
         <string name="content_description_place_detail">Details of place</string>
-        
+
         <string name="place_name_label">Places :</string>
         <string name="place_name">Bandstand</string>
-    
+
         <string name="state_name_label">State :</string>
         <string name="state_name">Maharashtra</string>
-    
+
         <string name="city_name_label">City :</string>
         <string name="city_name">Mumbai</string>
 
