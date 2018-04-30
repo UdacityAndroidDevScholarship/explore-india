@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Explore India</string>
+    <string name="app_tb_title">Taj Mahal</string>
+    <string name="places_details_btn_share">Share</string>
+    <string name="places_details_btn_favourite">Favourite</string>
+    <string name="places_details_btn_map_location">Map Location</string>
 </resources>
