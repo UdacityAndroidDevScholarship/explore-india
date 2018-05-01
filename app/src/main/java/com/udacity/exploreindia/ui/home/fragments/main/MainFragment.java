@@ -112,9 +112,9 @@ public class MainFragment extends BaseFragment<MainContract.Presenter,FragmentMa
         rv_my_loctions.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayout.VERTICAL));
         rv_my_loctions.setAdapter(new MyLocationsRVAdapter(context, list_my_loctions));
 
-        slider_image_list.add(R.drawable.gateway_of_india);
-        slider_image_list.add(R.drawable.gateway_of_india);
-        slider_image_list.add(R.drawable.gateway_of_india);
+        slider_image_list.add(R.drawable.gateway_of_india_strech);
+        slider_image_list.add(R.drawable.gateway_of_india_strech);
+        slider_image_list.add(R.drawable.gateway_of_india_strech);
 
 
         sliderPagerAdapter = new SliderPagerAdapter(context, slider_image_list);
