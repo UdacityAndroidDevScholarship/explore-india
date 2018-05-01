@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         tools:context=".ui.home.HomeActivity">
 
-        <android.support.design.widget.AppBarLayout
+        <!--<android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
@@ -28,7 +28,7 @@
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
             </android.support.v7.widget.Toolbar>
-        </android.support.design.widget.AppBarLayout>
+        </android.support.design.widget.AppBarLayout>-->
 
         <LinearLayout
             android:layout_width="match_parent"

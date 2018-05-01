@@ -6,7 +6,6 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.udacity.exploreindia.R;
@@ -38,8 +37,6 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
 
     private void init() {
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
