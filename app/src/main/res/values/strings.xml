@@ -3,4 +3,21 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Login Screen Strings-->
+    <string name="login_tv_app_title">Explore India</string>
+    <string name="login_et_phone_no_hint">  +91    Mobile No.</string>
+    <string name="login_btn_proceed_label">Proceed</string>
+    <string name="login_tv_or_label">Or</string>
+    <string name="login_btn_google_login">Sign in with google plus</string>
+
+    <!--Add Place strings-->
+    <string name="place_fragment_title">Add Place</string>
+    <string name="add_img_button_description">Add an image</string>
+    <string name="place_edittext_hint">Place Title</string>
+    <string name="tags_edittext_hint">Tags</string>
+    <string name="desctiption_edittext_hint">Description</string>
+    <string name="location_edittext_hint">Location</string>
+    <string name="submit_button_string">Submit</string>
+
 </resources>
