@@ -19,5 +19,4 @@
     <string name="desctiption_edittext_hint">Description</string>
     <string name="location_edittext_hint">Location</string>
     <string name="submit_button_string">Submit</string>
-
 </resources>
