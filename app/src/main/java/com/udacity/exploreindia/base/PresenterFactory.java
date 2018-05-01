@@ -23,14 +23,17 @@ public class PresenterFactory {
         S presenter = null;
         if (claxx instanceof MainFragment) {
             presenter = (S) new MainPresenter(InjectionUtils.getSharedPreference(), InjectionUtils.providesDataRepo(), claxx.getContext());
+            return presenter;
         } else if (claxx instanceof PlaceFragment) {
             presenter = (S) new PlacePresenter(InjectionUtils.getSharedPreference(), InjectionUtils.providesDataRepo(), claxx.getContext());
+            return presenter;
         } else if (claxx instanceof UserDetailFragment) {
             presenter = (S) new UserDetailPresenter(InjectionUtils.getSharedPreference(), InjectionUtils.providesDataRepo(), claxx.getContext());
+            return presenter;
         } else {
             throw new IllegalStateException("Activity presenter not supported yet");
         }
-        throw new IllegalStateException("Fragment presenter not supported yet");
+//        throw new IllegalStateException("Fragment presenter not supported yet");
     }
 
     @SuppressWarnings("unchecked")
