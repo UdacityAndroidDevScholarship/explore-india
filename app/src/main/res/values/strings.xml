@@ -19,4 +19,19 @@
     <string name="desctiption_edittext_hint">Description</string>
     <string name="location_edittext_hint">Location</string>
     <string name="submit_button_string">Submit</string>
+
+    <!-- String resources for Liked Places -->
+    
+        <string name="place_title">India Gate</string>
+
+        <string name="content_description_image">Place image</string>
+        <string name="content_description_dark_view">Relevant details</string>
+
+        <string name="total_likes_label">Total Likes :</string>
+        <string name="total_likes">6,231</string>
+    
+        <string name="date_added_label">Date Added :</string>
+        <string name="date_added">12&#8210;03&#8210;18</string>
+
+    <!-- End of String resources for Liked Places -->
 </resources>
