@@ -6,4 +6,9 @@
     <color name="blackText">#000</color>
     <color name="whiteColor">#FFF</color>
     <color name="btn_google_login_text_color">#b30909</color>
+    
+    <color name="colorGray">#D6D2D2</color>
+    <color name="colorDarkGray">#ABABAB</color>
+    <color name="colorLightGray">#F1F1F1</color>
+
 </resources>
