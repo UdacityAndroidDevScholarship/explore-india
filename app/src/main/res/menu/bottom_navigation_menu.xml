@@ -3,27 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/bnv_my_location"
-        android:icon="@drawable/ic_action_search"
+        android:icon="@drawable/ic_explore"
         android:title="My Location"
-        app:showAsAction="always" />
+        app:showAsAction="always|withText|withText" />
     <item
         android:id="@+id/bnv_search"
-        android:icon="@drawable/ic_action_search"
+        android:icon="@drawable/ic_search"
         android:title="Search"
-        app:showAsAction="always" />
+        app:showAsAction="always|withText" />
     <item
         android:id="@+id/bnv_add"
-        android:icon="@drawable/ic_action_search"
+        android:icon="@drawable/ic_add_box"
         android:title="Add"
-        app:showAsAction="always" />
+        app:showAsAction="always|withText" />
     <item
         android:id="@+id/bnv_favorite"
-        android:icon="@drawable/ic_action_search"
+        android:icon="@drawable/ic_favorite_border"
         android:title="Favorite"
-        app:showAsAction="always" />
+        app:showAsAction="always|withText" />
     <item
         android:id="@+id/bnv_profile"
-        android:icon="@drawable/ic_action_search"
+        android:icon="@drawable/ic_account_circle"
         android:title="Profile"
-        app:showAsAction="always" />
+        app:showAsAction="always|withText" />
 </menu>
