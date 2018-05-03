@@ -13,7 +13,6 @@ public interface SplashContract {
 
 
         void initCountDown();
-        void setAnimation(ActivitySplashBinding activitySplashBinding, Context context);
 
     }
 
@@ -21,6 +20,7 @@ public interface SplashContract {
 
         void moveToHomeScreen();
         void moveToLoginScreen();
+        void setAnimation();
 
     }
 }

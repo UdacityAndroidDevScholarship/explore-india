@@ -2,7 +2,9 @@
 <layout>
 
     <data>
-
+        <variable
+            name="presenter"
+            type="com.udacity.exploreindia.ui.splash.SplashPresenter"/>
     </data>
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
