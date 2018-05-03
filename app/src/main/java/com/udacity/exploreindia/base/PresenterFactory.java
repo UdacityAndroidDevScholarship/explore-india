@@ -9,6 +9,7 @@ import com.udacity.exploreindia.ui.home.fragments.place.PlaceFragment;
 import com.udacity.exploreindia.ui.home.fragments.place.PlacePresenter;
 import com.udacity.exploreindia.ui.home.fragments.profile.UserDetailFragment;
 import com.udacity.exploreindia.ui.home.fragments.profile.UserDetailPresenter;
+import com.udacity.exploreindia.ui.home.fragments.search.SearchFragment;
 import com.udacity.exploreindia.ui.login.LoginActivity;
 import com.udacity.exploreindia.ui.login.LoginPresenter;
 import com.udacity.exploreindia.ui.splash.SplashActivity;
@@ -30,7 +31,10 @@ public class PresenterFactory {
         } else if (claxx instanceof UserDetailFragment) {
             presenter = (S) new UserDetailPresenter(InjectionUtils.getSharedPreference(), InjectionUtils.providesDataRepo(), claxx.getContext());
             return presenter;
-        } else {
+        } else if (claxx instanceof SearchFragment) {
+            presenter = (S) new UserDetailPresenter(InjectionUtils.getSharedPreference(), InjectionUtils.providesDataRepo(), claxx.getContext());
+            return presenter;
+        }else {
             throw new IllegalStateException("Activity presenter not supported yet");
         }
 //        throw new IllegalStateException("Fragment presenter not supported yet");

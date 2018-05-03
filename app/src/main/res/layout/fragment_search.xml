@@ -8,16 +8,59 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/edittext_padding"
+        android:background="@color/colorPrimary">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_search"
+            android:hint="@string/search_places"
+            android:background="@color/colorPrimaryDark"
+            android:drawableRight="@drawable/ic_search_edt"
+            android:padding="@dimen/recyclerview_padding"/>
+    </LinearLayout>
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:layout_weight="1">
     <TextView android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/popular_cities"
+        android:id="@+id/txt_popular_cities"
+        android:textColor="@color/colorPrimary"
+        android:padding="@dimen/recyclerview_padding"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_popular_cities"
+        android:layout_below="@id/txt_popular_cities"
+        android:padding="@dimen/recyclerview_padding"
+        android:background="@android:color/darker_gray"/>
 </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"></RelativeLayout>
+        android:layout_weight="1">
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="@string/popular_places"
+            android:id="@+id/txt_popular_places"
+            android:textColor="@color/colorPrimary"
+            android:padding="@dimen/recyclerview_padding"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rv_popular_places"
+            android:layout_below="@id/txt_popular_places"
+            android:padding="@dimen/recyclerview_padding"
+            android:background="@android:color/darker_gray"
+            android:textColor="@color/colorPrimary"
+            />
+    </RelativeLayout>
 </LinearLayout>
 </layout>

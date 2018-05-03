@@ -87,4 +87,7 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
         fragmentTransaction.commit();
     }
 
+    public void setActionBarTitle(String title) {
+        getSupportActionBar().setTitle(title);
+    }
 }

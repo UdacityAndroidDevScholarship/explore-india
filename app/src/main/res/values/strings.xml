@@ -19,4 +19,7 @@
     <string name="desctiption_edittext_hint">Description</string>
     <string name="location_edittext_hint">Location</string>
     <string name="submit_button_string">Submit</string>
+    <string name="popular_cities">Popular Cities > </string>
+    <string name="popular_places">Popular Places > </string>
+    <string name="search_places">Search Places</string>
 </resources>
