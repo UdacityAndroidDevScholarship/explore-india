@@ -5,17 +5,142 @@
 
     </data>
 
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.home.fragments.place.PlaceFragment">
 
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+        <!-- Title -->
 
-    </FrameLayout>
+        <TextView
+            android:id="@+id/title_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="12dp"
+            android:text="@string/place_fragment_title"
+            android:textColor="@color/colorPrimary"
+            android:textSize="28sp" />
+
+        <View
+            android:id="@+id/title_separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/title_textView"
+            android:background="@color/colorDarkGray" />
+
+        <!-- Button to add images -->
+
+        <ImageButton
+            android:id="@id/add_place_img_pick_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="32dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/add_place_image_button_background"
+            android:contentDescription="@string/add_img_button_description"
+            android:padding="24dp"
+            android:scaleType="centerInside"
+            android:shadowColor="@color/colorGray"
+            android:src="@drawable/ic_add_a_photo_gray_92dp" />
+
+        <View
+            android:id="@+id/button_separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/add_place_img_pick_image"
+            android:background="@color/colorDarkGray" />
+
+        <!-- To enter place title -->
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@id/add_place_et_title"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_separator">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="@string/place_edittext_hint"
+                android:inputType="textCapWords"
+                android:textSize="22sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- To enter tags -->
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@id/add_place_et_tags"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_separator"
+            android:layout_toEndOf="@id/add_place_et_title"
+            android:layout_toRightOf="@id/add_place_et_title">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="@string/tags_edittext_hint"
+                android:inputType="text"
+                android:textSize="22sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- To enter place description -->
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@id/add_place_et_description"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_place_et_title"
+            android:layout_centerHorizontal="true">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="@string/desctiption_edittext_hint"
+                android:inputType="textCapSentences"
+                android:textSize="20sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- To enter place location -->
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@id/add_place_et_map_coordinates"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_place_et_description"
+            android:layout_centerHorizontal="true">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:hint="@string/location_edittext_hint"
+                android:inputType="text"
+                android:textSize="20sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@id/add_place_btn_submit"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/add_place_et_map_coordinates"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="8dp"
+            android:background="#BF360C"
+            android:text="@string/submit_button_string"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
 </layout>
