@@ -180,6 +180,7 @@
     <item name="single_state_vp_cities_places" type="id"/>
 
     <item name="state_rv_places" type="id"/>
+
         <!-- single state places list layout -->
         <item name="state_place_list_img_place" type="id"/>
         <item name="state_place_list_tv_name" type="id"/>
@@ -208,6 +209,7 @@
     <!-- End of single state layout -->
 
     <!-- state details layout -->
+
     
     <item name="popular_places_rv_names" type="id"/>
     <item name="city_rv_places" type="id"/>
