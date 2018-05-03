@@ -6,10 +6,12 @@ import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.udacity.exploreindia.R;
@@ -29,6 +31,7 @@ public class SearchFragment extends BaseFragment<MainContract.Presenter,Fragment
 
     private RecyclerView rvPopularCities;
     private RecyclerView rvPopularPlaces;
+    private SearchView searchPopularDestinations;
     private ArrayList<SearchModel> lPopularCites;
     private ArrayList<SearchModel> lPopularPlaces;
 
@@ -60,6 +63,9 @@ public class SearchFragment extends BaseFragment<MainContract.Presenter,Fragment
         rvPopularCities = view.findViewById(R.id.rv_popular_cities);
         rvPopularPlaces = view.findViewById(R.id.rv_popular_places);
 
+        searchPopularDestinations = view.findViewById(R.id.edt_search);
+
+
         lPopularCites = new ArrayList<>();
         lPopularPlaces = new ArrayList<>();
 
@@ -81,7 +87,14 @@ public class SearchFragment extends BaseFragment<MainContract.Presenter,Fragment
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        //locationPlaceHolder();
+
+        ImageView searchViewIcon =
+                searchPopularDestinations.findViewById(android.support.v7.appcompat.R.id.search_mag_icon);
+        ViewGroup linearLayoutSearchView =
+                (ViewGroup) searchViewIcon.getParent();
+        linearLayoutSearchView.removeView(searchViewIcon);
+        linearLayoutSearchView.addView(searchViewIcon);
+
         rvPopularCities.setHasFixedSize(true);
         rvPopularCities.setLayoutManager(new StaggeredGridLayoutManager(1, LinearLayout.HORIZONTAL));
         rvPopularCities.setAdapter(new SearchRVAdapter(getActivity(), lPopularCites));

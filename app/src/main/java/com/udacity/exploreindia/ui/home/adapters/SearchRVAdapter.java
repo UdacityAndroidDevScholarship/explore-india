@@ -13,10 +13,6 @@ import com.udacity.exploreindia.ui.home.fragments.search.SearchModel;
 
 import java.util.ArrayList;
 
-/**
- * Created by Divya on 30-04-2018.
- */
-
 public class SearchRVAdapter extends RecyclerView.Adapter<SearchRVAdapter.ViewHolder> {
     private Context context;
     private SearchModel searchModel;
@@ -29,7 +25,7 @@ public class SearchRVAdapter extends RecyclerView.Adapter<SearchRVAdapter.ViewHo
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.cardview_location_layout, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.searchview_location_layout, parent, false);
         return new ViewHolder(view);
     }
 
@@ -38,7 +34,6 @@ public class SearchRVAdapter extends RecyclerView.Adapter<SearchRVAdapter.ViewHo
         searchModel = lPopularDestinations.get(position);
         holder.iv_location.setImageResource(R.drawable.gateway_of_india_small);
         holder.tv_locationName.setText(searchModel.getLoctionName());
-        holder.tv_locationDistance.setText(searchModel.getLocationDistance());
     }
 
 
@@ -49,15 +44,12 @@ public class SearchRVAdapter extends RecyclerView.Adapter<SearchRVAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView iv_location;
-        private TextView tv_locationName, tv_locationDistance;
-        private ImageView isFavorite;
+        private TextView tv_locationName;
 
         public ViewHolder(View itemView) {
             super(itemView);
             iv_location = itemView.findViewById(R.id.my_location_img_places);
             tv_locationName = itemView.findViewById(R.id.loaction_tv_name);
-            tv_locationDistance = itemView.findViewById(R.id.loaction_tv_distance);
-            isFavorite = itemView.findViewById(R.id.loaction_img_favorite);
         }
     }
 

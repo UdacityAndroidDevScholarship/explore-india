@@ -39,7 +39,7 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
     private void init() {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
 
         setBottomNavigation();
     }
