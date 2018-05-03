@@ -10,7 +10,6 @@ android {
         versionName buildConfig.version.name
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-
     dataBinding {
         enabled = true
     }
@@ -20,39 +19,33 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    buildToolsVersion '27.0.3'
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     // Support lib
     implementation deps.android.support.appcompatV7
-
     // Constraint layout
     implementation deps.android.support.constraintLayout
-
     // Firebase Auth
     implementation deps.google.firebase.auth
-
     // Realtime database
     implementation deps.google.firebase.database
-
     // Timber - Logging library
     implementation deps.other.timber
-
     // Fused location
     implementation deps.google.play_services.location
-
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     implementation 'com.android.support:support-v4:27.1.1'
-    implementation 'com.android.support:cardview-v7:27.1.1'
     testImplementation deps.junit
-
     androidTestImplementation deps.android.support.test.runner
     androidTestImplementation deps.android.support.test.espressoCore
-
-    implementation deps.android.support.design
-
     implementation deps.google.play_services.maps
+
+    compile 'com.squareup.picasso:picasso:2.5.0'
+    compile 'com.android.support:cardview-v7:26.1.0'
+    compile 'com.android.support:design:25.0.0'
 }
 
 

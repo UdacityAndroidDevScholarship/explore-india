@@ -12,5 +12,47 @@
         android:layout_height="match_parent"
         tools:context=".ui.home.HomeActivity">
 
+        <!--<android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            >
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:textAlignment="center"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <FrameLayout
+                android:id="@+id/main_dashboard_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <android.support.design.widget.BottomNavigationView
+                android:id="@+id/bottom_navigation_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="#FFFFFF"
+                android:foregroundGravity="center"
+                app:menu="@menu/bottom_navigation_menu">
+
+            </android.support.design.widget.BottomNavigationView>
+        </LinearLayout>
+
     </android.support.constraint.ConstraintLayout>
 </layout>

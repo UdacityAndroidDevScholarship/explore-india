@@ -4,18 +4,40 @@
     <data>
 
     </data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.fragments.main.MainFragment"
+    android:id="@+id/my_location_fragment"
+    android:orientation="vertical">
 
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.home.fragments.main.MainFragment">
-
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
+        android:layout_height="200dp"
+        android:layout_margin="5dp">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_image_slider"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+        <LinearLayout
+            android:id="@+id/ll_dots"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:orientation="horizontal"/>
+    </RelativeLayout>
 
-    </FrameLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_location_rv_places"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp">
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>
 </layout>
