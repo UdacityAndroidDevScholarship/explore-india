@@ -12,6 +12,7 @@ import com.udacity.exploreindia.R;
 import com.udacity.exploreindia.base.BaseActivity;
 import com.udacity.exploreindia.databinding.ActivityHomBinding;
 import com.udacity.exploreindia.ui.home.fragments.main.MainFragment;
+import com.udacity.exploreindia.ui.home.fragments.search.SearchFragment;
 
 public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityHomBinding> implements HomeContract.View {
 
@@ -59,7 +60,7 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
                         break;
 
                     case R.id.bnv_search :
-                        replaceFragment(MainFragment.newInstance(), "Search");
+                        replaceFragment(SearchFragment.newInstance(), "Search");
                         break;
 
                     case R.id.bnv_add :
