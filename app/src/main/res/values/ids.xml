@@ -187,6 +187,13 @@
 
     <!-- End of single state places list layout -->
 
+    <item name="state_rv_places" type="id"/>
+
+        <!-- single state places list layout -->
+        <item name="state_place_list_img_place" type="id"/>
+        <item name="state_place_list_tv_name" type="id"/>
+        <item name="state_place_list_img_favourite" type="id"/>
+
     <!-- single state cities list layout -->
     <item name="state_city_list_vp_places" type="id" />
     <item name="state_city_list_rv_city" type="id" />
