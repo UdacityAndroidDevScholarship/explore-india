@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#bf360c</color>
     <color name="colorPrimaryDark">#860000</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#FFFFFF</color>
     <color name="blackText">#000</color>
     <color name="whiteColor">#FFF</color>
     <color name="btn_google_login_text_color">#b30909</color>
