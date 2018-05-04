@@ -11,7 +11,6 @@ import android.view.MenuItem;
 import com.udacity.exploreindia.R;
 import com.udacity.exploreindia.base.BaseActivity;
 import com.udacity.exploreindia.databinding.ActivityHomBinding;
-import com.udacity.exploreindia.helper.CustomDialog;
 
 public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityHomBinding> implements HomeContract.View {
 
@@ -26,8 +25,7 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
 
     @Override
     protected void init(@Nullable Bundle savedInstanceState) {
-        CustomDialog customDialog=new CustomDialog(this);
-        customDialog.show();
+     
 
         init();
     }
