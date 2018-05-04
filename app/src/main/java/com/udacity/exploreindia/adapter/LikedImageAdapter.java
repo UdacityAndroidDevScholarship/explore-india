@@ -14,7 +14,7 @@ import com.udacity.exploreindia.R;
  * Created by kamalshree on 5/3/2018.
  */
 
-public class LikedImageAdapter extends RecyclerView.Adapter<LikedImageAdapter.WeatherViewHolder> {
+public class LikedImageAdapter extends RecyclerView.Adapter<LikedImageAdapter.ImageViewHolder> {
 
     private final Context mContext;
 
@@ -30,13 +30,13 @@ public class LikedImageAdapter extends RecyclerView.Adapter<LikedImageAdapter.We
     }
 
     @Override
-    public WeatherViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ImageViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(mContext).inflate(R.layout.images_layout, parent, false);
-        return new WeatherViewHolder(view);
+        return new ImageViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(WeatherViewHolder holder, int position) {
+    public void onBindViewHolder(ImageViewHolder holder, int position) {
         holder.liked_images.setImageResource(likedImages[position]);
         holder.place_name.setText(mplace[position]);
         holder.like_val.setText(mlike[position]);
@@ -49,11 +49,11 @@ public class LikedImageAdapter extends RecyclerView.Adapter<LikedImageAdapter.We
     }
 
 
-    protected class WeatherViewHolder extends RecyclerView.ViewHolder {
+    protected class ImageViewHolder extends RecyclerView.ViewHolder {
         ImageView liked_images;
         TextView place_name,like_val,date_val;
 
-        public WeatherViewHolder(View itemView) {
+        public ImageViewHolder(View itemView) {
             super(itemView);
             liked_images = (ImageView) itemView.findViewById(R.id.liked_places_list_images);
             place_name=(TextView) itemView.findViewById(R.id.liked_place_tv_name);
