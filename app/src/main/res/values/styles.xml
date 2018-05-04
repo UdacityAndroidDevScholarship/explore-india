@@ -15,4 +15,10 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
+    <!-- CardView Style for RecyclerView item -->
+    <style name="CardViewStyle" parent="CardView">
+        <item name="cardElevation">4dp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
 </resources>
