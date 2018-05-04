@@ -7,6 +7,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 import android.view.animation.Animation;
@@ -30,7 +31,7 @@ public class CustomDialog extends AlertDialog {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         View view=View.inflate(mContext,R.layout.dialog_layout,null);
-        ImageView image = (ImageView) view.findViewById(R.id.image);
+        ImageView image = (ImageView) view.findViewById(R.id.dialog_icon_image);
         Animation animation = AnimationUtils.loadAnimation(mContext,
                 R.anim.anim_rotate_clockwise);
         image.setAnimation(animation);
@@ -46,6 +47,8 @@ public class CustomDialog extends AlertDialog {
     }
 
     public void setMessage(String message) {
+        if(TextUtils.isEmpty(message) && message.trim().length()>0)
+            message="";
         this.message = message;
     }
 }
