@@ -8,7 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
-import com.udacity.exploreindia.helper.CustomDialog;
+import com.udacity.exploreindia.views.CustomDialog;
 
 
 /**
