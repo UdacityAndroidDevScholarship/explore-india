@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import com.udacity.exploreindia.R;
 import com.udacity.exploreindia.base.BaseActivity;
 import com.udacity.exploreindia.databinding.ActivityHomBinding;
+import com.udacity.exploreindia.helper.CustomDialog;
 import com.udacity.exploreindia.ui.home.fragments.likedplaces.LikedPlacesFragment;
 import com.udacity.exploreindia.ui.home.fragments.main.MainFragment;
 
