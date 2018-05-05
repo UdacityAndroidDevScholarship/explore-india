@@ -29,6 +29,7 @@ public class CustomDialog extends AlertDialog {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         View view = View.inflate(mContext, R.layout.dialog_layout, null);
 
         TextView dialogMessage = (TextView) view.findViewById(R.id.dialog_message);
@@ -36,6 +37,7 @@ public class CustomDialog extends AlertDialog {
 
 
         Animation animation = AnimationUtils.loadAnimation(mContext, R.anim.anim_rotate_clockwise);
+
         image.setAnimation(animation);
 
         Typeface typeface = Typeface.createFromAsset(mContext.getAssets(), "fonts/samarn.TTF");
@@ -53,6 +55,8 @@ public class CustomDialog extends AlertDialog {
     }
 
     public void setMessage(String message) {
+        if(TextUtils.isEmpty(message) && message.trim().length()>0)
+            message="";
         this.message = message;
     }
 }
