@@ -26,26 +26,42 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     // Support lib
     implementation deps.android.support.appcompatV7
+
+    // Design lib
+    implementation deps.android.support.design
+
     // Constraint layout
     implementation deps.android.support.constraintLayout
+
     // Firebase Auth
     implementation deps.google.firebase.auth
+
     // Realtime database
     implementation deps.google.firebase.database
+
+    // RecyclerView
+    implementation deps.android.support.recycleView
+
     // Timber - Logging library
     implementation deps.other.timber
+
+    // Picasso - Image loading library
+    implementation deps.other.picasso
+
     // Fused location
     implementation deps.google.play_services.location
-    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
-    implementation 'com.android.support:support-v4:27.1.1'
+
+
+    //CardView
+    implementation deps.android.support.cardView
+
     testImplementation deps.junit
     androidTestImplementation deps.android.support.test.runner
     androidTestImplementation deps.android.support.test.espressoCore
     implementation deps.google.play_services.maps
 
-    compile 'com.squareup.picasso:picasso:2.5.0'
-    compile 'com.android.support:cardview-v7:26.1.0'
-    compile 'com.android.support:design:25.0.0'
+
+
 }
 
 

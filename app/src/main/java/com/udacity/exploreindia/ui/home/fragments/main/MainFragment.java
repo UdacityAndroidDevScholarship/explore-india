@@ -34,15 +34,15 @@ import java.util.TimerTask;
 public class MainFragment extends BaseFragment<MainContract.Presenter,FragmentMainBinding> implements MainContract.View {
 
     private Context context;
-    private RecyclerView rvMyLocations;
-    private ArrayList<MyLocationsModel> lMyLocations;
+    private RecyclerView rv_my_loctions;
+    private ArrayList<MyLocationsModel> list_my_loctions;
 
-    private ViewPager vpImageSlider;
-    private LinearLayout llDots;
+    private ViewPager vp_imageSlider;
+    private LinearLayout ll_dots;
     SliderPagerAdapter sliderPagerAdapter;
-    ArrayList<Integer> lSliderImages;
+    ArrayList<Integer> slider_image_list;
     private TextView[] dots;
-    int pagePosition = 0;
+    int page_position = 0;
 
     public MainFragment() {
         // Required empty public constructor
@@ -54,7 +54,6 @@ public class MainFragment extends BaseFragment<MainContract.Presenter,FragmentMa
         fragment.setArguments(bundle);
         return fragment;
     }
-    
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -62,12 +61,12 @@ public class MainFragment extends BaseFragment<MainContract.Presenter,FragmentMa
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main, container, false);
         context = getContext();
-        vpImageSlider = view.findViewById(R.id.vp_image_slider);
-        llDots = view.findViewById(R.id.ll_dots);
+        vp_imageSlider = view.findViewById(R.id.vp_image_slider);
+        ll_dots = view.findViewById(R.id.ll_dots);
 
-        lSliderImages = new ArrayList<>();
-        rvMyLocations = view.findViewById(R.id.my_location_rv_places);
-        lMyLocations = new ArrayList<>();
+        slider_image_list = new ArrayList<>();
+        rv_my_loctions = view.findViewById(R.id.my_location_rv_places);
+        list_my_loctions = new ArrayList<>();
 
         locationPlaceHolder();
 
@@ -79,12 +78,12 @@ public class MainFragment extends BaseFragment<MainContract.Presenter,FragmentMa
 
         final Runnable update = new Runnable() {
             public void run() {
-                if (pagePosition == lSliderImages.size()) {
-                    pagePosition = 0;
+                if (page_position == slider_image_list.size()) {
+                    page_position = 0;
                 } else {
-                    pagePosition = pagePosition + 1;
+                    page_position = page_position + 1;
                 }
-                vpImageSlider.setCurrentItem(pagePosition, true);
+                vp_imageSlider.setCurrentItem(page_position, true);
             }
         };
 
@@ -101,7 +100,7 @@ public class MainFragment extends BaseFragment<MainContract.Presenter,FragmentMa
 
     private void locationPlaceHolder() {
         for (int i = 0; i<6; i++){
-            lMyLocations.add(new MyLocationsModel("Gateway of India", "600m", true));
+            list_my_loctions.add(new MyLocationsModel("Gateway of India", "600m", true));
         }
     }
 
@@ -109,19 +108,19 @@ public class MainFragment extends BaseFragment<MainContract.Presenter,FragmentMa
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //locationPlaceHolder();
-        rvMyLocations.setHasFixedSize(true);
-        rvMyLocations.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayout.VERTICAL));
-        rvMyLocations.setAdapter(new MyLocationsRVAdapter(context, lMyLocations));
+        rv_my_loctions.setHasFixedSize(true);
+        rv_my_loctions.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayout.VERTICAL));
+        rv_my_loctions.setAdapter(new MyLocationsRVAdapter(context, list_my_loctions));
 
-        lSliderImages.add(R.drawable.gateway_of_india_strech);
-        lSliderImages.add(R.drawable.gateway_of_india_strech);
-        lSliderImages.add(R.drawable.gateway_of_india_strech);
+        slider_image_list.add(R.drawable.gateway_of_india_strech);
+        slider_image_list.add(R.drawable.gateway_of_india_strech);
+        slider_image_list.add(R.drawable.gateway_of_india_strech);
 
 
-        sliderPagerAdapter = new SliderPagerAdapter(context, lSliderImages);
-        vpImageSlider.setAdapter(sliderPagerAdapter);
+        sliderPagerAdapter = new SliderPagerAdapter(context, slider_image_list);
+        vp_imageSlider.setAdapter(sliderPagerAdapter);
 
-        vpImageSlider.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        vp_imageSlider.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -140,15 +139,15 @@ public class MainFragment extends BaseFragment<MainContract.Presenter,FragmentMa
     }
 
     private void addBottomDots(int currentPage) {
-        dots = new TextView[lSliderImages.size()];
+        dots = new TextView[slider_image_list.size()];
 
-        llDots.removeAllViews();
+        ll_dots.removeAllViews();
         for (int i = 0; i < dots.length; i++) {
             dots[i] = new TextView(context);
             dots[i].setText(Html.fromHtml("&#8226;"));
             dots[i].setTextSize(40);
             dots[i].setTextColor(Color.parseColor("#8ff7f5f5"));
-            llDots.addView(dots[i]);
+            ll_dots.addView(dots[i]);
         }
 
         if (dots.length > 0)
