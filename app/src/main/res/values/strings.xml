@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">Explore India</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Splash Screen Strings-->
+    <string name="readPrivacy"><u>Read our privacy and policy</u></string>
 
     <!--Login Screen Strings-->
     <string name="login_tv_app_title">Explore India</string>
