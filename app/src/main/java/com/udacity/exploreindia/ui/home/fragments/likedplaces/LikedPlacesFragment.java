@@ -23,6 +23,13 @@ public class LikedPlacesFragment extends BaseFragment<LikedPlacesContract.Presen
     public LikedPlacesFragment() {
     }
 
+    public static LikedPlacesFragment newInstance() {
+        LikedPlacesFragment fragment = new LikedPlacesFragment();
+        Bundle bundle = new Bundle();
+        fragment.setArguments(bundle);
+        return fragment;
+    }
+
     @Override
     protected int getContentResource() {
         return R.layout.fragment_liked_places;

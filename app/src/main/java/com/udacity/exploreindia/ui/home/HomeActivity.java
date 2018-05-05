@@ -13,7 +13,7 @@ import com.udacity.exploreindia.R;
 import com.udacity.exploreindia.base.BaseActivity;
 import com.udacity.exploreindia.databinding.ActivityHomBinding;
 import com.udacity.exploreindia.ui.home.fragments.likedplaces.LikedPlacesFragment;
-
+import com.udacity.exploreindia.ui.home.fragments.main.MainFragment;
 
 
 public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityHomBinding> implements HomeContract.View {
@@ -67,19 +67,19 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
                         break;
 
                     case R.id.bnv_search :
-                        replaceFragment(MainFragment.newInstance(), "Search");
+                        showMessage("Search not implemented yet");
                         break;
 
                     case R.id.bnv_add :
-                        replaceFragment(MainFragment.newInstance(), "Add");
+                        showMessage("Add not implemented yet");
                         break;
 
                     case R.id.bnv_favorite :
-                        replaceFragment(MainFragment.newInstance(), "Favorite");
+                        replaceFragment(LikedPlacesFragment.newInstance(), "Favorite");
                         break;
 
                     case R.id.bnv_profile :
-                        replaceFragment(MainFragment.newInstance(), "Profile");
+                        showMessage("Profile not implemented yet");
                         break;
                 }
                 return true;
