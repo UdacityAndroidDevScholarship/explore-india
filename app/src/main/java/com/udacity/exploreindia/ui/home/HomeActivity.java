@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.MenuItem;
 
@@ -14,6 +13,8 @@ import com.udacity.exploreindia.databinding.ActivityHomBinding;
 import com.udacity.exploreindia.helper.FragmentAdapter;
 import com.udacity.exploreindia.ui.home.fragments.likedplaces.LikedPlacesFragment;
 import com.udacity.exploreindia.ui.home.fragments.main.MainFragment;
+import com.udacity.exploreindia.ui.home.fragments.place.PlaceFragment;
+import com.udacity.exploreindia.ui.home.fragments.profile.UserDetailFragment;
 import com.udacity.exploreindia.ui.home.fragments.search.SearchFragment;
 
 
@@ -41,15 +42,31 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
     }
 
     private void populateViewPager() {
-         viewPager = findViewById(R.id.view_pager);
+        viewPager = findViewById(R.id.view_pager);
 
-        FragmentAdapter fragmentAdapter = new FragmentAdapter(getSupportFragmentManager());
-        fragmentAdapter.addFragment(MainFragment.newInstance());
-        fragmentAdapter.addFragment(SearchFragment.newInstance());
-        fragmentAdapter.addFragment(MainFragment.newInstance());
-        fragmentAdapter.addFragment(LikedPlacesFragment.newInstance());
-        fragmentAdapter.addFragment(MainFragment.newInstance());
+        final FragmentAdapter fragmentAdapter = new FragmentAdapter(getSupportFragmentManager());
+        fragmentAdapter.addFragment(MainFragment.newInstance(), R.id.bnv_my_location);
+        fragmentAdapter.addFragment(SearchFragment.newInstance(), R.id.bnv_search);
+        fragmentAdapter.addFragment(PlaceFragment.newInstance(), R.id.bnv_add);
+        fragmentAdapter.addFragment(LikedPlacesFragment.newInstance(), R.id.bnv_favorite);
+        fragmentAdapter.addFragment(UserDetailFragment.newInstance(), R.id.bnv_profile);
         viewPager.setAdapter(fragmentAdapter);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                bottomNavigationView.setSelectedItemId(fragmentAdapter.getIds().get(position));
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     @Override
@@ -93,9 +110,6 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
         });
     }
 
-    public void replaceFragment(Fragment selectedFragment, String tag) {
-
-    }
 
     public void setActionBarTitle(String title) {
         getSupportActionBar().setTitle(title);

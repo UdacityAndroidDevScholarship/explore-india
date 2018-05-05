@@ -9,6 +9,7 @@ android {
         versionCode buildConfig.version.code
         versionName buildConfig.version.name
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
     dataBinding {
         enabled = true
@@ -51,7 +52,7 @@ dependencies {
     // Fused location
     implementation deps.google.play_services.location
 
-
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
     //CardView
     implementation deps.android.support.cardView
 
