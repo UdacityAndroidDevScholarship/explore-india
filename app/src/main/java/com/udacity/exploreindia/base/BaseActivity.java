@@ -7,6 +7,8 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import com.udacity.exploreindia.helper.CustomDialog;
+
 
 /**
  * Created by kautilya on 09-12-2017.
@@ -27,9 +29,8 @@ public abstract class BaseActivity<T extends BaseMvpPresenter, K extends ViewDat
         mPresenter.init();
         beforeView(savedInstanceState);
         mDataBinder = DataBindingUtil.setContentView(this, getContentResource());
-
         init(savedInstanceState);
-        getPresenter().init();
+
     }
 
 
@@ -61,5 +62,11 @@ public abstract class BaseActivity<T extends BaseMvpPresenter, K extends ViewDat
 
 
     protected abstract void beforeView(@Nullable Bundle savedInstanceState);
+
+    protected void showCustomDialog(String message){
+        CustomDialog customDialog=new CustomDialog(this);
+        customDialog.setMessage(message);
+        customDialog.show();
+    }
 
 }
