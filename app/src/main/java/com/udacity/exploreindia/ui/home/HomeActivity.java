@@ -14,6 +14,7 @@ import com.udacity.exploreindia.databinding.ActivityHomBinding;
 import com.udacity.exploreindia.helper.FragmentAdapter;
 import com.udacity.exploreindia.ui.home.fragments.likedplaces.LikedPlacesFragment;
 import com.udacity.exploreindia.ui.home.fragments.main.MainFragment;
+import com.udacity.exploreindia.ui.home.fragments.search.SearchFragment;
 
 
 public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityHomBinding> implements HomeContract.View {
@@ -44,7 +45,7 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
 
         FragmentAdapter fragmentAdapter = new FragmentAdapter(getSupportFragmentManager());
         fragmentAdapter.addFragment(MainFragment.newInstance());
-        fragmentAdapter.addFragment(MainFragment.newInstance());
+        fragmentAdapter.addFragment(SearchFragment.newInstance());
         fragmentAdapter.addFragment(MainFragment.newInstance());
         fragmentAdapter.addFragment(LikedPlacesFragment.newInstance());
         fragmentAdapter.addFragment(MainFragment.newInstance());
@@ -96,4 +97,7 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
 
     }
 
+    public void setActionBarTitle(String title) {
+        getSupportActionBar().setTitle(title);
+    }
 }
