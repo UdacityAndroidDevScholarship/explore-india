@@ -1,5 +1,7 @@
 package com.udacity.exploreindia.ui.splash;
 
+
+import android.content.Intent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -7,15 +9,15 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-
 import com.udacity.exploreindia.R;
 import com.udacity.exploreindia.base.BaseActivity;
 import com.udacity.exploreindia.databinding.ActivitySplashBinding;
-import com.udacity.exploreindia.helper.CustomDialog;
+import com.udacity.exploreindia.ui.home.HomeActivity;
 import com.udacity.exploreindia.helper.SharedPrefManager;
 import com.udacity.exploreindia.helper.Utils;
 import com.udacity.exploreindia.ui.home.HomeActivity;
 import com.udacity.exploreindia.ui.login.LoginActivity;
+
 
 public class SplashActivity extends BaseActivity<SplashContract.Presenter, ActivitySplashBinding> implements SplashContract.View {
 
@@ -67,5 +69,6 @@ public class SplashActivity extends BaseActivity<SplashContract.Presenter, Activ
         getDataBinder().imageRight.setAnimation(animation);
 
         getDataBinder().frameLogo.animate().alpha(1).setDuration(1000);
+
     }
 }

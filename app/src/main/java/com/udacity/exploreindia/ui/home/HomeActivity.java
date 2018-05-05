@@ -29,7 +29,9 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
 
     @Override
     protected void init(@Nullable Bundle savedInstanceState) {
-
+        CustomDialog customDialog=new CustomDialog(this);
+        customDialog.show();
+        
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
@@ -40,8 +42,7 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
                     .commit();
         }
 
-
-
+        init();
     }
 
     @Override
@@ -49,6 +50,13 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
 
     }
 
+    private void init() {
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        setBottomNavigation();
+    }
 
 
     private void setBottomNavigation() {

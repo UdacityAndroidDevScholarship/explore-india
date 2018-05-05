@@ -13,6 +13,14 @@
     <string name="login_tv_or_label">Or</string>
     <string name="login_btn_google_login">Sign in with google plus</string>
 
+
+    <!-- Liked places String -->
+    <string name="liked_place_tv_date">Date :</string>
+    <string name="liked_place_tv_like">Total Likes :</string>
+    <string name="likde_place_tv_name">Name</string>
+    <string name="liked_places_list_images">Image</string>
+    <string name="liked_places_img_background">Background</string>
+
     <!--Add Place strings-->
     <string name="place_fragment_title">Add Place</string>
     <string name="add_img_button_description">Add an image</string>
@@ -21,4 +29,5 @@
     <string name="desctiption_edittext_hint">Description</string>
     <string name="location_edittext_hint">Location</string>
     <string name="submit_button_string">Submit</string>
+
 </resources>
