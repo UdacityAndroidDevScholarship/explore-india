@@ -3,6 +3,7 @@ package com.udacity.exploreindia.ui.home;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -11,7 +12,9 @@ import android.view.MenuItem;
 import com.udacity.exploreindia.R;
 import com.udacity.exploreindia.base.BaseActivity;
 import com.udacity.exploreindia.databinding.ActivityHomBinding;
+import com.udacity.exploreindia.ui.home.fragments.likedplaces.LikedPlacesFragment;
 import com.udacity.exploreindia.ui.home.fragments.main.MainFragment;
+
 
 public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityHomBinding> implements HomeContract.View {
 
@@ -27,7 +30,18 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
     @Override
     protected void init(@Nullable Bundle savedInstanceState) {
 
-        init();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        setBottomNavigation();
+        if(savedInstanceState == null){
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.fragment_container, new LikedPlacesFragment())
+                    .commit();
+        }
+
+
+
     }
 
     @Override
@@ -35,13 +49,7 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
 
     }
 
-    private void init() {
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-
-        setBottomNavigation();
-    }
 
     private void setBottomNavigation() {
         bottomNavigationView = findViewById(R.id.bottom_navigation_view);
@@ -59,19 +67,19 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
                         break;
 
                     case R.id.bnv_search :
-                        replaceFragment(MainFragment.newInstance(), "Search");
+                        showMessage("Search not implemented yet");
                         break;
 
                     case R.id.bnv_add :
-                        replaceFragment(MainFragment.newInstance(), "Add");
+                        showMessage("Add not implemented yet");
                         break;
 
                     case R.id.bnv_favorite :
-                        replaceFragment(MainFragment.newInstance(), "Favorite");
+                        replaceFragment(LikedPlacesFragment.newInstance(), "Favorite");
                         break;
 
                     case R.id.bnv_profile :
-                        replaceFragment(MainFragment.newInstance(), "Profile");
+                        showMessage("Profile not implemented yet");
                         break;
                 }
                 return true;
