@@ -19,8 +19,7 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
 
     @Override
     protected void init(@Nullable Bundle savedInstanceState) {
-        CustomDialog customDialog=new CustomDialog(this);
-        customDialog.show();
+
 
     }
 

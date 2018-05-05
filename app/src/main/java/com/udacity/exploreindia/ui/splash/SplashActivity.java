@@ -11,8 +11,6 @@ import android.view.animation.AnimationUtils;
 import com.udacity.exploreindia.R;
 import com.udacity.exploreindia.base.BaseActivity;
 import com.udacity.exploreindia.databinding.ActivitySplashBinding;
-import com.udacity.exploreindia.helper.CustomDialog;
-import com.udacity.exploreindia.helper.SharedPrefManager;
 import com.udacity.exploreindia.helper.Utils;
 import com.udacity.exploreindia.ui.home.HomeActivity;
 import com.udacity.exploreindia.ui.login.LoginActivity;
