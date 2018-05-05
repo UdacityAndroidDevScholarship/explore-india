@@ -4,7 +4,8 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@id/dialog_icon_image"
+
+        android:id="@id/dialog_image"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
@@ -15,10 +16,10 @@
         android:id="@id/dialog_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/dialog_icon_image"
+        android:layout_below="@id/dialog_image"
         android:layout_centerHorizontal="true"
-        android:text="Loading..."
         android:layout_marginTop="100dp"
+        android:text="Loading..."
         android:textColor="@color/whiteColor"
         android:textSize="40sp" />
 

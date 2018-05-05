@@ -179,12 +179,11 @@
 
     <item name="single_state_vp_cities_places" type="id"/>
 
-    <item name="state_rv_places" type="id"/>
-
-        <!-- single state places list layout -->
-        <item name="state_place_list_img_place" type="id"/>
-        <item name="state_place_list_tv_name" type="id"/>
-        <item name="state_place_list_img_favourite" type="id"/>
+    <item name="state_rv_places" type="id" />
+    <!-- single state places list layout -->
+    <item name="state_place_list_img_place" type="id" />
+    <item name="state_place_list_tv_name" type="id" />
+    <item name="state_place_list_img_favourite" type="id" />
 
         <!-- End of single state places list layout -->
 
@@ -242,13 +241,21 @@
 
     <!-- End of places details layout -->
 
-    <!-- custom dialog layout -->
-
-    <item name="dialog_message" type="id"/>
-    <item name="dialog_icon_image" type="id"/>
-
-    <!-- End of places details layout -->
 
 
+    <!-- Custom Dialog -->
+    <item name="dialog_message" type="id" />
+    <item name="dialog_image" type="id" />
+  
+  
+    <!-- Liked place Details -->
+    <item name="liked_places_rv_images" type="id" />
+    <item name="liked_places_list_images" type="id" />
+    <item name="liked_places_img_background" type="id" />
+    <item name="liked_place_tv_name" type="id" />
+    <item name="liked_place_tv_like" type="id" />
+    <item name="liked_place_tv_date" type="id" />
+
+    <!-- End of Liked place Details -->
 
 </resources>
