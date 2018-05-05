@@ -241,11 +241,14 @@
 
     <!-- End of places details layout -->
 
-    <!-- Liked place Details -->
+
 
     <!-- Custom Dialog -->
     <item name="dialog_message" type="id" />
     <item name="dialog_image" type="id" />
+  
+  
+    <!-- Liked place Details -->
     <item name="liked_places_rv_images" type="id" />
     <item name="liked_places_list_images" type="id" />
     <item name="liked_places_img_background" type="id" />
