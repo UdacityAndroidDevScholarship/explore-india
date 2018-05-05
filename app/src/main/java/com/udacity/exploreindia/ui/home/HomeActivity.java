@@ -15,7 +15,6 @@ import com.udacity.exploreindia.ui.home.fragments.main.MainFragment;
 
 public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityHomBinding> implements HomeContract.View {
 
-    private long lastBackPressTime;
     private FragmentTransaction fragmentTransaction;
     private BottomNavigationView bottomNavigationView;
 
@@ -85,5 +84,7 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
+
+
 
 }
