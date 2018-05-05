@@ -65,6 +65,7 @@ public abstract class BaseActivity<T extends BaseMvpPresenter, K extends ViewDat
 
     protected void showCustomDialog(String message){
         CustomDialog customDialog=new CustomDialog(this);
+        customDialog.setMessage(message);
         customDialog.show();
     }
 
