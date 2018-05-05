@@ -36,6 +36,9 @@ dependencies {
     // Realtime database
     implementation deps.google.firebase.database
 
+    // RecyclerView
+    implementation deps.android.support.recycleView
+
     // Timber - Logging library
     implementation deps.other.timber
 

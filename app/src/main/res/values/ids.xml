@@ -52,199 +52,207 @@
 
     <!-- Main Viewpager Layout containing main fragments -->
 
-    <item name="main_tb_toolbar" type="id" />
-    <item name="main_vp_viewpager" type="id" />
+    <item name="main_tb_toolbar" type="id"/>
+    <item name="main_vp_viewpager" type="id"/>
 
     <!-- End of Main Viewpager -->
 
     <!-- User Location Home Screen Layout -->
 
-    <item name="home_rv_user_location_places" type="id" />
-    <item name="home_vp_sliding_images" type="id" />
+    <item name="home_rv_user_location_places" type="id"/>
+    <item name="home_vp_sliding_images" type="id"/>
 
-    <!-- ViewPager for sliding images -->
-    <item name="sliding_viewpager_img_background" type="id" />
-    <item name="sliding_viewpager_img_favourite" type="id" />
-    <item name="sliding_viewpager_tv_name" type="id" />
-    <item name="sliding_viewpager_tv_distance" type="id" />
+        <!-- ViewPager for sliding images -->
+        <item name="sliding_viewpager_img_background" type="id"/>
+        <item name="sliding_viewpager_img_favourite" type="id"/>
+        <item name="sliding_viewpager_tv_name" type="id"/>
+        <item name="sliding_viewpager_tv_distance" type="id"/>
 
-    <!-- End of ViewPager for sliding images -->
+        <!-- End of ViewPager for sliding images -->
 
-    <!-- User Location Home Screen RecyclerView List Layout -->
-    <item name="list_tv_name" type="id" />
-    <item name="list_tv_distance" type="id" />
-    <item name="list_img_favourite" type="id" />
-    <item name="list_img_background" type="id" />
+        <!-- User Location Home Screen RecyclerView List Layout -->
+        <item name="list_tv_name" type="id"/>
+        <item name="list_tv_distance" type="id"/>
+        <item name="list_img_favourite" type="id"/>
+        <item name="list_img_background" type="id"/>
 
-    <!-- End of User Location Home Screen RecyclerView List Layout -->
+        <!-- End of User Location Home Screen RecyclerView List Layout -->
 
     <!-- End of User Location Home Screen Layout -->
 
     <!-- Search Fragment Layout -->
 
-    <item name="search_sv_places" type="id" />
-    <item name="search_tv_cities" type="id" />
-    <item name="search_tv_places" type="id" />
-    <item name="search_rv_cities" type="id" />
-    <item name="search_rv_places" type="id" />
+    <item name="search_sv_places" type="id"/>
+    <item name="search_tv_cities" type="id"/>
+    <item name="search_tv_places" type="id"/>
+    <item name="search_rv_cities" type="id"/>
+    <item name="search_rv_places" type="id"/>
 
-    <!-- Places and Cities Recycler View List Layout -->
-    <item name="searchlist_img_places_cities" type="id" />
-    <item name="searchlist_tv_name" type="id" />
+        <!-- Places and Cities Recycler View List Layout -->
+        <item name="searchlist_img_places_cities" type="id"/>
+        <item name="searchlist_tv_name" type="id"/>
 
-    <!-- End of Places and cities recycler view list layout -->
+        <!-- End of Places and cities recycler view list layout -->
 
     <!-- End of Search Fragment Layout -->
 
     <!-- Search RecyclerView Results Layout -->
 
-    <item name="search_results_rv_places" type="id" />
+    <item name="search_results_rv_places" type="id"/>
 
-    <!-- Search Results List Layout -->
-    <item name="search_results_list_img_places" type="id" />
-    <item name="search_results_list_tv_name" type="id" />
-    <item name="search_results_list_img_favourite" type="id" />
+        <!-- Search Results List Layout -->
+        <item name="search_results_list_img_places" type="id"/>
+        <item name="search_results_list_tv_name" type="id"/>
+        <item name="search_results_list_img_favourite" type="id"/>
 
-    <!-- End of search results list layout -->
+        <!-- End of search results list layout -->
 
     <!-- End of Search RecyclerView Results Layout -->
 
     <!-- Add place layout -->
 
-    <item name="add_place_img_pick_image" type="id" />
-    <item name="add_place_et_title" type="id" />
-    <item name="add_place_et_tags" type="id" />
-    <item name="add_place_et_description" type="id" />
-    <item name="add_place_et_map_coordinates" type="id" />
-    <item name="add_place_btn_submit" type="id" />
+    <item name="add_place_img_pick_image" type="id"/>
+    <item name="add_place_et_title" type="id"/>
+    <item name="add_place_et_tags" type="id"/>
+    <item name="add_place_et_description" type="id"/>
+    <item name="add_place_et_map_coordinates" type="id"/>
+    <item name="add_place_btn_submit" type="id"/>
 
     <!-- End of Add place layout -->
 
     <!-- Liked Place Layout -->
 
-    <item name="liked_rv_places" type="id" />
+    <item name="liked_rv_places" type="id"/>
 
-    <!-- Liked List Layout -->
-    <item name="liked_list_img_places" type="id" />
-    <item name="liked_list_tv_name" type="id" />
-    <item name="liked_list_tv_total_likes" type="id" />
-    <item name="liked_list_tv_date" type="id" />
+        <!-- Liked List Layout -->
+        <item name="liked_list_img_places" type="id"/>
+        <item name="liked_list_tv_name" type="id"/>
+        <item name="liked_list_tv_total_likes" type="id"/>
+        <item name="liked_list_tv_date" type="id"/>
 
-    <!-- End of Liked list layout -->
+        <!-- End of Liked list layout -->
 
     <!-- End of Liked Place Layout -->
 
     <!-- Profile Page Layout -->
 
-    <item name="profile_tv_name" type="id" />
-    <item name="profile_btn_edit_profile" type="id" />
-    <item name="profile_img_profile_image" type="id" />
-    <item name="profile_tv_city" type="id" />
-    <item name="profile_tv_state" type="id" />
-    <item name="profile_tv_number" type="id" />
-    <item name="profile_tv_age" type="id" />
-    <item name="profile_rv_places" type="id" />
+    <item name="profile_tv_name" type="id"/>
+    <item name="profile_btn_edit_profile" type="id"/>
+    <item name="profile_img_profile_image" type="id"/>
+    <item name="profile_tv_city" type="id"/>
+    <item name="profile_tv_state" type="id"/>
+    <item name="profile_tv_number" type="id"/>
+    <item name="profile_tv_age" type="id"/>
+    <item name="profile_rv_places" type="id"/>
 
-    <!-- Profile RecyclerView list Layout -->
+        <!-- Profile RecyclerView list Layout -->
 
-    <item name="profile_list_tv_place" type="id" />
-    <item name="profile_list_tv_state" type="id" />
-    <item name="profile_list_tv_city" type="id" />
-    <item name="profile_list_tv_date" type="id" />
-    <item name="profile_list_img_place" type="id" />
+        <item name="profile_list_tv_place" type="id"/>
+        <item name="profile_list_tv_state" type="id"/>
+        <item name="profile_list_tv_city" type="id"/>
+        <item name="profile_list_tv_date" type="id"/>
+        <item name="profile_list_img_place" type="id"/>
 
-    <!-- End of Profile RecyclerView list Layout -->
+        <!-- End of Profile RecyclerView list Layout -->
 
     <!-- End of Profile Page Layout -->
 
     <!-- Explore states layout -->
 
-    <item name="explore_state_rv_direction_list" type="id" />
-    <item name="explore_state_rv_direction_states" type="id" />
+    <item name="explore_state_rv_direction_list" type="id"/>
+    <item name="explore_state_rv_direction_states" type="id"/>
+    
+        <!-- Explore direction list layout -->
+        <item name="direction_list_tv_directions" type="id"/>
 
-    <!-- Explore direction list layout -->
-    <item name="direction_list_tv_directions" type="id" />
+        <!-- End of Explore direction list layout -->
 
-    <!-- End of Explore direction list layout -->
+        <!-- Explore state list layout -->
+        <item name="state_list_tv_name" type="id"/>
+        <item name="state_list_img_states" type="id"/>
 
-    <!-- Explore state list layout -->
-    <item name="state_list_tv_name" type="id" />
-    <item name="state_list_img_states" type="id" />
-
-    <!-- End of Explore state list layout -->
+        <!-- End of Explore state list layout -->
 
     <!-- End of explore state layout -->
 
     <!-- single state layout -->
 
-    <item name="single_state_vp_cities_places" type="id" />
+    <item name="single_state_vp_cities_places" type="id"/>
 
     <item name="state_rv_places" type="id" />
-
     <!-- single state places list layout -->
     <item name="state_place_list_img_place" type="id" />
     <item name="state_place_list_tv_name" type="id" />
     <item name="state_place_list_img_favourite" type="id" />
 
-    <!-- End of single state places list layout -->
+        <!-- End of single state places list layout -->
 
-    <!-- single state cities list layout -->
-    <item name="state_city_list_vp_places" type="id" />
-    <item name="state_city_list_rv_city" type="id" />
+        <!-- single state cities list layout -->
+        <item name="state_city_list_vp_places" type="id"/>
+        <item name="state_city_list_rv_city" type="id"/>
 
-    <!-- state city list viewpager layout -->
-    <item name="city_list_vp_img_images" type="id" />
-    <item name="city_list_vp_tv_name" type="id" />
+            <!-- state city list viewpager layout -->
+            <item name="city_list_vp_img_images" type="id"/>
+            <item name="city_list_vp_tv_name" type="id"/>
 
-    <!-- End of state city list viewpager layout -->
+            <!-- End of state city list viewpager layout -->
 
-    <!-- state city list recyclerview layout -->
-    <item name="city_list_rv_img_images" type="id" />
-    <item name="city_list_rv_tv_name" type="id" />
+            <!-- state city list recyclerview layout -->
+            <item name="city_list_rv_img_images" type="id"/>
+            <item name="city_list_rv_tv_name" type="id"/>
+  
+            <!-- End of state city list recyclerview layout -->
 
-    <!-- End of state city list recyclerview layout -->
-
-    <!-- End of single state cities list layout -->
+        <!-- End of single state cities list layout -->
 
     <!-- End of single state layout -->
 
     <!-- state details layout -->
 
+    
+    <item name="popular_places_rv_names" type="id"/>
+    <item name="city_rv_places" type="id"/>
 
-    <item name="popular_places_rv_names" type="id" />
-    <item name="city_rv_places" type="id" />
+        <!-- Popular places RecyclerView list layout -->
+        <item name="popular_places_img_places" type="id"/>
+        <item name="popular_place_tv_location" type="id"/>
+        <item name="popular_place_tv_name" type="id"/>
 
-    <!-- Popular places RecyclerView list layout -->
-    <item name="popular_places_img_places" type="id" />
-    <item name="popular_place_tv_location" type="id" />
-    <item name="popular_place_tv_name" type="id" />
+        <!-- End of popular places REcyclerView layout -->
 
-    <!-- End of popular places REcyclerView layout -->
+        <!-- All state places list layout -->
+        <item name="places_img_background" type="id"/>
+        <item name="places_tv_names" type="id"/>
+        <item name="places_img_favourite" type="id"/>
 
-    <!-- All state places list layout -->
-    <item name="places_img_background" type="id" />
-    <item name="places_tv_names" type="id" />
-    <item name="places_img_favourite" type="id" />
-
-    <!--End All state places list layout -->
+        <!--End All state places list layout -->
 
     <!-- End of state details layout -->
 
     <!-- places details layout -->
 
-    <item name="places_details_rv_images" type="id" />
+    <item name="places_details_rv_images" type="id"/>
 
-    <item name="places_details_list_img_images" type="id" />
-    <item name="places_details_btn_share" type="id" />
-    <item name="places_details_btn_favourite" type="id" />
-    <item name="places_details_btn_map_location" type="id" />
-    <item name="places_details_tv_place_description" type="id" />
+    <item name="places_details_list_img_images" type="id"/>
+    <item name="places_details_btn_share" type="id"/>
+    <item name="places_details_btn_favourite" type="id"/>
+    <item name="places_details_btn_map_location" type="id"/>
+    <item name="places_details_tv_place_description" type="id"/>
 
     <!-- End of places details layout -->
 
+    <!-- Liked place Details -->
 
     <!-- Custom Dialog -->
     <item name="dialog_message" type="id" />
     <item name="dialog_image" type="id" />
+    <item name="liked_places_rv_images" type="id" />
+    <item name="liked_places_list_images" type="id" />
+    <item name="liked_places_img_background" type="id" />
+    <item name="liked_place_tv_name" type="id" />
+    <item name="liked_place_tv_like" type="id" />
+    <item name="liked_place_tv_date" type="id" />
+
+    <!-- End of Liked place Details -->
 
 </resources>
