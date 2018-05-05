@@ -3,6 +3,8 @@ package com.udacity.exploreindia.base;
 import com.udacity.exploreindia.injection.InjectionUtils;
 import com.udacity.exploreindia.ui.home.HomeActivity;
 import com.udacity.exploreindia.ui.home.HomePresenter;
+import com.udacity.exploreindia.ui.home.fragments.likedplaces.LikedPlacesFragment;
+import com.udacity.exploreindia.ui.home.fragments.likedplaces.LikedPlacesPresenter;
 import com.udacity.exploreindia.ui.home.fragments.main.MainFragment;
 import com.udacity.exploreindia.ui.home.fragments.main.MainPresenter;
 import com.udacity.exploreindia.ui.home.fragments.place.PlaceFragment;
@@ -29,11 +31,15 @@ public class PresenterFactory {
             return presenter;
         } else if (claxx instanceof UserDetailFragment) {
             presenter = (S) new UserDetailPresenter(InjectionUtils.getSharedPreference(), InjectionUtils.providesDataRepo(), claxx.getContext());
-            return presenter;
+
+        } else if (claxx instanceof LikedPlacesFragment) {
+            presenter = (S) new LikedPlacesPresenter(InjectionUtils.getSharedPreference(), InjectionUtils.providesDataRepo(), claxx.getContext());
         } else {
             throw new IllegalStateException("Activity presenter not supported yet");
         }
-//        throw new IllegalStateException("Fragment presenter not supported yet");
+        return presenter;
+        //throw new IllegalStateException("Fragment presenter not supported yet");
+
     }
 
     @SuppressWarnings("unchecked")

@@ -247,4 +247,19 @@
 
 
 
+    <!-- Custom Dialog -->
+    <item name="dialog_message" type="id" />
+    <item name="dialog_image" type="id" />
+  
+  
+    <!-- Liked place Details -->
+    <item name="liked_places_rv_images" type="id" />
+    <item name="liked_places_list_images" type="id" />
+    <item name="liked_places_img_background" type="id" />
+    <item name="liked_place_tv_name" type="id" />
+    <item name="liked_place_tv_like" type="id" />
+    <item name="liked_place_tv_date" type="id" />
+
+    <!-- End of Liked place Details -->
+
 </resources>
