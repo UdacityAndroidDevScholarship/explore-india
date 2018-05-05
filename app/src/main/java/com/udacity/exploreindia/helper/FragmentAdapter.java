@@ -13,6 +13,7 @@ import java.util.List;
 public class FragmentAdapter extends FragmentPagerAdapter {
 
     List<Fragment> fragmentList;
+    List<Integer> ids;
 
     public FragmentAdapter(FragmentManager fm, List<Fragment> fragmentList) {
         super(fm);
@@ -33,9 +34,16 @@ public class FragmentAdapter extends FragmentPagerAdapter {
         return fragmentList.size();
     }
 
-    public void addFragment(Fragment fragment) {
+    public void addFragment(Fragment fragment, int id) {
         if (fragmentList == null)
             fragmentList = new ArrayList<>();
         fragmentList.add(fragment);
+        if (ids == null)
+            ids = new ArrayList<>();
+        ids.add(id);
+    }
+
+    public List<Integer> getIds() {
+        return ids;
     }
 }

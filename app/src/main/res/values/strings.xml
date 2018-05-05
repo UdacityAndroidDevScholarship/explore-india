@@ -33,4 +33,47 @@
     <string name="popular_places">Popular Places > </string>
     <string name="search_places">Search Places</string>
 
+
+    <!-- String resources for Profile Page Layout -->
+
+    <string name="profile_name">\@vvklingayat</string>
+    <string name="content_description_profile">Your Profile Image</string>
+
+    <string name="edit_profile">Edit Profile</string>
+
+    <string name="city_label">City :</string>
+    <string name="city">Mumbai</string>
+
+    <string name="state_label">State :</string>
+    <string name="state">Maharashtra</string>
+
+    <string name="number_label">Mobile :</string>
+    <string name="number">8879495775</string>
+
+    <string name="age_label">Age :</string>
+    <string name="age">24</string>
+
+    <string name="my_places_label">My Places</string>
+
+        <!-- String resources for RecyclerView item -->
+
+        <string name="content_description_place">Image of place</string>
+        <string name="content_description_place_detail">Details of place</string>
+
+        <string name="place_name_label">Places :</string>
+        <string name="place_name">Bandstand</string>
+
+        <string name="state_name_label">State :</string>
+        <string name="state_name">Maharashtra</string>
+
+        <string name="city_name_label">City :</string>
+        <string name="city_name">Mumbai</string>
+
+        <string name="date_label">Date :</string>
+        <string name="date">17&#8211;04&#8211;18</string>
+
+        <!-- End of String resources for RecyclerView item -->
+
+    <!-- End of String resources for Profile Page Layout -->
+
 </resources>
