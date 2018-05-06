@@ -20,11 +20,11 @@ import java.util.ArrayList;
 public class MyLocationsRVAdapter extends RecyclerView.Adapter<MyLocationsRVAdapter.ViewHolder> {
     private Context context;
     private MyLocationsModel myLocationsModel;
-    private ArrayList<MyLocationsModel> list_my_loctions;
+    private ArrayList<MyLocationsModel> lMyLocations;
 
-    public MyLocationsRVAdapter(Context context, ArrayList<MyLocationsModel> list_my_loctions) {
+    public MyLocationsRVAdapter(Context context, ArrayList<MyLocationsModel> lMyLocations) {
         this.context = context;
-        this.list_my_loctions = list_my_loctions;
+        this.lMyLocations = lMyLocations;
     }
 
     @Override
@@ -35,12 +35,12 @@ public class MyLocationsRVAdapter extends RecyclerView.Adapter<MyLocationsRVAdap
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        myLocationsModel = list_my_loctions.get(position);
+        myLocationsModel = lMyLocations.get(position);
 
         if(position%2==0)
-            holder.iv_location.setImageResource(R.drawable.gateway_of_india);
+            holder.ivLocations.setImageResource(R.drawable.gateway_of_india);
         else
-            holder.iv_location.setImageResource(R.drawable.gateway_of_india_small);
+            holder.ivLocations.setImageResource(R.drawable.gateway_of_india_small);
 
         if (myLocationsModel.isFavorite())
             holder.isFavorite.setImageResource(R.drawable.ic_action_favorite_fill);
@@ -48,26 +48,26 @@ public class MyLocationsRVAdapter extends RecyclerView.Adapter<MyLocationsRVAdap
             holder.isFavorite.setImageResource(R.drawable.ic_action_favorite);
 
 
-        holder.tv_locationName.setText(myLocationsModel.getLoctionName());
-        holder.tv_locationDistance.setText(myLocationsModel.getLocationDistance());
+        holder.tvLocationName.setText(myLocationsModel.getLoctionName());
+        holder.tvLocationDistance.setText(myLocationsModel.getLocationDistance());
     }
 
 
     @Override
     public int getItemCount() {
-        return list_my_loctions.size();
+        return lMyLocations.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private ImageView iv_location;
-        private TextView tv_locationName, tv_locationDistance;
+        private ImageView ivLocations;
+        private TextView tvLocationName, tvLocationDistance;
         private ImageView isFavorite;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            iv_location = itemView.findViewById(R.id.my_location_img_places);
-            tv_locationName = itemView.findViewById(R.id.loaction_tv_name);
-            tv_locationDistance = itemView.findViewById(R.id.loaction_tv_distance);
+            ivLocations = itemView.findViewById(R.id.my_location_img_places);
+            tvLocationName = itemView.findViewById(R.id.loaction_tv_name);
+            tvLocationDistance = itemView.findViewById(R.id.loaction_tv_distance);
             isFavorite = itemView.findViewById(R.id.loaction_img_favorite);
         }
     }
