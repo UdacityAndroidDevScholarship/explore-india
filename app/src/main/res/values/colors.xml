@@ -6,9 +6,29 @@
     <color name="blackText">#000</color>
     <color name="whiteColor">#FFF</color>
     <color name="btn_google_login_text_color">#b30909</color>
-    
+
     <color name="colorGray">#D6D2D2</color>
     <color name="colorDarkGray">#ABABAB</color>
     <color name="colorLightGray">#F1F1F1</color>
+
+
+    <!-- Color resources for User Detail UI -->
+
+        <!-- Color resource for TextViews -->
+        <color name="textColor">#BF360C</color>
+
+        <!-- Color resource for margins -->
+        <color name="marginColor">#BBB7B7</color>
+
+        <!-- Color resource for RecyclerView item -->
+        <color name="textColorRecyclerView">#FFFFFF</color>
+
+        <!-- Color resource for background -->
+        <color name="backgroundColor">#F1F1F1</color>
+
+        <!-- Color resource for backgroundTint of FAB -->
+        <color name="fabColor">#D6D2D2</color>
+
+    <!-- End of Color resources for User Detail UI -->
 
 </resources>

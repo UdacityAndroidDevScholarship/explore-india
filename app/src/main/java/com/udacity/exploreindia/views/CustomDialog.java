@@ -1,4 +1,4 @@
-package com.udacity.exploreindia.helper;
+package com.udacity.exploreindia.views;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -33,7 +33,7 @@ public class CustomDialog extends AlertDialog {
         View view = View.inflate(mContext, R.layout.dialog_layout, null);
 
         TextView dialogMessage = (TextView) view.findViewById(R.id.dialog_message);
-        ImageView image = (ImageView) view.findViewById(R.id.image);
+        ImageView image = view.findViewById(R.id.dialog_image);
 
 
         Animation animation = AnimationUtils.loadAnimation(mContext, R.anim.anim_rotate_clockwise);

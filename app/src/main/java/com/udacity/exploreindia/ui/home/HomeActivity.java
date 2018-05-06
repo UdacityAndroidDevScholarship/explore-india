@@ -3,25 +3,27 @@ package com.udacity.exploreindia.ui.home;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.view.MenuItem;
 
 import com.udacity.exploreindia.R;
 import com.udacity.exploreindia.base.BaseActivity;
 import com.udacity.exploreindia.databinding.ActivityHomBinding;
-import com.udacity.exploreindia.helper.CustomDialog;
+import com.udacity.exploreindia.helper.FragmentAdapter;
 import com.udacity.exploreindia.ui.home.fragments.likedplaces.LikedPlacesFragment;
 import com.udacity.exploreindia.ui.home.fragments.main.MainFragment;
+import com.udacity.exploreindia.ui.home.fragments.place.PlaceFragment;
+import com.udacity.exploreindia.ui.home.fragments.profile.UserDetailFragment;
+import com.udacity.exploreindia.ui.home.fragments.search.SearchFragment;
+import com.udacity.exploreindia.views.CustomDialog;
 
 
 public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityHomBinding> implements HomeContract.View {
 
-    private long lastBackPressTime;
-    private FragmentTransaction fragmentTransaction;
+
     private BottomNavigationView bottomNavigationView;
+    private ViewPager viewPager;
 
     @Override
     protected int getContentResource() {
@@ -30,20 +32,45 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
 
     @Override
     protected void init(@Nullable Bundle savedInstanceState) {
+
         CustomDialog customDialog=new CustomDialog(this);
         customDialog.show();
-        
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
+        populateViewPager();
         setBottomNavigation();
-        if(savedInstanceState == null){
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.fragment_container, new LikedPlacesFragment())
-                    .commit();
-        }
 
-        init();
+    }
+
+    private void populateViewPager() {
+        viewPager = findViewById(R.id.view_pager);
+
+        final FragmentAdapter fragmentAdapter = new FragmentAdapter(getSupportFragmentManager());
+        fragmentAdapter.addFragment(MainFragment.newInstance(), R.id.bnv_my_location);
+        fragmentAdapter.addFragment(SearchFragment.newInstance(), R.id.bnv_search);
+        fragmentAdapter.addFragment(PlaceFragment.newInstance(), R.id.bnv_add);
+        fragmentAdapter.addFragment(LikedPlacesFragment.newInstance(), R.id.bnv_favorite);
+        fragmentAdapter.addFragment(UserDetailFragment.newInstance(), R.id.bnv_profile);
+        viewPager.setAdapter(fragmentAdapter);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                bottomNavigationView.setSelectedItemId(fragmentAdapter.getIds().get(position));
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
     }
 
     @Override
@@ -63,32 +90,31 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
     private void setBottomNavigation() {
         bottomNavigationView = findViewById(R.id.bottom_navigation_view);
 
-        replaceFragment(MainFragment.newInstance(), "My Location");
         bottomNavigationView.setSelectedItemId(R.id.my_location_fragment);
         bottomNavigationView.getMenu().findItem(R.id.bnv_my_location).setChecked(true);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.bnv_my_location :
-                        replaceFragment(MainFragment.newInstance(), "My Locations");
+                switch (item.getItemId()) {
+                    case R.id.bnv_my_location:
+                        viewPager.setCurrentItem(0);
                         break;
 
-                    case R.id.bnv_search :
-                        showMessage("Search not implemented yet");
+                    case R.id.bnv_search:
+                        viewPager.setCurrentItem(1);
                         break;
 
-                    case R.id.bnv_add :
-                        showMessage("Add not implemented yet");
+                    case R.id.bnv_add:
+                        viewPager.setCurrentItem(2);
                         break;
 
-                    case R.id.bnv_favorite :
-                        replaceFragment(LikedPlacesFragment.newInstance(), "Favorite");
+                    case R.id.bnv_favorite:
+                        viewPager.setCurrentItem(3);
                         break;
 
-                    case R.id.bnv_profile :
-                        showMessage("Profile not implemented yet");
+                    case R.id.bnv_profile:
+                        viewPager.setCurrentItem(4);
                         break;
                 }
                 return true;
@@ -96,11 +122,8 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
         });
     }
 
-    public void replaceFragment(Fragment selectedFragment, String tag){
-        fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.main_dashboard_container, selectedFragment, tag);
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
-    }
 
+    public void setActionBarTitle(String title) {
+        getSupportActionBar().setTitle(title);
+    }
 }
