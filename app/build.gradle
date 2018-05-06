@@ -9,6 +9,7 @@ android {
         versionCode buildConfig.version.code
         versionName buildConfig.version.name
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
     dataBinding {
         enabled = true
@@ -36,8 +37,22 @@ dependencies {
     implementation deps.other.timber
     // Fused location
     implementation deps.google.play_services.location
+<<<<<<< HEAD
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     implementation 'com.android.support:support-v4:27.1.1'
+||||||| merged common ancestors
+
+
+    //CardView
+    implementation deps.android.support.cardView
+
+=======
+
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    //CardView
+    implementation deps.android.support.cardView
+
+>>>>>>> upstream/master
     testImplementation deps.junit
     androidTestImplementation deps.android.support.test.runner
     androidTestImplementation deps.android.support.test.espressoCore

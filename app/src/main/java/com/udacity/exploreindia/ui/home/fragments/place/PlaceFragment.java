@@ -32,4 +32,10 @@ public class PlaceFragment extends BaseFragment<PlaceContract.Presenter,Fragment
 
 
 
+    public static Fragment newInstance() {
+        PlaceFragment fragment = new PlaceFragment();
+        Bundle bundle = new Bundle();
+        fragment.setArguments(bundle);
+        return fragment;
+    }
 }
