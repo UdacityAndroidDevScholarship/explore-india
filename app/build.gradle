@@ -37,8 +37,11 @@ dependencies {
     // Firebase Auth
     implementation deps.google.firebase.auth
 
-    // Realtime database
-    implementation deps.google.firebase.database
+    // Gson lib
+    implementation  deps.other.gsonConvertor
+
+    // Gson lib
+    implementation deps.android.support.gson
 
     // RecyclerView
     implementation deps.android.support.recycleView
@@ -48,6 +51,9 @@ dependencies {
 
     // Picasso - Image loading library
     implementation deps.other.picasso
+
+    // Retofit - server data lib
+    implementation deps.other.api
 
     // Fused location
     implementation deps.google.play_services.location
