@@ -37,7 +37,8 @@ buildscript {
             'espressoCore'    : '3.0.1',
             'leak_canary'     :  '1.5.4',
             'timber'          : '4.7.0',
-            'play_services'   : '15.0.0'
+            'play_services'   : '15.0.0',
+            'picasso'         : '2.5.0'
     ]
 
     String versionName = "${buildConfig.version.major}.${buildConfig.version.minor}.${buildConfig.version.patch}"
@@ -52,6 +53,8 @@ buildscript {
                             'annotations'     : "com.android.support:support-annotations:${versions.supportLibrary}",
                             'constraintLayout': "com.android.support.constraint:constraint-layout:${versions.constraintLayout}",
                             'design'          : "com.android.support:design:${versions.supportLibrary}",
+                            'cardView'        : "com.android.support:cardview-v7:${versions.supportLibrary}",
+                            'recycleView'     : "com.android.support:recyclerview-v7:${versions.supportLibrary}",
                             'test'            : [
                                     'runner'      : "com.android.support.test:runner:${versions.testRunner}",
                                     'espressoCore': "com.android.support.test.espresso:espresso-core:${versions.espressoCore}"
@@ -71,13 +74,15 @@ buildscript {
             ],
 
             'other':[
-                    'timber':"com.jakewharton.timber:timber:${versions.timber}"
+                    'timber':"com.jakewharton.timber:timber:${versions.timber}",
+                    'picasso':"com.squareup.picasso:picasso:${versions.picasso}"
             ],
 
             'junit'  : 'junit:junit:4.12'
     ]
 
 }
+
 
 allprojects {
     repositories {
