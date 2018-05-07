@@ -120,7 +120,7 @@ public class MainFragment extends BaseFragment<MainContract.Presenter,FragmentMa
         sliderPagerAdapter = new SliderPagerAdapter(context, slider_image_list);
         vp_imageSlider.setAdapter(sliderPagerAdapter);
 
-        vp_imageSlider.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        vp_imageSlider.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 

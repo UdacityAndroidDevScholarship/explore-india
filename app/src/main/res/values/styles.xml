@@ -20,4 +20,10 @@
         <item name="cardElevation">4dp</item>
     </style>
 
+    <!-- Custom theme for textInputLayouts -->
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <item name="android:textColorHint">@color/colorDarkGray</item>
+        <item name="colorControlActivated">@color/colorDarkGray</item>
+    </style>
+
 </resources>

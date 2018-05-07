@@ -21,7 +21,7 @@
             android:id="@+id/edt_search"
             app:queryHint="@string/search_places"
             app:iconifiedByDefault="false"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/colorAccent"
             android:padding="@dimen/recyclerview_padding"
             />
     </LinearLayout>
