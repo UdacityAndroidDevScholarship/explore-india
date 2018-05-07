@@ -62,6 +62,9 @@ dependencies {
     //CardView
     implementation deps.android.support.cardView
 
+    //PinView
+    implementation 'com.github.GoodieBag:Pinview:v1.3'
+
     testImplementation deps.junit
     androidTestImplementation deps.android.support.test.runner
     androidTestImplementation deps.android.support.test.espressoCore

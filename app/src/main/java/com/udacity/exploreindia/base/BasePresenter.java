@@ -24,6 +24,7 @@ public abstract class BasePresenter<V extends BaseView> implements BaseMvpPresen
         this.mContext = mContext;
     }
 
+
     public Context getContext() {
         return mContext;
     }
@@ -50,7 +51,6 @@ public abstract class BasePresenter<V extends BaseView> implements BaseMvpPresen
     public boolean isAttached() {
         return view != null;
     }
-
 
     public V getView() {
         return view;

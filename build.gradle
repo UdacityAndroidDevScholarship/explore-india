@@ -93,6 +93,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url 'https://jitpack.io' }
     }
     configurations.all {
         resolutionStrategy.eachDependency { details ->
