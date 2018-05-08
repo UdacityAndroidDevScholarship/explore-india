@@ -15,14 +15,15 @@
         android:padding="@dimen/edittext_padding"
         android:background="@color/colorPrimary"
         >
+
         <android.support.v7.widget.SearchView
+            android:id="@+id/edt_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/edt_search"
-            app:queryHint="@string/search_places"
-            app:iconifiedByDefault="false"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/cardview_light_background"
             android:padding="@dimen/recyclerview_padding"
+            app:iconifiedByDefault="false"
+            app:queryHint="@string/search_places"
             />
     </LinearLayout>
 <RelativeLayout
