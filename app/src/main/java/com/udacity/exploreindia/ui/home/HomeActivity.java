@@ -1,12 +1,15 @@
 package com.udacity.exploreindia.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
+import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.udacity.exploreindia.R;
 import com.udacity.exploreindia.base.BaseActivity;
 import com.udacity.exploreindia.databinding.ActivityHomBinding;
@@ -16,6 +19,7 @@ import com.udacity.exploreindia.ui.home.fragments.main.MainFragment;
 import com.udacity.exploreindia.ui.home.fragments.place.PlaceFragment;
 import com.udacity.exploreindia.ui.home.fragments.profile.UserDetailFragment;
 import com.udacity.exploreindia.ui.home.fragments.search.SearchFragment;
+import com.udacity.exploreindia.ui.login.LoginActivity;
 
 
 public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityHomBinding> implements HomeContract.View {
@@ -74,6 +78,26 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.home_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int selectedId = item.getItemId();
+        switch (selectedId) {
+            case R.id.action_logout :
+                FirebaseAuth.getInstance().signOut();
+                Intent loginIntent = new Intent(this, LoginActivity.class);
+                startActivity(loginIntent);
+                return true;
+
+                default:
+                    return super.onOptionsItemSelected(item);
+        }
+    }
 
     private void setBottomNavigation() {
         bottomNavigationView = findViewById(R.id.bottom_navigation_view);
