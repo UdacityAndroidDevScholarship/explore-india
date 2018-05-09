@@ -63,7 +63,7 @@ public class SearchFragment extends BaseFragment<MainContract.Presenter,Fragment
         rvPopularCities = view.findViewById(R.id.rv_popular_cities);
         rvPopularPlaces = view.findViewById(R.id.rv_popular_places);
 
-        searchPopularDestinations = view.findViewById(R.id.edt_search);
+        searchPopularDestinations = view.findViewById(R.id.edit_search);
 
 
         lPopularCites = new ArrayList<>();
