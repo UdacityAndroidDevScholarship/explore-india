@@ -16,6 +16,7 @@ import com.udacity.exploreindia.ui.home.fragments.main.MainFragment;
 import com.udacity.exploreindia.ui.home.fragments.place.PlaceFragment;
 import com.udacity.exploreindia.ui.home.fragments.profile.UserDetailFragment;
 import com.udacity.exploreindia.ui.home.fragments.search.SearchFragment;
+import com.udacity.exploreindia.views.CustomDialog;
 
 
 public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityHomBinding> implements HomeContract.View {
@@ -32,12 +33,14 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
     @Override
     protected void init(@Nullable Bundle savedInstanceState) {
 
+        CustomDialog customDialog=new CustomDialog(this);
+        customDialog.show();
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         populateViewPager();
         setBottomNavigation();
-
 
     }
 
@@ -67,11 +70,20 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
 
             }
         });
+
     }
 
     @Override
     protected void beforeView(@Nullable Bundle savedInstanceState) {
 
+    }
+
+    private void init() {
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        setBottomNavigation();
     }
 
 

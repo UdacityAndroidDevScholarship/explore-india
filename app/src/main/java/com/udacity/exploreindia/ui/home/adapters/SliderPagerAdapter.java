@@ -18,16 +18,16 @@ import java.util.ArrayList;
 
 public class SliderPagerAdapter extends PagerAdapter {
     private Context context;
-    private ArrayList<Integer> slider_image_list;
+    private ArrayList<Integer> lSliderImage;
 
     public SliderPagerAdapter(Context context, ArrayList<Integer> list_images) {
         this.context = context;
-        this.slider_image_list = list_images;
+        this.lSliderImage = list_images;
     }
 
     @Override
     public int getCount() {
-        return slider_image_list.size();
+        return lSliderImage.size();
     }
 
     @Override
@@ -39,12 +39,12 @@ public class SliderPagerAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, int position) {
         View view = LayoutInflater.from(context).inflate(R.layout.cardview_location_layout, container, false);
 
-        ImageView im_slider = view.findViewById(R.id.my_location_img_places);
+        ImageView imgSlider = view.findViewById(R.id.my_location_img_places);
         Picasso.with(context)
-                .load(slider_image_list.get(position))
+                .load(lSliderImage.get(position))
                 .placeholder(R.mipmap.ic_launcher) // optional
                 .error(R.mipmap.ic_launcher)         // optional
-                .into(im_slider);
+                .into(imgSlider);
         container.addView(view);
         return view;
     }
