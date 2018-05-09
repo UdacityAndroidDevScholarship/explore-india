@@ -270,4 +270,10 @@
 
     <!-- End of Liked place Details -->
 
+
+    <!-- Selected place Details -->
+
+    <item name="selected_img_background" type="id" />
+
+    <!-- End of Selected place Details -->
 </resources>
