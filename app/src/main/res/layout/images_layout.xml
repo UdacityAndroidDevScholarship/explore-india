@@ -9,8 +9,7 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-
+        <!--ImageView for Location-->
         <ImageView
             android:id="@id/liked_places_list_images"
             android:layout_width="match_parent"
@@ -24,7 +23,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/image1" />
 
-
+        <!--ImageView for Dark Background-->
         <ImageView
             android:id="@id/liked_places_img_background"
             android:layout_width="0dp"
@@ -36,6 +35,7 @@
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:srcCompat="@drawable/background_image" />
 
+        <!--Location Name-->
         <TextView
             android:id="@id/liked_place_tv_name"
             android:layout_width="100dp"
@@ -50,6 +50,7 @@
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!--Label for number of likes of Location-->
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
@@ -60,6 +61,7 @@
             app:layout_constraintStart_toStartOf="@+id/liked_place_tv_name"
             app:layout_constraintTop_toBottomOf="@+id/liked_place_tv_name" />
 
+        <!--Number of likes for Location-->
         <TextView
             android:id="@id/liked_place_tv_like"
             android:layout_width="68dp"
@@ -71,6 +73,7 @@
             app:layout_constraintBaseline_toBaselineOf="@+id/textView"
             app:layout_constraintStart_toEndOf="@+id/textView" />
 
+        <!--Label for Date-->
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
@@ -81,6 +84,7 @@
             app:layout_constraintStart_toStartOf="@+id/textView"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+        <!--Date of Location-->
         <TextView
             android:id="@id/liked_place_tv_date"
             android:layout_width="92dp"
