@@ -1,6 +1,7 @@
 package com.udacity.exploreindia.ui.home.fragments.search;
 
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -11,8 +12,10 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.udacity.exploreindia.R;
 import com.udacity.exploreindia.base.BaseFragment;
@@ -64,7 +67,8 @@ public class SearchFragment extends BaseFragment<MainContract.Presenter,Fragment
         rvPopularPlaces = view.findViewById(R.id.rv_popular_places);
 
         searchPopularDestinations = view.findViewById(R.id.edt_search);
-
+        ((EditText)  searchPopularDestinations.findViewById(android.support.v7.appcompat.R.id.search_src_text))
+                .setTextColor(Color.WHITE);
 
         lPopularCites = new ArrayList<>();
         lPopularPlaces = new ArrayList<>();
@@ -90,6 +94,8 @@ public class SearchFragment extends BaseFragment<MainContract.Presenter,Fragment
 
         ImageView searchViewIcon =
                 searchPopularDestinations.findViewById(android.support.v7.appcompat.R.id.search_mag_icon);
+
+
         ViewGroup linearLayoutSearchView =
                 (ViewGroup) searchViewIcon.getParent();
         linearLayoutSearchView.removeView(searchViewIcon);

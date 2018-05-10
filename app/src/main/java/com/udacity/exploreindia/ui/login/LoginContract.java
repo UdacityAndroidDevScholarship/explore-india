@@ -10,6 +10,9 @@ public interface LoginContract {
             void performPhoneLogin(String number);
             void signInWithPhoneAuthCredential(PhoneAuthCredential phoneAuthCredential);
             void createAuthWithOTP(String otp);
+            void openOTPDialog();
+            void registerOTPReceiver();
+            void unRegisterOTPReceiver();
 
     }
 

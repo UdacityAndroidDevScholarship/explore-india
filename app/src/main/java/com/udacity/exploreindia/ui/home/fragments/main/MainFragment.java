@@ -62,6 +62,7 @@ public class MainFragment extends BaseFragment<MainContract.Presenter,FragmentMa
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main, container, false);
         context = getContext();
+
         vp_imageSlider = view.findViewById(R.id.vp_image_slider);
         ll_dots = view.findViewById(R.id.ll_dots);
 

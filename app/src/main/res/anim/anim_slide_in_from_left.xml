@@ -3,7 +3,7 @@
     android:shareInterpolator="false" >
 
     <translate android:duration="400"
-        android:fromXDelta="0%"
-        android:toXDelta="-100%"
+        android:fromXDelta="-100%"
+        android:toXDelta="0%"
         xmlns:android="http://schemas.android.com/apk/res/android" />
 </set>
