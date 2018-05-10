@@ -272,8 +272,15 @@
 
 
     <!-- Selected place Details -->
-
-    <item name="selected_img_background" type="id" />
+    <item name="selected_places_rv_images" type="id" />
+    <item name="selected_places_img_background" type="id" />
+    <item name="selected_places_list_images" type="id" />
+    <item name="selected_places_tv_name" type="id" />
+    <item name="selected_places_like_image" type="id" />
+    <item name="selected_palced_rv_toolbar" type="id" />
+    <item name="selected_places_tv_placename" type="id" />
+    <item name="selected_places_img_arrow" type="id" />
+    <item name="selected_places_img_search" type="id" />
 
     <!-- End of Selected place Details -->
 </resources>

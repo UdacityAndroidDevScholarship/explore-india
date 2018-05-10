@@ -33,6 +33,11 @@
     <string name="popular_places">Popular Places > </string>
     <string name="search_places">Search Places</string>
 
+  <!-- Selected Places Strings -->
+    <string name="selected_places_tv_placename">Gujarat</string>
+    <string name="selected_places_img_back">back</string>
+    <string name="selected_places_img_search">search</string>
+    <string name="selected_places_like_image">Like</string>
 
     <!-- String resources for Profile Page Layout -->
 

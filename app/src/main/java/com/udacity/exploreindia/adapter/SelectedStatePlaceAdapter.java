@@ -1,16 +1,11 @@
 package com.udacity.exploreindia.adapter;
 
-import android.app.Activity;
+
 import android.content.Context;
-import android.content.res.Resources;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.support.constraint.ConstraintLayout;
-import android.util.DisplayMetrics;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,76 +15,46 @@ import com.udacity.exploreindia.R;
  * Created by kamalshree on 5/9/2018.
  */
 
-public class SelectedStatePlaceAdapter extends ArrayAdapter<Integer> {
+public class SelectedStatePlaceAdapter extends RecyclerView.Adapter<SelectedStatePlaceAdapter.ImageViewHolder> {
 
-    Context context;
-    LayoutInflater inflater;
-    int layoutResourceId;
-    float imageWidth;
+    private final Context mContext;
 
-    public SelectedStatePlaceAdapter(Context context, int layoutResourceId, Integer[] items, String[] placename) {
-        super(context, layoutResourceId, items);
-        this.context = context;
-        this.layoutResourceId = layoutResourceId;
+    //sample data this can be changed later
+    private int[] likedImages = {R.drawable.gujarat1, R.drawable.gujarat2, R.drawable.gujarat3, R.drawable.gujarat4, R.drawable.gujarat5, R.drawable.gujarat6, R.drawable.gujarat7, R.drawable.gujarat8, R.drawable.gujarat5};
+    private String[] mplace = {"Bharuch", "Vadodara", "Akshardham", "Sarkhej Roza", "Nagina Masjid", "Akshardham", "Gandhinagar", "Rajkot", "Nagina Masjid"};
 
-        float width = ((Activity) context).getWindowManager().getDefaultDisplay().getWidth();
-        float margin = (int) convertDpToPixel(10f, (Activity) context);
-        // two images, three margins of 10dips
-        imageWidth = ((width - (3 * margin)) / 2);
+    public SelectedStatePlaceAdapter(Context context) {
+        mContext = context;
+
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        ConstraintLayout row = (ConstraintLayout) convertView;
-        ItemHolder holder;
-        Integer item = getItem(position);
-
-        if (row == null) {
-            holder = new ItemHolder();
-            inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            row = (ConstraintLayout) inflater.inflate(layoutResourceId, parent, false);
-            ImageView itemImage = (ImageView) row.findViewById(R.id.item_image);
-            ImageView itemBackground = (ImageView) row.findViewById(R.id.selected_img_background);
-            TextView placeName = (TextView) row.findViewById(R.id.place_name);
-            ImageView heartImage = (ImageView) row.findViewById(R.id.heart_image);
-
-            holder.itemImage = itemImage;
-            holder.itemBackground = itemBackground;
-            holder.placeName = placeName;
-            holder.heartImage = heartImage;
-        } else {
-            holder = (ItemHolder) row.getTag();
-        }
-
-        row.setTag(holder);
-        setImageBitmap(item, holder.itemImage);
-        return row;
+    public SelectedStatePlaceAdapter.ImageViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(mContext).inflate(R.layout.image_item_list, parent, false);
+        return new SelectedStatePlaceAdapter.ImageViewHolder(view);
     }
 
-    public static class ItemHolder {
+    @Override
+    public void onBindViewHolder(SelectedStatePlaceAdapter.ImageViewHolder holder, int position) {
+        holder.itemImage.setImageResource(likedImages[position]);
+        holder.placeName.setText(mplace[position]);
+    }
+
+    @Override
+    public int getItemCount() {
+        return likedImages.length;
+    }
+
+
+    protected class ImageViewHolder extends RecyclerView.ViewHolder {
         ImageView itemImage;
-        ImageView itemBackground;
         TextView placeName;
-        ImageView heartImage;
-    }
 
-    // resize the image proportionately so it fits the entire space
-    private void setImageBitmap(Integer item, ImageView imageView) {
-        Bitmap bitmap = BitmapFactory.decodeResource(getContext().getResources(), item);
-        float i = ((float) imageWidth) / ((float) bitmap.getWidth());
-        float imageHeight = i * (bitmap.getHeight());
-        ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) imageView.getLayoutParams();
-        params.height = (int) imageHeight;
-        params.width = (int) imageWidth;
-        imageView.setLayoutParams(params);
-        imageView.setImageResource(item);
-    }
-
-    public static float convertDpToPixel(float dp, Context context) {
-        Resources resources = context.getResources();
-        DisplayMetrics metrics = resources.getDisplayMetrics();
-        float px = dp * (metrics.densityDpi / 160f);
-        return px;
+        public ImageViewHolder(View itemView) {
+            super(itemView);
+            itemImage = (ImageView) itemView.findViewById(R.id.selected_places_list_images);
+            placeName = (TextView) itemView.findViewById(R.id.selected_places_tv_name);
+        }
     }
 
 }
