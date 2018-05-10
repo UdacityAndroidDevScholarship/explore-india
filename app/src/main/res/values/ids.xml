@@ -33,6 +33,7 @@
                ViewPager = vp
                Toolbar = tb
                SearchView = sv
+               PinView = pv
 
                If new ids are needed to be created apart from the id's mentioned here,
                 please use the above convention.
@@ -47,6 +48,7 @@
     <item name="login_right_divider" type="id" />
     <item name="login_tv_label_or" type="id" />
     <item name="login_btn_signin_google_plus" type="id" />
+    <item name="login_pv_otp" type="id"/>
 
     <!-- End of Login Layout -->
 
@@ -54,6 +56,10 @@
 
     <item name="bottom_navigation_view" type="id" />
     <item name="view_pager" type="id" />
+
+    <!-- Home Menu Layout -->
+    <item name="action_logout" type="id"/>
+    <!-- End of Home Menu Layout -->
 
     <!-- Main Viewpager Layout containing main fragments -->
 
