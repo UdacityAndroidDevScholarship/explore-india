@@ -21,9 +21,11 @@
             android:id="@+id/edt_search"
             app:queryHint="@string/search_places"
             app:iconifiedByDefault="false"
+            app:searchIcon="@drawable/ic_search_black_24dp"
+            app:closeIcon="@drawable/ic_close_white_24dp"
+            android:theme="@style/SearchViewTheme"
             android:background="@color/colorPrimaryDark"
-            android:padding="@dimen/recyclerview_padding"
-            />
+             />
     </LinearLayout>
 <RelativeLayout
     android:layout_width="match_parent"

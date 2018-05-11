@@ -8,7 +8,7 @@
 
     <!--Login Screen Strings-->
     <string name="login_tv_app_title">Explore India</string>
-    <string name="login_et_phone_no_hint">  +91    Mobile No.</string>
+    <string name="login_et_phone_no_hint">Mobile No.</string>
     <string name="login_btn_proceed_label">Proceed</string>
     <string name="login_tv_or_label">Or</string>
     <string name="login_btn_google_login">Sign in with google plus</string>
@@ -80,5 +80,22 @@
         <!-- End of String resources for RecyclerView item -->
 
     <!-- End of String resources for Profile Page Layout -->
+
+
+
+    <!--Custom Dialog Message Strings-->
+    <string name="msg_signing_in">Signing in&#8230;</string>
+
+
+
+    <!--Fixed Strings-->
+    <string name="country_code">+91</string>
+
+
+    <!--Toast Messages Strings-->
+    <string name="msg_login_success">Login Successful!</string>
+    <string name="msg_login_failed">Login Failed!</string>
+    <string name="msg_invalid_no">Please enter correct number!</string>
+
 
 </resources>

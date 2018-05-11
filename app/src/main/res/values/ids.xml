@@ -49,6 +49,8 @@
     <item name="login_tv_label_or" type="id" />
     <item name="login_btn_signin_google_plus" type="id" />
     <item name="login_pv_otp" type="id"/>
+    <item name="login_txt_otp" type="id"/>
+    <item name="login_img_cross" type="id"/>
 
     <!-- End of Login Layout -->
 
