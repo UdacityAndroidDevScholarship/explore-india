@@ -39,9 +39,9 @@ public class LikedImageAdapter extends RecyclerView.Adapter<LikedImageAdapter.Im
     @Override
     public void onBindViewHolder(ImageViewHolder holder, int position) {
         holder.likedPlacesListImages.setImageResource(likedImages[position]);
-        holder.likedPlaceTvName.setText(mplace[position]);
-        holder.liked_place_tv_like.setText(mlike[position]);
-        holder.likedPlaceTvDate.setText(mdate[position]);
+        holder.likedPlaceTvName.setText("Name: "+mplace[position]);
+        holder.liked_place_tv_like.setText("Likes: "+mlike[position]);
+        holder.likedPlaceTvDate.setText("Date: "+mdate[position]);
     }
 
     @Override
