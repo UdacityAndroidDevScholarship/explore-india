@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -81,7 +83,7 @@ public class StatesWithCitiesFragment extends BaseFragment<StatesWithCitiesContr
         for (int i=0; i<5; i++) {
             mDummyDataMajorCities.add(new CityData(R.drawable.ahmedabad, "Ahmedabad"));
         }
-        for (int i=0; i<12; i++) {
+        for (int i=0; i<16; i++) {
             mDummyDataSmallCities.add(new CityData(R.drawable.image3, "Taj Mahal"));
         }
 
@@ -100,7 +102,7 @@ public class StatesWithCitiesFragment extends BaseFragment<StatesWithCitiesContr
             public void run() {
                 handler.post(slidePositionRunnable);
             }
-        }, 0, 5000);
+        }, 1000, 5000);
 
         return view;
     }
@@ -116,7 +118,9 @@ public class StatesWithCitiesFragment extends BaseFragment<StatesWithCitiesContr
 
         // Populate the Bottom Small City view with data
         mSmallCityRecyclerView.setHasFixedSize(true);
-        mSmallCityRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(3, LinearLayout.VERTICAL));
+        mSmallCityRecyclerView.setNestedScrollingEnabled(true);
+        mSmallCityRecyclerView.setLayoutManager(new GridLayoutManager(mContext, 3, GridLayout.VERTICAL, false));
+        mSmallCityRecyclerView.addItemDecoration(new GridSpacingItemDecoration(80));
         mSmallCityRecyclerView.setAdapter(new SmallCitiesAdapter(mDummyDataSmallCities));
     }
 
