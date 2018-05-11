@@ -3,6 +3,7 @@ package com.udacity.exploreindia.ui.home.fragments.main;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -34,8 +35,8 @@ import java.util.TimerTask;
 public class MainFragment extends BaseFragment<MainContract.Presenter,FragmentMainBinding> implements MainContract.View {
 
     private Context context;
-    private RecyclerView rv_my_loctions;
-    private ArrayList<MyLocationsModel> list_my_loctions;
+    private RecyclerView rv_my_locations;
+    private ArrayList<MyLocationsModel> list_my_locations;
 
     private ViewPager vp_imageSlider;
     private LinearLayout ll_dots;
@@ -65,8 +66,8 @@ public class MainFragment extends BaseFragment<MainContract.Presenter,FragmentMa
         ll_dots = view.findViewById(R.id.ll_dots);
 
         slider_image_list = new ArrayList<>();
-        rv_my_loctions = view.findViewById(R.id.my_location_rv_places);
-        list_my_loctions = new ArrayList<>();
+        rv_my_locations = view.findViewById(R.id.my_location_rv_places);
+        list_my_locations = new ArrayList<>();
 
         locationPlaceHolder();
 
@@ -100,7 +101,7 @@ public class MainFragment extends BaseFragment<MainContract.Presenter,FragmentMa
 
     private void locationPlaceHolder() {
         for (int i = 0; i<6; i++){
-            list_my_loctions.add(new MyLocationsModel("Gateway of India", "600m", true));
+            list_my_locations.add(new MyLocationsModel("Gateway of India", "600m", true));
         }
     }
 
@@ -108,9 +109,9 @@ public class MainFragment extends BaseFragment<MainContract.Presenter,FragmentMa
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //locationPlaceHolder();
-        rv_my_loctions.setHasFixedSize(true);
-        rv_my_loctions.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayout.VERTICAL));
-        rv_my_loctions.setAdapter(new MyLocationsRVAdapter(context, list_my_loctions));
+        rv_my_locations.setHasFixedSize(true);
+        rv_my_locations.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayout.VERTICAL));
+        rv_my_locations.setAdapter(new MyLocationsRVAdapter(context, list_my_locations));
 
         slider_image_list.add(R.drawable.gateway_of_india_strech);
         slider_image_list.add(R.drawable.gateway_of_india_strech);
@@ -120,7 +121,7 @@ public class MainFragment extends BaseFragment<MainContract.Presenter,FragmentMa
         sliderPagerAdapter = new SliderPagerAdapter(context, slider_image_list);
         vp_imageSlider.setAdapter(sliderPagerAdapter);
 
-        vp_imageSlider.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        vp_imageSlider.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -138,13 +139,24 @@ public class MainFragment extends BaseFragment<MainContract.Presenter,FragmentMa
         });
     }
 
+    @SuppressWarnings("deprecation")
     private void addBottomDots(int currentPage) {
         dots = new TextView[slider_image_list.size()];
 
         ll_dots.removeAllViews();
         for (int i = 0; i < dots.length; i++) {
             dots[i] = new TextView(context);
-            dots[i].setText(Html.fromHtml("&#8226;"));
+            /**
+             * The following if-else block checks for SDK version since the function
+             * Html.fromHtml(String source) is deprecated in android versions N and above.
+             * That is also why the @SuppressWarnings annotation has been written above the method
+             * declaration
+             */
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                dots[i].setText(Html.fromHtml("&#8226;", Html.FROM_HTML_MODE_LEGACY));
+            } else {
+                dots[i].setText(Html.fromHtml("&#8226;"));
+            }
             dots[i].setTextSize(40);
             dots[i].setTextColor(Color.parseColor("#8ff7f5f5"));
             ll_dots.addView(dots[i]);

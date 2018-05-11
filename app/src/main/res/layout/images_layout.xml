@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="200dp"
     android:layout_margin="10dp">
@@ -8,91 +9,99 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-
+        <!--ImageView for Location-->
         <ImageView
             android:id="@id/liked_places_list_images"
             android:layout_width="match_parent"
-            android:layout_height="195dp"
-            android:layout_marginBottom="4dp"
+            android:layout_height="0dp"
             android:contentDescription="@string/liked_places_list_images"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/image1" />
 
-
+        <!--ImageView for Dark Background-->
         <ImageView
             android:id="@id/liked_places_img_background"
-            android:layout_width="185dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:contentDescription="@string/liked_places_img_background"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="@id/liked_places_list_images"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintLeft_toLeftOf="@id/liked_places_list_images"
             app:layout_constraintRight_toRightOf="@id/liked_places_list_images"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
             app:srcCompat="@drawable/background_image" />
 
+        <!--Location Name-->
         <TextView
             android:id="@id/liked_place_tv_name"
             android:layout_width="100dp"
-            android:layout_height="15dp"
-            android:layout_marginBottom="112dp"
-            android:layout_marginLeft="220dp"
-            android:layout_marginStart="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="48dp"
             android:text="@string/likde_place_tv_name"
             android:textColor="#FFF"
-            app:layout_constraintBottom_toBottomOf="@id/liked_places_list_images"
-            app:layout_constraintLeft_toLeftOf="@id/liked_places_list_images" />
+            app:layout_constraintEnd_toEndOf="@+id/liked_places_img_background"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <!--Label for number of likes of Location-->
         <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="84dp"
-            android:layout_marginLeft="192dp"
-            android:layout_marginStart="192dp"
+            android:layout_marginTop="24dp"
             android:text="@string/liked_place_tv_like"
             android:textColor="#FFF"
-            app:layout_constraintBottom_toBottomOf="@id/liked_places_list_images"
-            app:layout_constraintLeft_toLeftOf="@id/liked_places_list_images" />
+            app:layout_constraintStart_toStartOf="@+id/liked_place_tv_name"
+            app:layout_constraintTop_toBottomOf="@+id/liked_place_tv_name" />
 
+        <!--Number of likes for Location-->
         <TextView
             android:id="@id/liked_place_tv_like"
             android:layout_width="68dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="84dp"
-            android:layout_marginLeft="280dp"
-            android:layout_marginStart="280dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             android:text=""
             android:textColor="#FFF"
-            app:layout_constraintBottom_toBottomOf="@id/liked_places_list_images"
-            app:layout_constraintLeft_toLeftOf="@id/liked_places_list_images" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView"
+            app:layout_constraintStart_toEndOf="@+id/textView" />
 
+        <!--Label for Date-->
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="52dp"
-            android:layout_marginLeft="192dp"
-            android:layout_marginStart="192dp"
+            android:layout_marginTop="24dp"
             android:text="@string/liked_place_tv_date"
             android:textColor="#FFF"
-            app:layout_constraintBottom_toBottomOf="@id/liked_places_list_images"
-            app:layout_constraintLeft_toLeftOf="@id/liked_places_list_images" />
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+        <!--Date of Location-->
         <TextView
             android:id="@id/liked_place_tv_date"
             android:layout_width="92dp"
-            android:layout_height="22dp"
-            android:layout_marginBottom="48dp"
-            android:layout_marginLeft="240dp"
-            android:layout_marginStart="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             android:text=""
             android:textColor="#FFF"
-            app:layout_constraintBottom_toBottomOf="@id/liked_places_list_images"
-            app:layout_constraintLeft_toLeftOf="@id/liked_places_list_images" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
+            app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="180dp" />
 
     </android.support.constraint.ConstraintLayout>
 
