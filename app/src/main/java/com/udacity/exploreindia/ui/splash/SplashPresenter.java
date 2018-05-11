@@ -25,18 +25,18 @@ public class SplashPresenter extends BasePresenter<SplashContract.View> implemen
 
     @Override
     public void initCountDown() {
-        new Handler().postDelayed(new Runnable() {
-                                      @Override
-                                      public void run() {
+        new Handler().postDelayed(
+                new Runnable() {
+                    @Override
+                    public void run() {
+                        if (!getSharedPreferences().isLoggedIn()) {
+                            getView().moveToLoginScreen();
+                        } else {
+                            getView().moveToHomeScreen();
 
-                                          if (getSharedPreferences().isFirstTimeLaunch()) {
-                                              getView().moveToHomeScreen();
-                                          } else {
-                                              getView().moveToLoginScreen();
-
-                                          }
-                                      }
-                                  },
+                        }
+                    }
+                },
                 secondsDelayed * 1000);
     }
 

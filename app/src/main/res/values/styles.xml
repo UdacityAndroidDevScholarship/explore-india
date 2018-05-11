@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorDarkGray</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -13,6 +14,22 @@
         <item name="windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- CardView Style for RecyclerView item -->
+    <style name="CardViewStyle" parent="CardView">
+        <item name="cardElevation">4dp</item>
+    </style>
+
+    <style name="SearchViewTheme" parent="Widget.AppCompat.Light.SearchView">
+        <item name="android:textColor">#f2f2f2</item>
+        <item name="android:textColorHint">#c0c0c0</item>
+    </style>
+
+    <!-- Custom theme for textInputLayouts -->
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <item name="android:textColorHint">@color/colorDarkGray</item>
+        <item name="colorControlActivated">@color/colorDarkGray</item>
     </style>
 
 </resources>

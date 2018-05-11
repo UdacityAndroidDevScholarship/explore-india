@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
+
+import com.udacity.exploreindia.views.CustomDialog;
 
 
 /**
@@ -17,6 +20,7 @@ public abstract class BaseActivity<T extends BaseMvpPresenter, K extends ViewDat
 
     T mPresenter;
     K mDataBinder;
+    CustomDialog customDialog;
 
 
     @Override
@@ -27,9 +31,8 @@ public abstract class BaseActivity<T extends BaseMvpPresenter, K extends ViewDat
         mPresenter.init();
         beforeView(savedInstanceState);
         mDataBinder = DataBindingUtil.setContentView(this, getContentResource());
-
         init(savedInstanceState);
-        getPresenter().init();
+
     }
 
 
@@ -59,7 +62,20 @@ public abstract class BaseActivity<T extends BaseMvpPresenter, K extends ViewDat
     protected abstract void init(@Nullable Bundle savedInstanceState);
 
 
-
     protected abstract void beforeView(@Nullable Bundle savedInstanceState);
+
+    protected void showMessage(String message) {
+        customDialog = new CustomDialog(this);
+        customDialog.setMessage(message);
+        customDialog.show();
+    }
+
+    protected void dismissDialog() {
+        customDialog.dismiss();
+    }
+
+    protected void showToast(String text) {
+        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+    }
 
 }

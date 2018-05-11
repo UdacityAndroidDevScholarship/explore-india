@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="recyclerview_padding">8dp</dimen>
+    <dimen name="edittext_padding">16dp</dimen>
+    <dimen name="txtOtpSize">18sp</dimen>
+
+
+    <dimen name="actionBarTitleSize">14sp</dimen>
+
+
+</resources>

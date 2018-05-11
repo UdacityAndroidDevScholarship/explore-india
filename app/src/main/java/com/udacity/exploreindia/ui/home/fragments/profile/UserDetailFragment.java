@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import com.udacity.exploreindia.R;
 import com.udacity.exploreindia.base.BaseFragment;
 import com.udacity.exploreindia.databinding.FragmentUserDetailBinding;
+import com.udacity.exploreindia.ui.home.fragments.main.MainFragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -34,4 +35,10 @@ public class UserDetailFragment extends BaseFragment<UserDetailContract.Presente
     }
 
 
+    public static Fragment newInstance() {
+        UserDetailFragment fragment = new UserDetailFragment();
+        Bundle bundle = new Bundle();
+        fragment.setArguments(bundle);
+        return fragment;
+    }
 }

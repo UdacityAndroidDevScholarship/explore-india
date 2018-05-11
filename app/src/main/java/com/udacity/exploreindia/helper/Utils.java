@@ -3,7 +3,7 @@ package com.udacity.exploreindia.helper;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.app.Fragment;
+
 import android.support.v7.app.AppCompatActivity;
 
 import com.udacity.exploreindia.R;
@@ -30,6 +30,27 @@ public class Utils {
             Activity activity=(Activity)context;
             activity.startActivity(intent);
             activity.overridePendingTransition(R.anim.anim_slide_in_from_right, R.anim.anim_slide_out_to_left);
+            activity.finish();
+        }
+    }
+
+    /**
+     * Animation with
+     * Exit current Activity- SlideOut to Right
+     * Entry new Activity- SlideIn from Left
+     * @param context
+     */
+    public static void finishExitAnimation(Context context, Intent intent)
+    {
+        if(context instanceof AppCompatActivity){
+            AppCompatActivity activity=(AppCompatActivity) context;
+            activity.startActivity(intent);
+            activity.overridePendingTransition(R.anim.anim_slide_in_from_left, R.anim.anim_slide_out_to_right);
+            activity.finish();
+        }else if (context instanceof Activity){
+            Activity activity=(Activity)context;
+            activity.startActivity(intent);
+            activity.overridePendingTransition(R.anim.anim_slide_in_from_left, R.anim.anim_slide_out_to_right);
             activity.finish();
         }
     }

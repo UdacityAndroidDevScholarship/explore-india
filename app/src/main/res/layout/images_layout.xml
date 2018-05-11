@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_margin="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@id/liked_places_list_images"
+            android:layout_width="match_parent"
+            android:layout_height="195dp"
+            android:layout_marginBottom="4dp"
+            android:contentDescription="@string/liked_places_list_images"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/image1" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:id="@id/liked_places_img_background"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/background_image"
+                android:contentDescription="@string/liked_places_img_background"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:scaleType="centerCrop">
+
+                <TextView
+                    android:id="@id/liked_place_tv_name"
+                    android:layout_width="100dp"
+                    android:layout_height="15dp"
+                    android:text="@string/likde_place_tv_name"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:id="@id/liked_place_tv_like"
+                    android:text="@string/liked_place_tv_like"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:id="@id/liked_place_tv_date"
+                    android:text="@string/liked_place_tv_date"
+                    android:textColor="#FFF" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
