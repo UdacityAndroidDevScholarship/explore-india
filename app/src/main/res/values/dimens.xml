@@ -2,4 +2,6 @@
 <resources>
     <dimen name="recyclerview_padding">8dp</dimen>
     <dimen name="edittext_padding">16dp</dimen>
+    <dimen name="margin_padding_normal">8dp</dimen>
+    <dimen name="margin_large_start_end">16dp</dimen>
 </resources>
