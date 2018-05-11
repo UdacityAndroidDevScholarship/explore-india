@@ -26,7 +26,7 @@
         android:background="@color/colorDescriptionBackground"
         android:layout_alignParentBottom="true"
         android:scaleType="fitXY"
-        android:padding="16dp">
+        android:padding="14dp">
 
         <TextView
             android:id="@+id/tv_city_name"

@@ -16,6 +16,7 @@ import com.udacity.exploreindia.databinding.ActivityHomBinding;
 import com.udacity.exploreindia.helper.FragmentAdapter;
 import com.udacity.exploreindia.ui.StatesWithCities.StatesWithCitiesActivity;
 import com.udacity.exploreindia.ui.StatesWithCities.StatesWithCitiesFragment;
+import com.udacity.exploreindia.ui.StatesWithPlaces.StatesWithPlacesActivity;
 import com.udacity.exploreindia.ui.home.fragments.likedplaces.LikedPlacesFragment;
 import com.udacity.exploreindia.ui.home.fragments.main.MainFragment;
 import com.udacity.exploreindia.ui.home.fragments.place.PlaceFragment;
@@ -56,6 +57,7 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
         fragmentAdapter.addFragment(PlaceFragment.newInstance(), R.id.bnv_add);
         fragmentAdapter.addFragment(LikedPlacesFragment.newInstance(), R.id.bnv_favorite);
         fragmentAdapter.addFragment(UserDetailFragment.newInstance(), R.id.bnv_profile);
+        fragmentAdapter.addFragment(StatesWithCitiesFragment.newInstance(), R.id.bnv_profile);
         viewPager.setAdapter(fragmentAdapter);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -91,10 +93,9 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
         int selectedId = item.getItemId();
         switch (selectedId) {
             case R.id.action_logout :
-//                FirebaseAuth.getInstance().signOut();
-//                Intent loginIntent = new Intent(this, LoginActivity.class);
-//                startActivity(loginIntent);
-                startActivity(new Intent(this, StatesWithCitiesActivity.class));
+                FirebaseAuth.getInstance().signOut();
+                Intent loginIntent = new Intent(this, LoginActivity.class);
+                startActivity(loginIntent);
                 return true;
 
                 default:
@@ -129,7 +130,7 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
                         break;
 
                     case R.id.bnv_profile:
-                        viewPager.setCurrentItem(4);
+                        viewPager.setCurrentItem(5);
                         break;
                 }
                 return true;

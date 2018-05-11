@@ -12,6 +12,10 @@ import com.udacity.exploreindia.R;
 
 import java.util.ArrayList;
 
+/**
+ * Created by Arun K Babu on 10-May-18.
+ */
+
 public class SmallCitiesAdapter extends RecyclerView.Adapter<SmallCitiesAdapter.SmallCitiesViewHolder>
 {
     private ArrayList<CityData> mSmallCitiesData;
@@ -23,7 +27,7 @@ public class SmallCitiesAdapter extends RecyclerView.Adapter<SmallCitiesAdapter.
     @NonNull
     @Override
     public SmallCitiesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.states_with_cities_top_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.states_with_cities_bottom_item, parent, false);
         return new SmallCitiesViewHolder(view);
     }
 

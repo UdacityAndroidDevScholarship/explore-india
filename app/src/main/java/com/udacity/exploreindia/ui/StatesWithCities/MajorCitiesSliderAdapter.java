@@ -14,6 +14,10 @@ import com.udacity.exploreindia.R;
 
 import java.util.ArrayList;
 
+/**
+ * Created by Arun K Babu on 10-May-18.
+ */
+
 public class MajorCitiesSliderAdapter extends PagerAdapter
 {
     private Context mContext;

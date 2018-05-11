@@ -1,6 +1,9 @@
 package com.udacity.exploreindia.base;
 
 import com.udacity.exploreindia.injection.InjectionUtils;
+import com.udacity.exploreindia.ui.StatesWithCities.StatesWithCitiesActivity;
+import com.udacity.exploreindia.ui.StatesWithCities.StatesWithCitiesFragment;
+import com.udacity.exploreindia.ui.StatesWithCities.StatesWithCitiesPresenter;
 import com.udacity.exploreindia.ui.home.HomeActivity;
 import com.udacity.exploreindia.ui.home.HomePresenter;
 import com.udacity.exploreindia.ui.home.fragments.likedplaces.LikedPlacesFragment;
@@ -38,6 +41,8 @@ public class PresenterFactory {
             return presenter;
         } else if (claxx instanceof LikedPlacesFragment) {
             presenter = (S) new LikedPlacesPresenter(InjectionUtils.getSharedPreference(), InjectionUtils.providesDataRepo(), claxx.getContext());
+        } else if (claxx instanceof StatesWithCitiesFragment) {
+            presenter = (S) new StatesWithCitiesPresenter(InjectionUtils.getSharedPreference(), InjectionUtils.providesDataRepo(), claxx.getContext());
         } else {
             throw new IllegalStateException("Activity presenter not supported yet");
         }
@@ -55,7 +60,10 @@ public class PresenterFactory {
             presenter = (S) new LoginPresenter(InjectionUtils.getSharedPreference(), InjectionUtils.providesDataRepo(), claxx);
         } else if (claxx instanceof HomeActivity) {
             presenter = (S) new HomePresenter(InjectionUtils.getSharedPreference(), InjectionUtils.providesDataRepo(), claxx);
-        } else {
+        } else if (claxx instanceof StatesWithCitiesActivity) {
+            presenter = (S) new StatesWithCitiesPresenter(InjectionUtils.getSharedPreference(), InjectionUtils.providesDataRepo(), claxx);
+        }
+        else {
             throw new IllegalStateException("Activity presenter not supported yet");
         }
 

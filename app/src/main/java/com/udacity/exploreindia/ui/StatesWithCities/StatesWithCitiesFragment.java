@@ -7,7 +7,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +21,10 @@ import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
+/**
+ * Created by Arun K Babu on 10-May-18.
+ */
+
 public class StatesWithCitiesFragment extends BaseFragment<StatesWithCitiesContract.Presenter,
         FragmentStatesWithCitiesBinding> implements StatesWithCitiesContract.View
 {
@@ -31,7 +34,7 @@ public class StatesWithCitiesFragment extends BaseFragment<StatesWithCitiesContr
     private RecyclerView mSmallCityRecyclerView;
     private MajorCitiesSliderAdapter mMajorCitiesSliderAdapter;
     private Context mContext;
-    private int position;
+    private int mPosition;
     private Handler handler;
 
     // TODO: Delete this after linking with real data
@@ -41,12 +44,12 @@ public class StatesWithCitiesFragment extends BaseFragment<StatesWithCitiesContr
 
     Runnable slidePositionRunnable = new Runnable() {
         public void run() {
-            if (position == mDummyDataMajorCities.size()) {
-                position = 0;
+            if (mPosition == mDummyDataMajorCities.size()) {
+                mPosition = 0;
             } else {
-                position = position + 1;
+                mPosition = mPosition + 1;
             }
-            mCitySliderViewPager.setCurrentItem(position, true);
+            mCitySliderViewPager.setCurrentItem(mPosition, true);
         }
     };
 
@@ -74,17 +77,18 @@ public class StatesWithCitiesFragment extends BaseFragment<StatesWithCitiesContr
         mDummyDataSmallCities = new ArrayList<>();
         mDummyDataMajorCities = new ArrayList<>();
 
-        for (int i=0; i<4; i++) {
+        // TODO: Delete this after linking with real data
+        for (int i=0; i<5; i++) {
             mDummyDataMajorCities.add(new CityData(R.drawable.ahmedabad, "Ahmedabad"));
         }
-        for (int i=0; i<9; i++) {
+        for (int i=0; i<12; i++) {
             mDummyDataSmallCities.add(new CityData(R.drawable.image3, "Taj Mahal"));
         }
 
 
-        // TODO: Pass in the current position of the card to the cardNumber variable.
+        // TODO: Pass in the current mPosition of the card to the cardNumber variable.
         //  Like if you are showing the 3rd card from the Adapter or similar then pass it in here so that the 3rd dot will be highlighted
-        //  Also call this method where ever you are updating the position of the page to update the dot position like onPageScrolled()
+        //  Also call this method where ever you are updating the mPosition of the page to update the dot mPosition like onPageScrolled()
         //  callback in PageAdapter
         int cardNumber = 3;
         addDotsIndicator(cardNumber);
@@ -96,7 +100,7 @@ public class StatesWithCitiesFragment extends BaseFragment<StatesWithCitiesContr
             public void run() {
                 handler.post(slidePositionRunnable);
             }
-        }, 100, 5000);
+        }, 0, 5000);
 
         return view;
     }
@@ -134,6 +138,8 @@ public class StatesWithCitiesFragment extends BaseFragment<StatesWithCitiesContr
         @Override
         public void onPageSelected(int position) {
             addDotsIndicator(position);
+            mPosition = position;
+
         }
 
         @Override
@@ -143,7 +149,7 @@ public class StatesWithCitiesFragment extends BaseFragment<StatesWithCitiesContr
 
     /**
      * Adds progress dots right below the states_with_cities_top_item view
-     * @param position The current position of the card. This position is used to determine which dot to highlight
+     * @param position The current mPosition of the card. This mPosition is used to determine which dot to highlight
      */
     public void addDotsIndicator(int position) {
         // TODO: Specify the total number of cards or cities here (Ex: 5)
@@ -152,20 +158,24 @@ public class StatesWithCitiesFragment extends BaseFragment<StatesWithCitiesContr
 
         mDotsLayout.removeAllViews();
 
+        int textPadding = 26;
+
         for (int i = 0; i < mDots.length; i++) {
             mDots[i] = new TextView(mContext);
-            mDots[i].setText(Html.fromHtml("&#8226;"));  // ASCII Code for Bullet
-            mDots[i].setTextSize(35);
+            mDots[i].setText("•");
+            mDots[i].setPadding(textPadding, 0, textPadding, 0);
+            mDots[i].setTextSize(30);
             // Set the color of the dot to light grey to indicate inactive dots
             mDots[i].setTextColor(getResources().getColor(R.color.colorDotInactive));
 
             mDotsLayout.addView(mDots[i]);
         }
 
-        // Set the color of the dot to grey to indicate the currently active card position
+        // Set the color of the dot to grey to indicate the currently active card mPosition
         if (mDots.length > 0) {
             mDots[position].setTextColor(getResources().getColor(R.color.colorDotActive));
-            mDots[position].setTextSize(40);
+            mDots[position].setTextSize(35);
+            mDots[position].setPadding(textPadding, 0, textPadding, 0);
         }
     }
 }

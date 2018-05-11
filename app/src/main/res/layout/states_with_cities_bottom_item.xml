@@ -1,43 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/small_city_card"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    card_view:cardUseCompatPadding="true">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    card_view:cardElevation="0dp">
 
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/small_img_card"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/tv_small_city_name"
-        card_view:cardUseCompatPadding="true">
-    <ImageView
-        android:id="@+id/iv_small_city_photo"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scaleType="fitXY"
-        tools:src="@drawable/image1" />
-    </android.support.v7.widget.CardView>
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp">
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/small_card_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:cardBackgroundColor="@android:color/white"
+            card_view:cardCornerRadius="12dp"
+            card_view:cardElevation="7dp">
+
+            <ImageView
+                android:id="@+id/iv_small_city_photo"
+                android:layout_width="100dp"
+                android:layout_height="55dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/image1" />
+        </android.support.v7.widget.CardView>
 
 
         <TextView
             android:id="@+id/tv_small_city_name"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/small_card_view"
+            android:layout_centerHorizontal="true"
             android:layout_gravity="center"
+            android:layout_marginTop="8dp"
             android:fontFamily="sans-serif"
             android:textAlignment="center"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
-            android:textColor="@color/blackText"
-            android:layout_alignParentBottom="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
             tools:text="Ahmedabad" />
 
-</RelativeLayout>
+    </RelativeLayout>
 </android.support.v7.widget.CardView>

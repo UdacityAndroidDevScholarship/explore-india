@@ -1,5 +1,9 @@
 package com.udacity.exploreindia.ui.StatesWithCities;
 
+/**
+ * Created by Arun K Babu on 10-May-18.
+ */
+
 // TODO: This class can be deleted after linking with real data
 
 /**
