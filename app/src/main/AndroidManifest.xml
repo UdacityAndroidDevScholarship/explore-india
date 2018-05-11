@@ -13,27 +13,40 @@
 
         <activity
             android:name=".ui.splash.SplashActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-      
-        <activity android:name=".ui.login.LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait">
-        </activity>
-      
-        <activity android:name=".ui.home.HomeActivity"
-            android:windowSoftInputMode="adjustPan">
-        </activity>
-      
-        <activity android:name=".ui.City.CityActivity" />
 
-        <activity android:name=".ui.StatesWithCities.StatesWithCitiesActivity" />
 
-        <activity android:name=".ui.StatesWithPlaces.StatesWithPlacesActivity"></activity>
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation"></activity>
+
+        <activity android:name=".ui.City.CityActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation"/>
+
+
+        <activity android:name=".ui.StatesWithCities.StatesWithCitiesActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation"/>
+
+        <activity android:name=".ui.StatesWithPlaces.StatesWithPlacesActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation"></activity>
     </application>
 
 </manifest>
