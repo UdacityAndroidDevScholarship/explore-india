@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
 
+
         <activity
             android:name=".ui.login.LoginActivity"
             android:screenOrientation="portrait"
@@ -37,6 +38,7 @@
         <activity android:name=".ui.City.CityActivity"
             android:screenOrientation="portrait"
             android:configChanges="orientation"/>
+
 
         <activity android:name=".ui.StatesWithCities.StatesWithCitiesActivity"
             android:screenOrientation="portrait"
