@@ -14,6 +14,8 @@ import com.udacity.exploreindia.R;
 import com.udacity.exploreindia.base.BaseActivity;
 import com.udacity.exploreindia.databinding.ActivityHomBinding;
 import com.udacity.exploreindia.helper.FragmentAdapter;
+import com.udacity.exploreindia.ui.StatesWithCities.StatesWithCitiesActivity;
+import com.udacity.exploreindia.ui.StatesWithCities.StatesWithCitiesFragment;
 import com.udacity.exploreindia.ui.home.fragments.likedplaces.LikedPlacesFragment;
 import com.udacity.exploreindia.ui.home.fragments.main.MainFragment;
 import com.udacity.exploreindia.ui.home.fragments.place.PlaceFragment;
@@ -89,9 +91,10 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
         int selectedId = item.getItemId();
         switch (selectedId) {
             case R.id.action_logout :
-                FirebaseAuth.getInstance().signOut();
-                Intent loginIntent = new Intent(this, LoginActivity.class);
-                startActivity(loginIntent);
+//                FirebaseAuth.getInstance().signOut();
+//                Intent loginIntent = new Intent(this, LoginActivity.class);
+//                startActivity(loginIntent);
+                startActivity(new Intent(this, StatesWithCitiesActivity.class));
                 return true;
 
                 default:

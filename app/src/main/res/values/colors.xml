@@ -31,4 +31,9 @@
 
     <!-- End of Color resources for User Detail UI -->
 
+    <!-- Color resources for States With Cities UI -->
+        <color name="colorDescriptionBackground">#81000000</color>
+        <color name="colorDotInactive">#D6D6D6</color>
+        <color name="colorDotActive">#5E5E5E</color>
+
 </resources>
