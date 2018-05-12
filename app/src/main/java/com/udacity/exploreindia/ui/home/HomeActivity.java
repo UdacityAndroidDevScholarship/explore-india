@@ -14,8 +14,6 @@ import com.udacity.exploreindia.R;
 import com.udacity.exploreindia.base.BaseActivity;
 import com.udacity.exploreindia.databinding.ActivityHomBinding;
 import com.udacity.exploreindia.helper.FragmentAdapter;
-import com.udacity.exploreindia.ui.StatesWithCities.StatesWithCitiesActivity;
-import com.udacity.exploreindia.ui.StatesWithCities.StatesWithCitiesFragment;
 import com.udacity.exploreindia.ui.StatesWithPlaces.StatesWithPlacesActivity;
 import com.udacity.exploreindia.ui.home.fragments.likedplaces.LikedPlacesFragment;
 import com.udacity.exploreindia.ui.home.fragments.main.MainFragment;
@@ -23,6 +21,7 @@ import com.udacity.exploreindia.ui.home.fragments.place.PlaceFragment;
 import com.udacity.exploreindia.ui.home.fragments.profile.UserDetailFragment;
 import com.udacity.exploreindia.ui.home.fragments.search.SearchFragment;
 import com.udacity.exploreindia.ui.login.LoginActivity;
+import com.udacity.exploreindia.ui.selectedstate.SelectedStateActivity;
 
 
 public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityHomBinding> implements HomeContract.View {
@@ -57,7 +56,6 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
         fragmentAdapter.addFragment(PlaceFragment.newInstance(), R.id.bnv_add);
         fragmentAdapter.addFragment(LikedPlacesFragment.newInstance(), R.id.bnv_favorite);
         fragmentAdapter.addFragment(UserDetailFragment.newInstance(), R.id.bnv_profile);
-        fragmentAdapter.addFragment(StatesWithCitiesFragment.newInstance(), R.id.bnv_profile);
         viewPager.setAdapter(fragmentAdapter);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -130,7 +128,7 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
                         break;
 
                     case R.id.bnv_profile:
-                        viewPager.setCurrentItem(5);
+                        viewPager.setCurrentItem(4);
                         break;
                 }
                 return true;

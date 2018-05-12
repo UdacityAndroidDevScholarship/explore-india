@@ -7,7 +7,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,23 +34,23 @@ public class StatesWithCitiesFragment extends BaseFragment<StatesWithCitiesContr
     private TextView[] mDots;
     private RecyclerView mSmallCityRecyclerView;
     private MajorCitiesSliderAdapter mMajorCitiesSliderAdapter;
-    private Context mContext;
     private int mPosition;
     private Handler handler;
+    private Context mContext;
+    private boolean started;
 
     // TODO: Delete this after linking with real data
     private ArrayList<CityData> mDummyDataSmallCities;
     private ArrayList<CityData> mDummyDataMajorCities;
 
-
-    Runnable slidePositionRunnable = new Runnable() {
+    private Runnable slidePositionRunnable = new Runnable() {
+        @Override
         public void run() {
-            if (mPosition == mDummyDataMajorCities.size()) {
-                mPosition = 0;
+            if (started) {
+                startSlide();
             } else {
-                mPosition = mPosition + 1;
+                stopSlide();
             }
-            mCitySliderViewPager.setCurrentItem(mPosition, true);
         }
     };
 
@@ -64,12 +63,14 @@ public class StatesWithCitiesFragment extends BaseFragment<StatesWithCitiesContr
         return frag;
     }
 
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState)
-    {
+    protected int getContentResource() {
+        return R.layout.fragment_states_with_cities;
+    }
+
+    @Override
+    protected void init(View view, @Nullable Bundle savedInstanceState) {
         mContext = getContext();
-        View view = inflater.inflate(R.layout.fragment_states_with_cities, container, false);
 
         mCitySliderViewPager = view.findViewById(R.id.vp_major_cities_slider);
         mDotsLayout = view.findViewById(R.id.dotsLayout);
@@ -88,7 +89,7 @@ public class StatesWithCitiesFragment extends BaseFragment<StatesWithCitiesContr
         }
 
 
-        // TODO: Pass in the current mPosition of the card to the cardNumber variable.
+        // TODO: Pass in the current position of the card to the cardNumber variable.
         //  Like if you are showing the 3rd card from the Adapter or similar then pass it in here so that the 3rd dot will be highlighted
         //  Also call this method where ever you are updating the mPosition of the page to update the dot mPosition like onPageScrolled()
         //  callback in PageAdapter
@@ -96,20 +97,6 @@ public class StatesWithCitiesFragment extends BaseFragment<StatesWithCitiesContr
         addDotsIndicator(cardNumber);
 
         this.handler = new Handler();
-
-        new Timer().schedule(new TimerTask() {
-            @Override
-            public void run() {
-                handler.post(slidePositionRunnable);
-            }
-        }, 1000, 5000);
-
-        return view;
-    }
-
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
 
         // Populate the Top SlideView with data
         mMajorCitiesSliderAdapter = new MajorCitiesSliderAdapter(mContext, mDummyDataMajorCities);
@@ -122,17 +109,15 @@ public class StatesWithCitiesFragment extends BaseFragment<StatesWithCitiesContr
         mSmallCityRecyclerView.setLayoutManager(new GridLayoutManager(mContext, 3, GridLayout.VERTICAL, false));
         mSmallCityRecyclerView.addItemDecoration(new GridSpacingItemDecoration(80));
         mSmallCityRecyclerView.setAdapter(new SmallCitiesAdapter(mDummyDataSmallCities));
+
     }
 
     @Override
-    protected int getContentResource() {
-        return 0;
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        startSlide();
     }
 
-    @Override
-    protected void init(View view, @Nullable Bundle savedInstanceState) {
-
-    }
 
     ViewPager.OnPageChangeListener pageChangeListener = new ViewPager.OnPageChangeListener() {
         @Override
@@ -162,7 +147,7 @@ public class StatesWithCitiesFragment extends BaseFragment<StatesWithCitiesContr
 
         mDotsLayout.removeAllViews();
 
-        int textPadding = 26;
+        int textPadding = 20;
 
         for (int i = 0; i < mDots.length; i++) {
             mDots[i] = new TextView(mContext);
@@ -181,5 +166,33 @@ public class StatesWithCitiesFragment extends BaseFragment<StatesWithCitiesContr
             mDots[position].setTextSize(35);
             mDots[position].setPadding(textPadding, 0, textPadding, 0);
         }
+    }
+
+    private void startSlide() {
+        started = true;
+        if (mPosition == mDummyDataMajorCities.size()) {
+            mPosition = 0;
+        } else {
+            mPosition = mPosition + 1;
+        }
+        mCitySliderViewPager.setCurrentItem(mPosition, true);
+        handler.postDelayed(slidePositionRunnable, 5000);
+    }
+
+    private void stopSlide() {
+        started = false;
+        handler.removeCallbacks(slidePositionRunnable);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        stopSlide();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        stopSlide();
     }
 }
