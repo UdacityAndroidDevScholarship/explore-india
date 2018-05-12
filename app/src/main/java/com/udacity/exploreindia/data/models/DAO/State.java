@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 /**
  * Created by Kautilya on 13-05-2018.
  */
-public class States {
+public class State {
 
     @SerializedName("state_status")
     private String state_status;
