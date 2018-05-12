@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class RetrofitFactory {
 
-    private static final String URL = "https://ei.wevands.com";
+    private static final String URL = "https://ei.wevands.com/api/v1.0.0";
 
     public static <T> T createRetroFitService(final Class<T> clazz) {
 

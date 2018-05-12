@@ -14,6 +14,9 @@ import retrofit2.http.Query;
  */
 public interface DataRequest {
 
-    @GET("api/v1.0.0/states.php")
-    Call<List<StateResponse>> getStateDetails(@Query("token") String id);
+    @GET("states.php")
+    Call<StateResponse> getStateDetails(@Query("token") String id);
+
+    @GET("citeis.php")
+    Call<CitiResponse> getAllCities()
 }
