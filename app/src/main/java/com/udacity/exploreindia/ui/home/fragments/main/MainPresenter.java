@@ -28,14 +28,14 @@ public class MainPresenter extends BasePresenter<MainContract.View> implements M
 
     private void loadState() {
         DataRequest data = RetrofitFactory.createRetroFitService(DataRequest.class);
-        data.getStateDetails("asdasda").enqueue(new Callback<List<StateResponse>>() {
+        data.getStateDetails("Unique_token").enqueue(new Callback<StateResponse>() {
             @Override
-            public void onResponse(Call<List<StateResponse>> call, Response<List<StateResponse>> response) {
-                List<StateResponse> states = response.body();
+            public void onResponse(Call<StateResponse> call, Response<StateResponse> response) {
+
             }
 
             @Override
-            public void onFailure(Call<List<StateResponse>> call, Throwable t) {
+            public void onFailure(Call<StateResponse> call, Throwable t) {
 
             }
         });
