@@ -34,6 +34,7 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
 
     private BottomNavigationView bottomNavigationView;
     private ViewPager viewPager;
+    private MenuItem menuSkipItem;
 
     @Override
     protected int getContentResource() {
@@ -99,6 +100,9 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.home_menu, menu);
+        menuSkipItem = menu.findItem(R.id.action_logout);
+        if (SharedPrefManager.getInstance().isSkipped())
+            menuSkipItem.setTitle(getString(R.string.menu_login));
         return true;
     }
 
@@ -109,6 +113,7 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
             case R.id.action_logout:
                 FirebaseAuth.getInstance().signOut();
                 SharedPrefManager.getInstance().setLoggedIn(false);
+                SharedPrefManager.getInstance().setSkipped(false);
                 Intent loginIntent = new Intent(this, LoginActivity.class);
                 Utils.finishExitAnimation(this, loginIntent);
                 return true;
