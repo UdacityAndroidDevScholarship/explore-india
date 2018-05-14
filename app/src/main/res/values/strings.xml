@@ -6,6 +6,15 @@
     <!--Splash Screen Strings-->
     <string name="readPrivacy"><u>Read our privacy and policy</u></string>
 
+    <!--Places Details Strings-->
+    <string name="taj_mahal">Taj Mahal</string>
+    <string name="dummy_place_description">The Taj Mahal was commissioned by Shah Jahan in 1631, to be built in the memory of his wife Mumtaz Mahal, a Persian princess who died giving birth to their 14th child, Gauhara Begum.[6] Construction of the Taj Mahal began in 1632.[7] The imperial court documenting Shah Jahan\'s grief after the death of Mumtaz Mahal illustrate the love story held as the inspiration for Taj Mahal.[8][9] The principal mausoleum was completed in 1643 and the surrounding buildings and garden were finished about five years later.[10].
+    The Taj Mahal incorporates and expands on design traditions of Persian and earlier Mughal architecture. Specific inspiration came from successful Timurid and Mughal buildings including the Gur-e Amir (the tomb of Timur, progenitor of the Mughal dynasty, in Samarkand),[12] Humayun's Tomb, Itmad-Ud-Daulah's Tomb (sometimes called the Baby Taj), and Shah Jahan's own Jama Masjid in Delhi. While earlier Mughal buildings were primarily constructed of red sandstone, Shah Jahan promoted the use of white marble inlaid with semi-precious stones. Buildings under his patronage reached new levels of refinement.</string>
+    <string name="places_details_btn_share">Place details share button</string>
+    <string name="places_details_btn_favourite">Places details favourite button</string>
+    <string name="places_details_btn_map_location">Places details map location button</string>
+
+
     <!--Login Screen Strings-->
     <string name="login_tv_app_title">Explore India</string>
     <string name="login_et_phone_no_hint">Mobile No.</string>
