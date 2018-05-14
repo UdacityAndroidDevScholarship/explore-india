@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp"
+    app:contentPadding="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+
+        <TextView
+            android:id="@id/login_txt_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:text="Enter OTP"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+        <ImageView
+            android:contentDescription="Close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:id="@id/login_img_cross"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_close_black_24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_txt_otp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/n1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_ring4"
+                android:gravity="center_horizontal|center_vertical"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/blackText"
+                android:textSize="@dimen/txtOtpSize" />
+
+            <EditText
+                android:id="@+id/n2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_ring4"
+                android:gravity="center_horizontal|center_vertical"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/blackText"
+                android:textSize="@dimen/txtOtpSize" />
+
+            <EditText
+                android:id="@+id/n3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_ring4"
+                android:gravity="center_horizontal|center_vertical"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/blackText"
+                android:textSize="@dimen/txtOtpSize" />
+
+            <EditText
+                android:id="@+id/n4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_ring4"
+                android:gravity="center_horizontal|center_vertical"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/blackText"
+                android:textSize="@dimen/txtOtpSize" />
+
+            <EditText
+                android:id="@+id/n5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/button_ring4"
+                android:gravity="center_horizontal|center_vertical"
+                android:inputType="number"
+                android:layout_marginRight="10dp"
+                android:maxLength="1"
+                android:textColor="@color/blackText"
+                android:textSize="@dimen/txtOtpSize" />
+
+         <EditText
+                android:id="@+id/n6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/button_ring4"
+                android:gravity="center_horizontal|center_vertical"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/blackText"
+                android:textSize="@dimen/txtOtpSize" />
+
+        </LinearLayout>
+
+        <!--  <com.goodiebag.pinview.Pinview
+              android:id="@id/login_pv_otp"
+              app:pinBackground="@color/backgroundColor"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              app:pinWidth="40dp"
+              app:pinHeight="40dp"
+              app:pinLength="6"
+              app:cursorVisible="true"
+              app:forceKeyboard="true"
+              app:inputType="number"
+              app:password="true"/>
+      -->
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

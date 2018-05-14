@@ -2,34 +2,75 @@
 <layout>
 
     <data>
-
+        <variable
+            name="presenter"
+            type="com.udacity.exploreindia.ui.splash.SplashPresenter"/>
     </data>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
-        xmlns:tools="http://schemas.android.com/tools"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/transitionsContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        tools:context="com.udacity.exploreindia.ui.splash.SplashActivity">
+        android:background="@drawable/gradient_red_background">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+
+        <ImageView
+            android:id="@+id/imageLeft"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginLeft="-90dp"
+            android:layout_marginTop="-90dp"
+            android:background="@drawable/ic_circular_pattern" />
+
+        <ImageView
+            android:id="@+id/imageRight"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="-90dp"
+            android:layout_marginTop="-90dp"
+            android:background="@drawable/ic_circular_pattern" />
+
+        <RelativeLayout
+            android:id="@+id/frameLogo"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:alpha="0">
 
-            <ProgressBar
-                android:id="@+id/progressBar"
-                style="?android:attr/progressBarStyle"
+            <ImageView
+                android:id="@+id/imageWomen"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:foregroundGravity="center" />
+                android:layout_height="200dp"
+                android:src="@drawable/ic_namaste" />
+
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/title"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Please wait..." />
-        </LinearLayout>
-    </LinearLayout>
+                android:layout_below="@id/imageWomen"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:autoSizeTextType="uniform"
+                android:gravity="center_horizontal"
+                android:text="Explore India"
+                android:textColor="#FFFFFF"
+                android:textSize="60sp"
+                android:textStyle="bold" />
 
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/privacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:text="@string/readPrivacy"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+    </RelativeLayout>
 </layout>

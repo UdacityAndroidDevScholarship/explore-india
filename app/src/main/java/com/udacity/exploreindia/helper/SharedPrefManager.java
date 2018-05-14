@@ -25,6 +25,8 @@ public class SharedPrefManager {
 
     // All Shared Preferences Keys
     private static final String IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch";
+    private static final String IS_LOGGED_IN = "isLoggedIn";
+    private static final String IS_SKIPPED = "isSkipped";
 
     public SharedPrefManager() {
         pref =
@@ -49,13 +51,32 @@ public class SharedPrefManager {
     }
 
 
-    public void setFirstTimeLaunch(boolean isFirstTime) {
-        getEditor().putBoolean(IS_FIRST_TIME_LAUNCH, isFirstTime);
-        getEditor().commit();
+  /*  public void setFirstTimeLaunch(boolean firstTimeLaunch) {
+        getEditor().putBoolean(IS_FIRST_TIME_LAUNCH, firstTimeLaunch);
+        getEditor().apply();
     }
 
     public boolean isFirstTimeLaunch() {
         return pref.getBoolean(IS_FIRST_TIME_LAUNCH, true);
+    }
+*/
+
+    public void setLoggedIn(boolean firstTimeLaunch) {
+        getEditor().putBoolean(IS_LOGGED_IN, firstTimeLaunch);
+        getEditor().apply();
+    }
+
+    public boolean isLoggedIn() {
+        return pref.getBoolean(IS_LOGGED_IN, false);
+    }
+
+    public void setSkipped(boolean isSkipped) {
+        getEditor().putBoolean(IS_SKIPPED, isSkipped);
+        getEditor().apply();
+    }
+
+    public boolean isSkipped() {
+        return pref.getBoolean(IS_SKIPPED, false);
     }
 
 }

@@ -1,148 +1,250 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <data>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
 
-    </data>
-
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.home.fragments.profile.UserDetailFragment">
-
-        <LinearLayout
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            tools:context=".ui.home.fragments.profile.UserDetailFragment">
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
+            <!-- Username Text -->
+
+            <TextView
+                android:id="@id/profile_tv_name"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="1dp"
-                app:cardElevation="2dp"
-                app:contentPadding="16dp">
+                android:textColor="@color/textColor"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/marginView1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/profile_name" />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+            <!-- First partition line -->
 
-                    <TextView
-                        android:id="@id/profile_tv_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentTop="true"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="24sp" />
-
-                    <TextView
-                        android:id="@id/profile_btn_edit_profile"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentTop="true"
-                        android:text="Edit Profile"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="24sp" />
-
-                </RelativeLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
+            <View
+                android:id="@+id/marginView1"
                 android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/marginColor"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Background view of profile details -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/backgroundColor"
+                app:layout_constraintBottom_toTopOf="@id/marginView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/marginView1" />
+
+            <!-- Profile Image -->
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@id/profile_img_profile_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/content_description_profile"
+                android:src="@drawable/profile_image"
+                app:layout_constraintBottom_toTopOf="@id/marginView2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/marginView1" />
+
+            <!-- City label -->
+
+            <TextView
+                android:id="@+id/profile_tv_city_label"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="1dp"
-                app:cardElevation="2dp"
-                app:contentPadding="16dp">
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/city_label"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/profile_img_profile_image"
+                app:layout_constraintTop_toBottomOf="@id/marginView1" />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+            <!-- State label -->
 
-                    <ImageView
-                        android:id="@id/profile_img_profile_image"
-                        android:layout_width="136dp"
-                        android:layout_height="136dp"
-                        android:layout_marginRight="16dp" />
-
-                    <TextView
-                        android:id="@id/profile_tv_city"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginBottom="8dp"
-                        android:layout_toRightOf="@id/profile_img_profile_image"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@id/profile_tv_state"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/profile_tv_city"
-                        android:layout_marginBottom="8dp"
-                        android:layout_toRightOf="@id/profile_img_profile_image"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@id/profile_tv_number"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/profile_tv_state"
-                        android:layout_marginBottom="8dp"
-                        android:layout_toRightOf="@id/profile_img_profile_image"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@id/profile_tv_age"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/profile_tv_number"
-                        android:layout_marginBottom="8dp"
-                        android:layout_toRightOf="@id/profile_img_profile_image"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="20sp" />
-
-                </RelativeLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/profile_tv_state_label"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="1dp"
-                app:cardElevation="2dp"
-                app:contentPadding="16dp">
+                android:layout_marginTop="8dp"
+                android:text="@string/state_label"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/profile_tv_city_label"
+                app:layout_constraintTop_toBottomOf="@id/profile_tv_city_label" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="My Places"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="24sp" />
+            <!-- Phone number label -->
 
-            </android.support.v7.widget.CardView>
+            <TextView
+                android:id="@+id/profile_tv_number_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/number_label"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/profile_tv_state_label"
+                app:layout_constraintTop_toBottomOf="@id/profile_tv_state_label" />
 
-            <android.support.v7.widget.CardView
+            <!-- Age label -->
+
+            <TextView
+                android:id="@+id/profile_tv_age_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/age_label"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/profile_tv_number_label"
+                app:layout_constraintTop_toBottomOf="@id/profile_tv_number_label" />
+
+            <!-- Dummy City data -->
+
+            <TextView
+                android:id="@id/profile_tv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/profile_tv_city_label"
+                app:layout_constraintTop_toTopOf="@id/profile_tv_city_label"
+                tools:text="@string/city" />
+
+            <!-- Dummy State data -->
+
+            <TextView
+                android:id="@id/profile_tv_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/profile_tv_state_label"
+                app:layout_constraintTop_toTopOf="@id/profile_tv_state_label"
+                tools:text="@string/state" />
+
+            <!-- Dummy Phone number data -->
+
+            <TextView
+                android:id="@id/profile_tv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/profile_tv_number_label"
+                app:layout_constraintTop_toTopOf="@id/profile_tv_number_label"
+                tools:text="@string/number" />
+
+            <!-- Dummy Age data -->
+
+            <TextView
+                android:id="@id/profile_tv_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/profile_tv_age_label"
+                app:layout_constraintTop_toTopOf="@id/profile_tv_age_label"
+                tools:text="@string/age" />
+
+            <!-- FAB for editing profile -->
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@id/profile_btn_edit_profile"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:backgroundTint="@color/fabColor"
+                app:borderWidth="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/marginView2"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/marginView2"
+                app:srcCompat="@drawable/ic_edit_black_24dp" />
+
+            <!-- Second partition line -->
+
+            <View
+                android:id="@+id/marginView2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:cardElevation="2dp"
-                app:contentPadding="16dp">
+                android:background="@color/marginColor"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/profile_img_profile_image" />
 
-                <android.support.v7.widget.RecyclerView
-                    android:id="@id/profile_rv_places"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+            <!-- My Places headline -->
 
-                </android.support.v7.widget.RecyclerView>
+            <TextView
+                android:id="@id/profile_rv_places"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/my_places_label"
+                android:textColor="@color/textColor"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/marginView2" />
 
-            </android.support.v7.widget.CardView>
-        </LinearLayout>
+            <!-- Third partition line -->
 
-    </FrameLayout>
+            <View
+                android:id="@+id/marginView3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/marginColor"
+                app:layout_constraintTop_toBottomOf="@id/profile_rv_places" />
+
+            <!-- Background view of RecyclerView -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/marginView3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@color/backgroundColor"/>
+
+            <!-- RecyclerView -->
+                <!-- Head over to "user_detail_recyclerview_item.xml" where layout of the View item is waiting to be inflated inside it -->
+                <!-- No need to give margins to this RecyclerView as the CardView has already been given the required margins -->
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@id/recycler_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/marginView3" />
+
+        </android.support.constraint.ConstraintLayout>
 </layout>
