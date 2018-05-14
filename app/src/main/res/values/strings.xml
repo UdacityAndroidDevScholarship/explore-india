@@ -12,6 +12,7 @@
     <string name="login_btn_proceed_label">Proceed</string>
     <string name="login_tv_or_label">Or</string>
     <string name="login_btn_google_login">Sign in with google plus</string>
+    <string name="login_btn_skip">SKIP</string>
 
 
     <!-- Liked places String -->
@@ -85,6 +86,9 @@
 
     <!--Fixed Strings-->
     <string name="country_code">+91</string>
+
+    <!--Menu Strings-->
+    <string name="menu_login">Login</string>
 
 
     <!--Toast Messages Strings-->

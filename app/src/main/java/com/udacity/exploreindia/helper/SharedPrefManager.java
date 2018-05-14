@@ -26,6 +26,7 @@ public class SharedPrefManager {
     // All Shared Preferences Keys
     private static final String IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch";
     private static final String IS_LOGGED_IN = "isLoggedIn";
+    private static final String IS_SKIPPED = "isSkipped";
 
     public SharedPrefManager() {
         pref =
@@ -67,6 +68,15 @@ public class SharedPrefManager {
 
     public boolean isLoggedIn() {
         return pref.getBoolean(IS_LOGGED_IN, false);
+    }
+
+    public void setSkipped(boolean isSkipped) {
+        getEditor().putBoolean(IS_SKIPPED, isSkipped);
+        getEditor().apply();
+    }
+
+    public boolean isSkipped() {
+        return pref.getBoolean(IS_SKIPPED, false);
     }
 
 }

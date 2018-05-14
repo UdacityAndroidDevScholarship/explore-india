@@ -60,8 +60,8 @@
             android:id="@id/add_place_et_title"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:theme="@style/TextLabel"
-            android:layout_below="@id/button_separator">
+            android:layout_below="@id/button_separator"
+            android:theme="@style/TextLabel">
 
             <EditText
                 android:layout_width="match_parent"
@@ -78,11 +78,11 @@
         <android.support.design.widget.TextInputLayout
             android:id="@id/add_place_et_tags"
             android:layout_width="160dp"
-            android:theme="@style/TextLabel"
             android:layout_height="wrap_content"
             android:layout_below="@id/button_separator"
             android:layout_toEndOf="@id/add_place_et_title"
-            android:layout_toRightOf="@id/add_place_et_title">
+            android:layout_toRightOf="@id/add_place_et_title"
+            android:theme="@style/TextLabel">
 
             <EditText
                 android:layout_width="match_parent"
@@ -100,9 +100,9 @@
             android:id="@id/add_place_et_description"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:theme="@style/TextLabel"
             android:layout_below="@id/add_place_et_title"
-            android:layout_centerHorizontal="true">
+            android:layout_centerHorizontal="true"
+            android:theme="@style/TextLabel">
 
             <EditText
                 android:layout_width="match_parent"
@@ -119,10 +119,10 @@
         <android.support.design.widget.TextInputLayout
             android:id="@id/add_place_et_map_coordinates"
             android:layout_width="220dp"
-            android:theme="@style/TextLabel"
             android:layout_height="wrap_content"
             android:layout_below="@id/add_place_et_description"
-            android:layout_centerHorizontal="true">
+            android:layout_centerHorizontal="true"
+            android:theme="@style/TextLabel">
 
             <EditText
                 android:layout_width="match_parent"

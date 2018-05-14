@@ -30,7 +30,7 @@ public class LoginActivity extends BaseActivity<LoginContract.Presenter, Activit
 
     private EditText mEtNumber;
     private Button mBtnLoginProceed;
-    private Button mBtnSigninWithGooglePlus;
+    private Button mBtnSkip;
 
     private Toast mLoginToast;
     private LoginContract.Presenter mLoginPresenter;
@@ -45,6 +45,7 @@ public class LoginActivity extends BaseActivity<LoginContract.Presenter, Activit
     protected void init(@Nullable Bundle savedInstanceState) {
         mEtNumber = findViewById(R.id.login_et_mobile_no);
         mBtnLoginProceed = findViewById(R.id.login_btn_proceed);
+        mBtnSkip = findViewById(R.id.login_btn_skip);
 
         mSharedPrefManager = SharedPrefManager.getInstance();
 
@@ -58,6 +59,14 @@ public class LoginActivity extends BaseActivity<LoginContract.Presenter, Activit
                 String number = getString(R.string.country_code) + mEtNumber.getText().toString();
                 showMessage(getString(R.string.msg_signing_in));
                 mLoginPresenter.performPhoneLogin(number);
+
+            }
+        });
+        mBtnSkip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPrefManager.getInstance().setSkipped(true);
+                navigateToHomeActivity();
 
             }
         });
@@ -103,7 +112,7 @@ public class LoginActivity extends BaseActivity<LoginContract.Presenter, Activit
     public void navigateToHomeActivity() {
 
         Intent intent = new Intent(this, HomeActivity.class);
-        Utils.finishEntryAnimation(this,intent);
+        Utils.finishEntryAnimation(this, intent);
     }
 
     @Override
@@ -111,6 +120,7 @@ public class LoginActivity extends BaseActivity<LoginContract.Presenter, Activit
         dismissDialog();
         mLoginPresenter.openOTPDialog();
     }
+
     @Override
     protected void onResume() {
         mLoginPresenter.registerOTPReceiver();
