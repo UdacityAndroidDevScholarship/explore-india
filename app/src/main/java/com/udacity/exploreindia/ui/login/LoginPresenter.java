@@ -47,12 +47,12 @@ public class LoginPresenter extends BasePresenter<LoginContract.View> implements
     private PhoneAuthProvider.ForceResendingToken mResendToken;
     private AlertDialog dialog;
     private String num1, num2, num3, num4, num5, num6;
-     EditText n1;
-     EditText n2;
-     EditText n3;
-     EditText n4;
-     EditText n5;
-     EditText n6;
+    EditText n1;
+    EditText n2;
+    EditText n3;
+    EditText n4;
+    EditText n5;
+    EditText n6;
 
     public LoginPresenter(SharedPrefManager mSharedPreferences, BaseRepo mBaseRepo, Context mContext) {
         super(mSharedPreferences, mBaseRepo, mContext);
@@ -73,7 +73,7 @@ public class LoginPresenter extends BasePresenter<LoginContract.View> implements
         mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             @Override
             public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
-               // mLoginView.onLoginSuccess();
+                // mLoginView.onLoginSuccess();
                 signInWithPhoneAuthCredential(phoneAuthCredential);
             }
 
@@ -124,7 +124,7 @@ public class LoginPresenter extends BasePresenter<LoginContract.View> implements
                             Log.d(TAG, "signInWithCredential:success");
 
                             FirebaseUser user = task.getResult().getUser();
-                             mLoginView.onLoginSuccess();
+                            mLoginView.onLoginSuccess();
                             SharedPrefManager.getInstance().setLoggedIn(true);
                             mLoginView.navigateToHomeActivity();
                             // ...
@@ -317,7 +317,7 @@ public class LoginPresenter extends BasePresenter<LoginContract.View> implements
 
         builder.setView(view);
         dialog = builder.create();
-
+        dialog.setCanceledOnTouchOutside(false);
         dialog.show();
     }
 
@@ -334,10 +334,10 @@ public class LoginPresenter extends BasePresenter<LoginContract.View> implements
     private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
+            try {
 
-            if (intent.getAction().equals("android.provider.Telephony.SMS_RECEIVED")) {
-                final Bundle bundle = intent.getExtras();
-                try {
+                if (intent.getAction().equals("android.provider.Telephony.SMS_RECEIVED")) {
+                    final Bundle bundle = intent.getExtras();
                     if (bundle != null) {
                         Object[] pdusObj = (Object[]) bundle.get("pdus");
                         for (Object aPdusObj : pdusObj) {
@@ -350,9 +350,8 @@ public class LoginPresenter extends BasePresenter<LoginContract.View> implements
                             }
 
                             String verificationCode = getVerificationCode(message);
-                            if(!TextUtils.isEmpty(verificationCode))
-                            {
-                                Log.e("OTP num",verificationCode.charAt(0)+"");
+                            if (!TextUtils.isEmpty(verificationCode)) {
+                                Log.e("OTP num", verificationCode.charAt(0) + "");
                                 n1.setText(verificationCode.charAt(0));
                                 n2.setText(verificationCode.charAt(1));
                                 n3.setText(verificationCode.charAt(2));
@@ -362,9 +361,10 @@ public class LoginPresenter extends BasePresenter<LoginContract.View> implements
                             }
                         }
                     }
-                } catch (Exception e) {
-                    e.printStackTrace();
+
                 }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
 
         }

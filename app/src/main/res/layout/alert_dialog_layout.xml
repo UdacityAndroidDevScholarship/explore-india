@@ -25,12 +25,13 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
         <ImageView
+            android:contentDescription="Close"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:id="@id/login_img_cross"
             android:padding="8dp"
-            android:src="@drawable/ic_close_black_24dp" />
+            app:srcCompat="@drawable/ic_close_black_24dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
