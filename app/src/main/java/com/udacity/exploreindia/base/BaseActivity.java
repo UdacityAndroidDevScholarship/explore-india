@@ -20,6 +20,7 @@ public abstract class BaseActivity<T extends BaseMvpPresenter, K extends ViewDat
 
     T mPresenter;
     K mDataBinder;
+    CustomDialog customDialog;
 
 
     @Override
@@ -64,9 +65,13 @@ public abstract class BaseActivity<T extends BaseMvpPresenter, K extends ViewDat
     protected abstract void beforeView(@Nullable Bundle savedInstanceState);
 
     protected void showMessage(String message) {
-        CustomDialog customDialog = new CustomDialog(this);
+        customDialog = new CustomDialog(this);
         customDialog.setMessage(message);
         customDialog.show();
+    }
+
+    protected void dismissDialog() {
+        customDialog.dismiss();
     }
 
     protected void showToast(String text) {

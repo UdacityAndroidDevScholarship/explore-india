@@ -29,7 +29,9 @@ public class SplashPresenter extends BasePresenter<SplashContract.View> implemen
                 new Runnable() {
                     @Override
                     public void run() {
-                        if (getSharedPreferences().isFirstTimeLaunch()) {
+                        if (SharedPrefManager.getInstance().isLoggedIn()||
+                                SharedPrefManager.getInstance().isSkipped()) {
+                            // getView().moveToLoginScreen();
                             getView().moveToHomeScreen();
                         } else {
                             getView().moveToLoginScreen();

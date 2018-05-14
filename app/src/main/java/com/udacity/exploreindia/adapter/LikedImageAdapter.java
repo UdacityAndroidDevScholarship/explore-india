@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.view.View;
 
@@ -37,10 +38,10 @@ public class LikedImageAdapter extends RecyclerView.Adapter<LikedImageAdapter.Im
 
     @Override
     public void onBindViewHolder(ImageViewHolder holder, int position) {
-        holder.liked_images.setImageResource(likedImages[position]);
-        holder.place_name.setText(mplace[position]);
-        holder.like_val.setText(mlike[position]);
-        holder.date_val.setText(mdate[position]);
+        holder.likedPlacesListImages.setImageResource(likedImages[position]);
+        holder.likedPlaceTvName.setText("Name: "+mplace[position]);
+        holder.liked_place_tv_like.setText("Likes: "+mlike[position]);
+        holder.likedPlaceTvDate.setText("Date: "+mdate[position]);
     }
 
     @Override
@@ -50,15 +51,22 @@ public class LikedImageAdapter extends RecyclerView.Adapter<LikedImageAdapter.Im
 
 
     protected class ImageViewHolder extends RecyclerView.ViewHolder {
-        ImageView liked_images;
-        TextView place_name,like_val,date_val;
+        private ImageView likedPlacesListImages;
+        private LinearLayout likedPlacesImgBackground;
+        private TextView likedPlaceTvName;
+        private TextView liked_place_tv_like;
+        private TextView likedPlaceTvDate;
 
         public ImageViewHolder(View itemView) {
             super(itemView);
-            liked_images = (ImageView) itemView.findViewById(R.id.liked_places_list_images);
-            place_name=(TextView) itemView.findViewById(R.id.liked_place_tv_name);
-            like_val=(TextView) itemView.findViewById(R.id.liked_place_tv_like);
-            date_val=(TextView) itemView.findViewById(R.id.liked_place_tv_date);
+
+
+            likedPlacesListImages = (ImageView) itemView.findViewById(R.id.liked_places_list_images);
+            likedPlacesImgBackground = (LinearLayout) itemView.findViewById(R.id.liked_places_img_background);
+            likedPlaceTvName = (TextView) itemView.findViewById(R.id.liked_place_tv_name);
+            liked_place_tv_like = (TextView) itemView.findViewById(R.id.liked_place_tv_like);
+            likedPlaceTvDate = (TextView) itemView.findViewById(R.id.liked_place_tv_date);
+
         }
     }
 }
