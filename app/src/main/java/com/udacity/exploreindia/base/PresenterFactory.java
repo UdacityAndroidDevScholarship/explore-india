@@ -1,6 +1,8 @@
 package com.udacity.exploreindia.base;
 
 import com.udacity.exploreindia.injection.InjectionUtils;
+import com.udacity.exploreindia.ui.StatesWithPlaces.StatesWithPlacesActivity;
+import com.udacity.exploreindia.ui.StatesWithPlaces.StatesWithPlacesPresenter;
 import com.udacity.exploreindia.ui.City.CityActivity;
 import com.udacity.exploreindia.ui.City.CityPresenter;
 import com.udacity.exploreindia.ui.home.HomeActivity;
@@ -57,6 +59,8 @@ public class PresenterFactory {
             presenter = (S) new LoginPresenter(InjectionUtils.getSharedPreference(), InjectionUtils.providesDataRepo(), claxx);
         } else if (claxx instanceof HomeActivity) {
             presenter = (S) new HomePresenter(InjectionUtils.getSharedPreference(), InjectionUtils.providesDataRepo(), claxx);
+        } else if (claxx instanceof StatesWithPlacesActivity) {
+            presenter = (S) new StatesWithPlacesPresenter(InjectionUtils.getSharedPreference(), InjectionUtils.providesDataRepo(), claxx);
         } else if (claxx instanceof CityActivity) {
             presenter = (S) new CityPresenter(InjectionUtils.getSharedPreference(), InjectionUtils.providesDataRepo(), claxx);
         } else {

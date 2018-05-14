@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <data>
 
     </data>
 
-    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.StatesWithPlaces.StatesWithPlacesActivity">
+        android:layout_height="match_parent">
+        <!-- Top toolbar -->
+        <RelativeLayout
+            android:id="@id/selected_palced_rv_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
 
-    </android.support.constraint.ConstraintLayout>
+            <include layout="@layout/snippet_top_bar" />
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@id/selected_places_rv_images"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/selected_palced_rv_toolbar"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </RelativeLayout>
+
 </layout>
