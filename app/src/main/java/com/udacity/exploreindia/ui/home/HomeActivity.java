@@ -41,6 +41,7 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityH
         return R.layout.activity_home;
     }
 
+
     @Override
     protected void init(@Nullable Bundle savedInstanceState) {
 

@@ -43,6 +43,7 @@ public class PresenterFactory {
         } else {
             throw new IllegalStateException("Activity presenter not supported yet");
         }
+        //Commented the throw exception line and returned presenter for demo purpose and can be changed later as required
         return presenter;
         //throw new IllegalStateException("Fragment presenter not supported yet");
 
