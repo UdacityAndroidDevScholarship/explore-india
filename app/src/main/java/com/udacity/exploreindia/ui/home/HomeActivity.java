@@ -19,14 +19,17 @@ import com.udacity.exploreindia.R;
 import com.udacity.exploreindia.base.BaseActivity;
 import com.udacity.exploreindia.databinding.ActivityHomeBinding;
 import com.udacity.exploreindia.helper.FragmentAdapter;
+import com.udacity.exploreindia.ui.StatesWithPlaces.StatesWithPlacesActivity;
 import com.udacity.exploreindia.helper.SharedPrefManager;
 import com.udacity.exploreindia.helper.Utils;
+
 import com.udacity.exploreindia.ui.home.fragments.likedplaces.LikedPlacesFragment;
 import com.udacity.exploreindia.ui.home.fragments.main.MainFragment;
 import com.udacity.exploreindia.ui.home.fragments.place.PlaceFragment;
 import com.udacity.exploreindia.ui.home.fragments.profile.UserDetailFragment;
 import com.udacity.exploreindia.ui.home.fragments.search.SearchFragment;
 import com.udacity.exploreindia.ui.login.LoginActivity;
+import com.udacity.exploreindia.ui.selectedstate.SelectedStateActivity;
 
 
 public class HomeActivity extends BaseActivity<HomeContract.Presenter, ActivityHomeBinding> implements HomeContract.View {

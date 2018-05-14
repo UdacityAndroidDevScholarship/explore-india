@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    card_view:cardUseCompatPadding="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_state_place_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/backgrounds/scenic"/>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#50000000"
+            android:paddingBottom="@dimen/margin_padding_normal"
+            android:paddingTop="@dimen/margin_padding_normal"
+            app:layout_constraintBottom_toBottomOf="@id/iv_state_place_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/tv_state_place_name"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:paddingEnd="@dimen/margin_padding_normal"
+                android:paddingStart="@dimen/margin_padding_normal"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/iv_state_place_favourite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/lorem/random"/>
+
+            <ImageView
+                android:id="@+id/iv_state_place_favourite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_padding_normal"
+                android:layout_marginStart="@dimen/margin_padding_normal"
+                android:src="@drawable/ic_action_favorite_fill"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

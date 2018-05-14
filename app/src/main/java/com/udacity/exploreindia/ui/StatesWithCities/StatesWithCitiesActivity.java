@@ -1,14 +1,15 @@
 package com.udacity.exploreindia.ui.StatesWithCities;
 
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.udacity.exploreindia.R;
 import com.udacity.exploreindia.base.BaseActivity;
 import com.udacity.exploreindia.databinding.ActivityStatesWithCitiesBinding;
 
-public class StatesWithCitiesActivity extends BaseActivity<StatesWithCitiesContract.Presenter, ActivityStatesWithCitiesBinding> implements StatesWithCitiesContract.View {
+public class StatesWithCitiesActivity extends BaseActivity<StatesWithCitiesContract.Presenter,
+        ActivityStatesWithCitiesBinding> implements StatesWithCitiesContract.View
+{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/small_city_card"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    card_view:cardElevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/small_card_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:cardBackgroundColor="@android:color/white"
+            card_view:cardCornerRadius="12dp"
+            card_view:cardElevation="7dp">
+
+            <ImageView
+                android:id="@+id/iv_small_city_photo"
+                android:layout_width="100dp"
+                android:layout_height="55dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/image1" />
+        </android.support.v7.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/tv_small_city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/small_card_view"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            tools:text="Ahmedabad" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

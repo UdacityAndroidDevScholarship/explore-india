@@ -73,6 +73,10 @@
         <string name="date_label">Date :</string>
         <string name="date">17&#8211;04&#8211;18</string>
 
+        <string name="tab_places_title">Places</string>
+        <string name="tab_city_title">City</string>
+        <string name="search">Search</string>
+
         <!-- End of String resources for RecyclerView item -->
 
     <!-- End of String resources for Profile Page Layout -->
