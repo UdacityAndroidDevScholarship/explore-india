@@ -5,10 +5,10 @@ This Application is a collaborative project made by the Google Udacity Android D
 
 1) Awesome places (Location based or Interest-based)
 2) Places photos
-3) Famous (Food, Story, Culture, etc)
+3) Famous (Food, Story, Culture, etc.)
 4) Giving Google Map API to give directions.
 5) Place type ( Picnic, Tracking, Beach)
-6) Audience (Family, Friends, Couple, etc)
+6) Audience (Family, Friends, Couple, etc.)
 
 ## Description
 Technology is at its peak and Explore India wishes to delve into the technical world and be a guide to all those who love to explore various locations, places, know thrilling facts and trending locations.  We provide a platform where a user can share information about a particular place of interest with the rest. So brief and verified information, reviews from fellow travelers along with high-resolution photographs and maps are available to describe a place. The user will also get location-based suggestions for trending nearby places and also places according to one’s previous visits. The user will also be able to search region wise about every place in a city, about cities in a state and explore about states in Explore India!
