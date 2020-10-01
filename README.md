@@ -1,4 +1,4 @@
-# explore-india
+# explore india
 This Application is a collaborative project made by the Google Udacity Android Developer Scholars.
 
 ## Features
